@@ -1,3 +1,4 @@
+#!/bin/bash
 # install ModSecurity
 sudo apt update
 sudo apt intall libapache2-mod-security2 -y
