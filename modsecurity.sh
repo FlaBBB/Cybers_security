@@ -1,7 +1,7 @@
 #!/bin/bash
 # install ModSecurity
 sudo apt update
-sudo apt intall libapache2-mod-security2 -y
+sudo apt install libapache2-mod-security2 -y
 
 sudo a2enmod headers
 sudo a2dismod --force autoindex
