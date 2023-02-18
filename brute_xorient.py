@@ -5,9 +5,13 @@ def get_combination(a, b):
             temp.append(x+y)
     return temp
 
-def brute(cipher, len_key, know_message=""):
+def brute(cipher, len_key, know_message="", allowed_ord = []):
     len_cipher = len(cipher)
     len_know = len(know_message)
+    orginal_know_message = know_message
+    if len_know > len_key :
+        len_know = len_key
+        know_message = know_message[:len_key]
     if len_cipher < len_know:
         print("\n-- Brute Failed, Please check your input --")
         return False
@@ -75,7 +79,6 @@ def brute(cipher, len_key, know_message=""):
         "Y",
         "Z"
     )
-    allowed_ord = [10]
     array = dict()
     for z in range(len_key):
         array[brute_list[z]] = "-"
@@ -149,12 +152,12 @@ def brute(cipher, len_key, know_message=""):
                     last_offset = a
                     fixed_key += array[know_message[b]+"_loc"][str(z)][a]
                     continue
-                if array[know_message[b]+"_loc"].get(str(z+b)) == None:
+                if array[know_message[b]+"_loc"].get(str((z+b)%len_key)) == None:
                     cont = True
                     break
-                if (last_offset+1) in array[know_message[b]+"_loc"][str(z+b)]:
+                if (last_offset+1) in array[know_message[b]+"_loc"][str((z+b)%len_key)]:
                     last_offset += 1
-                    fixed_key += array[know_message[b]+"_loc"][str(z+b)][last_offset]
+                    fixed_key += array[know_message[b]+"_loc"][str((z+b)%len_key)][last_offset]
                 else:
                     cont = True
                     break
@@ -179,7 +182,12 @@ def brute(cipher, len_key, know_message=""):
             key_offset = b
         key = []
         for a in range(len_key):
-            if (a >= key_offset) and (a < key_offset+len_know):
+            if ((key_offset+len_know) > len_key) and a < (len(key_valid)-(len_key - key_offset)) :
+                if key == []:
+                    key = [key_valid[(len_key-key_offset)+a]]
+                else:
+                    key = get_combination(key, key_valid[(len_key-key_offset)+a])
+            elif (a >= key_offset) and (a < key_offset+len_know):
                 if key == []:
                     key = [key_valid[a-key_offset]]
                 else:
@@ -198,7 +206,7 @@ def brute(cipher, len_key, know_message=""):
         o = ''
         for i in range(len_cipher):
             o += chr(ord(cipher[i]) ^ ord(key_arr[key][i % len_key]))
-        if know_message not in o:
+        if orginal_know_message not in o:
             print(" ", end="\r")
             continue
         print(" ")
@@ -208,4 +216,4 @@ def brute(cipher, len_key, know_message=""):
 
 # -- MAIN --
 cipher = "1020222c733a203a6c393d3769362d2520353121356907160c1b0a796f06213a306f263f782e722a3b222323293628376937263c262b362a3669272c6f28292c6f2b262663203d253d21262c3763382638306f3a26246317001e78383d3b3830614546102a202c74306f36232d3d722f3f2228756c0c1a111d153817001e077e761605701d16130a6b610f060f101b7c070c001003177f32"
-brute(bytes.fromhex(cipher).decode('utf-8'), 9, "TUCTF{")
+brute(bytes.fromhex(cipher).decode('utf-8'), 9, "flag: TUCTF{", [10])

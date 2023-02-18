@@ -7,6 +7,9 @@ THRESHOLD=10
 # Set ban time in seconds
 BAN_TIME=10
 
+# Set Network Interface
+NET_INTERFACE='enp0s3'
+
 # Loop forever
 while true
 do
@@ -21,17 +24,17 @@ do
         # Check if IP is already banned
         if iptables -L INPUT -v -n | grep -q "$IP"
         then
-            
+            sleep 0
         else
             # Ban the IP address for the specified duration
             (echo "Banning IP address $IP for $BAN_TIME seconds" >> /var/log/banip.log
-            iptables -A INPUT -p tcp -i enp0s17 -s $IP --dport 80 -j DROP
+            iptables -A INPUT -p tcp -i $NET_INTERFACE -s $IP --dport 80 -j DROP
             sleep $BAN_TIME
             # Remove the IP ban after the specified duration
             echo "Unbanning IP address $IP" >> /var/log/banip.log
             while iptables -L INPUT -v -n | grep -q "$IP"
             do
-                iptables -D INPUT -p tcp -i enp0s17 -s $IP --dport 80 -j DROP
+                iptables -D INPUT -p tcp -i $NET_INTERFACE -s $IP --dport 80 -j DROP
             done)&
         fi
     fi
