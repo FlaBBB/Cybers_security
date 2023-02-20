@@ -9,7 +9,6 @@ DOSSiteCount 50
 DOSPageInterval 1
 DOSSiteInterval 1
 DOSBlockingPeriod 10
-DOSEmailNotify mail@yourdomain.com
 DOSLogDir "/var/log/apache2/"
 EOT
 

@@ -1,3 +1,4 @@
+import sys
 def get_combination(a, b):
     temp = []
     for x in a:
@@ -8,13 +9,16 @@ def get_combination(a, b):
 def brute(cipher, len_key, know_message="", allowed_ord = []):
     len_cipher = len(cipher)
     len_know = len(know_message)
+
+    if len_cipher < len_know:
+        print("\n-- Brute Failed, Please check your input --")
+        return False
+    
     orginal_know_message = know_message
     if len_know > len_key :
         len_know = len_key
         know_message = know_message[:len_key]
-    if len_cipher < len_know:
-        print("\n-- Brute Failed, Please check your input --")
-        return False
+
     brute_list = (
         "0",
         "1",
@@ -175,6 +179,23 @@ def brute(cipher, len_key, know_message="", allowed_ord = []):
         print("\n-- Brute Failed, Please check your input --")
         return False
 
+    if len(key_valid_list) > 1 :
+        print("\n")
+        print("result valid key is more than 1, you must choose 1 from the list")
+        print("valid key list:")
+        i = 1
+        for a in key_valid_list :
+            for b in a:
+                print(str(i)+". "+a[b])
+            i += 1
+        try:
+            inp = int(input("choose the valid key you want try: "))
+            assert key_valid_list[inp-1] != None
+            temp_valid_key = key_valid_list[inp-1]
+            key_valid_list = []
+            key_valid_list.append(temp_valid_key)
+        except:
+            sys.exit("your input not available in the list!!!")
     key_arr = []
     for z in key_valid_list:
         for b in z:
@@ -215,5 +236,5 @@ def brute(cipher, len_key, know_message="", allowed_ord = []):
 
 
 # -- MAIN --
-cipher = "1020222c733a203a6c393d3769362d2520353121356907160c1b0a796f06213a306f263f782e722a3b222323293628376937263c262b362a3669272c6f28292c6f2b262663203d253d21262c3763382638306f3a26246317001e78383d3b3830614546102a202c74306f36232d3d722f3f2228756c0c1a111d153817001e077e761605701d16130a6b610f060f101b7c070c001003177f32"
-brute(bytes.fromhex(cipher).decode('utf-8'), 9, "flag: TUCTF{", [10])
+cipher = "223e276325206e215d53546b306e0b08061a017f7d1b32303d30162d212c581b1f6b1e0b110c0b6e04646b13131a1c0a0c0b1a6758595a"
+brute(bytes.fromhex(cipher).decode(), 11, "CUY XOR", [])

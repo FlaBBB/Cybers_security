@@ -1,4 +1,4 @@
-from pwn import binascii
+from pwn import *
 def xor(msg, key):
     o = ''
     for i in range(len(msg)):
