@@ -5,8 +5,8 @@ def xor(msg, key):
         o += chr(ord(msg[i]) ^ ord(key[i % len(key)]))
     return o
 
-msg = "iki le flag e HACTFNO(yess_hoki), KEREN CUY XORIENT iki"
+msg = ""
 
-key = "KUNCIENG123"
+key = ""
 
 print(binascii.hexlify(xor(msg, key).encode()).decode())
