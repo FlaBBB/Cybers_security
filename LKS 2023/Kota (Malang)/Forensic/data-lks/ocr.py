@@ -1,6 +1,13 @@
 import requests
 import json
 import sys
+from PIL import Image
+def crop_image(input_image, output_image, start_x, start_y, width, height):
+    """Pass input name image, output name image, x coordinate to start croping, y coordinate to start croping, width to crop, height to crop """
+    input_img = Image.open(input_image)
+    box = (start_x, start_y, start_x + width, start_y + height)
+    output_img = input_img.crop(box)
+    output_img.save(output_image +".png")
 
 def ocr_space_file(filename, overlay=False, api_key='helloworld', language='eng', OCREngine=2):
     """ OCR.space API request with local file.
@@ -22,6 +29,7 @@ def ocr_space_file(filename, overlay=False, api_key='helloworld', language='eng'
                'OCREngine': OCREngine
                }
     with open(filename, 'rb') as f:
+
         r = requests.post('https://api.ocr.space/parse/image',
                           files={filename: f},
                           data=payload,
@@ -63,12 +71,16 @@ for i in range(131):
     print('gambar ke '+str(i))
     FilePath = "D:\\Programming\\Cyber Security\\LKS 2023\\Kota (Malang)\\Forensic\\data-lks\\data\\img"+str(i)+".png"
     Engine = 2
+    crop_image(FilePath, "D:\\Programming\\Cyber Security\\LKS 2023\\Kota (Malang)\\Forensic\\data-lks\\data\\img"+str(i)+"-cropped", 10,10,180,180)
     ocr_res = ''
     while len(ocr_res) < 2:
         if Engine == 6:
-            sys.exit('idk')
-        ocr_res = json.loads(ocr_space_file(FilePath, api_key='K82695434588957', OCREngine=Engine))['ParsedResults'][0]['ParsedText']
+            print(" -- Error")
+            break
+        ocr_res = json.loads(ocr_space_file("D:\\Programming\\Cyber Security\\LKS 2023\\Kota (Malang)\\Forensic\\data-lks\\data\\img"+str(i)+"-cropped.png", api_key='K82695434588957', OCREngine=Engine))['ParsedResults'][0]['ParsedText']
         Engine =+ 1
+        print("hasil ocr gambar img"+str(i)+": "+ocr_res, end="")
+    print("")
     stringa += ocr_res
 
 f = open("string_ocr_dari_depan.txt", "w")
