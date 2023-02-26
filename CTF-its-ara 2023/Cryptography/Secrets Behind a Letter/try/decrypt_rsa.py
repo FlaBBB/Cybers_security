@@ -20,4 +20,4 @@ e = 65537
 
 m = decrypt(p, q, c, e)
 
-print("Pesan terdekripsi:", m)
+print("decrypt:", m)
