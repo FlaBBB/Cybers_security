@@ -1,28 +1,3 @@
-from Crypto.Util.number import inverse
-import string
-
-ALLOWED = string.ascii_lowercase + string.digits + "_" + " "
-
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-def crt3(ciphertexts, moduli):
-    n1, n2, n3 = moduli
-    c1, c2, c3 = ciphertexts
-    N = n1 * n2 * n3
-    N1 = N // n1
-    N2 = N // n2
-    N3 = N // n3
-    x = (c1 * N1 * inverse(N1, n1) +
-         c2 * N2 * inverse(N2, n2) +
-         c3 * N3 * inverse(N3, n3)) % N
-    return x
-
 c1=50996973104845663108379751131203085432412490198312714663656823648233038479298192861451834246930208140110173699058527919020115432586705400467345647806522331396447650847650133013246673390879222719169248862420278256322967718701700458729207793124758166438641448112314489945863231881982352790765130535004090053677
 c2=2675086354476975422055414666795504683242305948200761348250028401266882028494792724072473530888031343997988485639367375927974100307107406775103695198800703704181414736281388464205429123159605048186634852771717909704864647112817586024682299987868607933059634279556321476204813521201682662328510086496215821461
 c3=37230658243252590743608571105027357862790972987208833213017941171448753815654839901699526651433771324826895355671255944414893947963934979068257310367315935701270804390799121669635153012916402271190722618997500392911737767143316552376495882986935695146970853914275481717400268832644987157988727575513351441919
@@ -31,37 +6,36 @@ n1=10548112726721826061215687101775769455014273582408715010675040357987749505923
 n2=93105621059686474816890215494554802831518948420160941703522759121619785851270608634130307450227557987976818162331982289634215037184075864787223681218982602092806757888533587126974091077190242797461318907280759075612577475534626062060960739269828789274137274363970056276139434039315860052556417340696998509271
 n3=65918509650742278494971363290874849181268364316012656769339120004000702945271942533097529884964063109377036715847176196280943807261986848593000424143320280053279021411394267268255337783494901606319687457351586915314662800434632332988978858085931586830283694881538759008360486661936884202274973387108214754101
 
-result = []
-result_raw = []
-for e in range(1000000):
-    if not is_prime(e):
-        continue
-    try:
-        print("try e: "+str(e))
-        phi = (n1-1)*(n2-1)*(n3-1)
-        d = inverse(e, phi)
-        m1 = pow(c1, d, n1)
-        m2 = pow(c2, d, n2)
-        m3 = pow(c3, d, n3)
+import functools
+from Crypto.Util.number import inverse
 
-        plaintext = crt3([m1, m2, m3], [n1, n2, n3])
+def chinese_remainder(n, a): 
+    sum = 0
+    prod = functools.reduce(lambda a, b: a*b, n)
+    for n_i, a_i in zip(n, a):
+        p = prod // n_i
+        sum += a_i * inverse(p, n_i) * p
+    return sum % prod
 
-        message = hex(plaintext)[2:]
-        message = bytes.fromhex(message).decode('utf-8')
+def inv_pow(c, e):
+    low = -1
+    high = c+1
+    while low + 1 < high:
+        m = (low + high) // 2
+        p = pow(m, e)
+        if p < c:
+            low = m
+        else:
+            high = m
+    m = high
+    assert pow(m, e) == c
+    return m
 
-        if not message.isprintable():
-            continue
-        for m in message:
-            if m not in ALLOWED:
-                result_raw.append()
-                print("message raw : "+message)
-                continue
-
-        print("message filtered : "+message)
-        result.append(message)
-    except:
-        continue
-print("result raw")
-print(result_raw)
-print("result filterd")
-print(result)
+N = [n1, n2, n3]
+C = [c1, c2, c3]
+e = 3
+a = chinese_remainder(N, C)
+for n, c in zip(N, C):
+    assert a % n == c
+m = inv_pow(a, e)
+print(bytes.fromhex(hex(m)[2:]).decode())
