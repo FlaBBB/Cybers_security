@@ -9,3 +9,5 @@ for f in FILE:
         text += f
 
 print(text)
+
+'\''
