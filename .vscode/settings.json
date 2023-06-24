@@ -1,0 +1,10 @@
+{
+    "files.watcherExclude": {
+        "**/target": true
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "cstdlib": "c",
+        "cmath": "c"
+    }
+}

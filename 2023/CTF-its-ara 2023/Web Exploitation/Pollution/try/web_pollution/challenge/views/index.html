@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="/static/css/style.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Register</title>
+</head>
+<body class="font-mono">
+  <div class="bg-neutral-900 w-screen h-screen flex justify-center items-center">
+    <div class="p-7 bg-neutral-800 w-96">
+        <h1 class="text-lime-500 text-center text-2xl font-bold">Register here!</h1>
+        <div class="mt-7">
+            <div class="mb-6">
+            <label for="username" class="block mb-2 text-sm font-medium text-neutral-900 dark:text-white">Username*</label>
+            <input type="username" id="username" class="bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-neutral-500 focus:border-neutral-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-neutral-500 dark:focus:border-neutral-500" required>
+            </div>
+            <div class="mb-6">
+            <label for="secret" class="block mb-2 text-sm font-medium text-neutral-900 dark:text-white">Secret</label>
+            <input type="secret" id="secret" class="bg-neutral-50 border border-neutral-300 text-neutral-900 rounded-lg focus:ring-neutral-500 focus:border-neutral-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-neutral-500 dark:focus:border-neutral-500 text-xs" placeholder="have secret? put here to get admin access">
+          </div>
+            <button id="submit" class="text-white bg-neutral-700 hover:bg-neutral-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-neutral-600 dark:hover:bg-neutral-700 dark:focus:ring-neutral-800">Submit</button>
+        </div>
+        <div id="output" class="mt-3 p-3 rounded w-full bg-neutral-900 h-fit">
+          <h1 id="response" class="text-lime-600">Please submit!</h1>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+  </div>
+  
+</body>
+</html>

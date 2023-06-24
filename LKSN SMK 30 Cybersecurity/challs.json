@@ -1,0 +1,433 @@
+{
+    "data": {
+        "Binary Exploitation": [
+            {
+                "category": "Binary Exploitation",
+                "description": "nc 68.183.188.198 11103",
+                "files": [
+                    "/files/e49d72400052e9740fa7f1589d409574/chall?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6OX0.Y1pNCw.110nWLEscuJuyIW2PD2Q6KbTKI0"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 6,
+                "name": "Hard",
+                "points": 700,
+                "solves": 0
+            },
+            {
+                "category": "Binary Exploitation",
+                "description": "nc 68.183.188.198 11102",
+                "files": [
+                    "/files/e5970caf1476de8bfea837518c439171/chall?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6OH0.Y1pNCw.1PeDLCyqUt-niBMa5LW-QDSt5WM"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 5,
+                "name": "Medium",
+                "points": 500,
+                "solves": 0
+            },
+            {
+                "category": "Binary Exploitation",
+                "description": "nc 68.183.188.198 11101",
+                "files": [
+                    "/files/2f518ccd1e0cc8273a11ce2b32c33ea4/chall?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6N30.Y1pNCw.M3EKGYCG0jlpNaDRAEuRzmbFE-E"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 4,
+                "name": "Easy",
+                "points": 300,
+                "solves": 0
+            }
+        ],
+        "Conceptual Examination": [
+            {
+                "category": "Conceptual Examination",
+                "description": "Selamat datang di Hari Pertama LKSN SMK XXX Cyber Security.\r\nBatas pengumpulan laporan / POC adalah pada tanggal 25 Oktober 2022, pukul 20.00 WIB.\r\n\r\nLaporan dikumpulkan ke: https://forms.gle/yF2jY7XPzWnV4AkV9\r\n\r\nHappy Securing!\r\n",
+                "files": [
+                    "/files/7acf3b6c3a1e59ec0a1b574ae162e4ba/LKSNSMKXXX-CyberSecurity-Day1-Examination.pdf?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6MTV9.Y1pNCw._ekhxgtWwhdvq_iPMm3TLD-OM8c"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 12,
+                "name": "Network Security Design",
+                "points": 0,
+                "solves": 0
+            }
+        ],
+        "Cryptography": [
+            {
+                "category": "Cryptography",
+                "description": "ABC 5 dasar",
+                "files": [
+                    "/files/7d1624d790dc8cdcb0cf60ac3a183e25/chall?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6MTB9.Y1pNCw.bGXxShyakifMudaokdr-KThoHFA"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 7,
+                "name": "Dasar Dasar",
+                "points": 200,
+                "solves": 0
+            },
+            {
+                "category": "Cryptography",
+                "description": "Rivest-Shamir-Adleman adalah sesuatu yang cukup spesial di dalam dunia kriptografi.\r\nYuk kita belajar bersama!\r\n\r\nSetelah flagnya telah dienkripsi dengan menggunakan algoritma enkripsi tersebut, bisakah kalian merecover flagnya?",
+                "files": [
+                    "/files/343532124dc0bc0beab66001ac1fd8fc/soal.py?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6MTF9.Y1pNCw.TZwcjCgBD96PjBdlmdA2nnqO8cg",
+                    "/files/0ec57ef09327d0142184e54f259119fc/output.txt?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6MTJ9.Y1pNCw.hiclVq5WORjMxuP7AA9Ow4Y4rKA"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 8,
+                "name": "Asimetris",
+                "points": 300,
+                "solves": 0
+            },
+            {
+                "category": "Cryptography",
+                "description": "Saya pikir implementasi \"Asimetris\" yang satu ini lebih aman dibanding sebelumnya!\r\nSaya pastikan angka primanya cukup kuat dengan size 2048 bit, dan saya enkripsi sebanyak tiga kali sehingga teman-teman pasti akan merasa kesulitan untuk merecovernya hehe ~\r\n\r\nOleh karena itu, bagaimana jika saya berikan teman-teman sebuah harapan dengan memberikan banyak encrypted messagenya beserta dengan modulusnya ^-^ ?\r\n\r\nBisakah Anda me-recover flagnya kembali?",
+                "files": [
+                    "/files/b308856c397c9fc0a5fd4f6235cfe1cf/soal.py?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6MTd9.Y1pNDA.iX0MsnFSHq8Ri-dmj2VPI1QeOMo",
+                    "/files/ae9e0e31f3979566ae1156d9f3656eb0/output.txt?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6MTh9.Y1pNDA.tbEGBsQMzYFkIneqMmx0lQwQKJ4"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 9,
+                "name": "Varian 2048",
+                "points": 500,
+                "solves": 0
+            }
+        ],
+        "Disk Image Forensics - Bully": [
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "Laman file: https://drive.google.com/file/d/1RQ-lT-yW-iCTPqgx8EfVOfLGfNIQHU3X/view?usp=sharing\r\n\r\nPassword file: **peserta_LKSN_terlalu_GG_dan_OP_2k22!**\r\n\r\n**Bagian Pertama**\r\n\r\nAwal Deskripsi Kasus:\r\n\r\nBobby, merupakan seorang anak SMA yang sangat nakal. Ia pernah masuk ke dalam penjara remaja sejak SMP karena kelakuannya yang suka menjahili temannya hingga berlebihan. Kini, Bobby berulah lagi hingga membuat banyak temannya merasa kesal dengannya hingga dipanggil polisi daerah. Bobby gemar menutupi jejak aksinya dan sangat terencana, oleh karena itu polisi daerah diberikan penugasan untuk mengecek HP Bobby jika ada keanehan atau kekeliruan di dalamnya. Anda, sebagai tim Digital Forensik yang dapat diandalkan diminta untuk melakukan analisa dari hasil akuisisi sebuah **Android Image Phone**. \r\n\r\nPertanyaan:\r\n\r\nApa nama aplikasi *browser* yang digunakan oleh tersangka? (nama *Android Package Name* )\r\n\r\nFormat:   com.apapunini.mbahgugel",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 24,
+                "name": "1 Ketagihan",
+                "points": 100,
+                "solves": 16
+            },
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "**Bagian Kesembilan**\r\n\r\nBobby juga ternyata didapati bahwa ada **rencana jahat lainnya** yang ada pada **aplikasi note-taking yang sama** dengan sebelumnya NAMUN notes yang berisikan rencana jahat itu telah **DIHAPUS**. Anda sebagai tim Forensik tentunya tahu bahwa segala file yang dihapus pasti masih bisa dapat direcover dan dicek kembali apapun itu bukti digitalnya. \r\nApa nama **judul** dari Notes yang telah ia hapus tersebut?\r\n\r\nFormat: judulnotestanpaspasi",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 32,
+                "name": "9 Sebelum Klimaks",
+                "points": 100,
+                "solves": 3
+            },
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "**Bagian Kedua**\r\n\r\nPihak kepolisian menerka sumber kenakalan remaja Bobby berasal dari kecanduan aplikasi ataupun dari lingkungan pertemanannya. Laman URL apa yang dikunjungi oleh Bobby yang **pertama kali**-nya selain **Google** ?\r\n\r\nFormat:   http://inihanyasebatascontohsajaya.com\r\n\r\n",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 25,
+                "name": "2 Sumber Kenakalan",
+                "points": 100,
+                "solves": 14
+            },
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "**Bagian Ketujuh**\r\n\r\nKarena masih anak SMA, ternyata Bobby juga bisa saja teledor menyimpan sesuatu yang sifatnya rahasia dan gampang terekspos oleh publik karena pihak Anda berhasil mendapatkan sesuatu dari sana.\r\nBobby telah menyimpan sebuah **backup password** yang ada pada aplikasi *note-taking* yang sama dengan sebelumnya. Apakah **isi konten** dari backup passwordnya?\r\n\r\nFormat:   hUrUf@lay",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 30,
+                "name": "7 Bobby Blunder",
+                "points": 100,
+                "solves": 12
+            },
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "**Bagian Kelima**\r\n\r\nBobby ternyata menyimpan rencananya pada sebuah aplikasi *note-taking* khusus.\r\nApa nama aplikasi yang digunakan penyerang untuk melakukan *note taking*? (nama *package name* Android-nya)\r\n\r\nFormat: com.lksn.menangsemua",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 28,
+                "name": "5 Tertata Rapi",
+                "points": 100,
+                "solves": 15
+            },
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "**Bagian Kedelapan**\r\n\r\nBobby merasa ketakutan karena kemampuan forensik Anda sangatlah handal. Anda ingin mengecek kapan **terakhir kali** Bobby **meng-*update* rencana jahatnya pada notes** yang telah dia buat **sebelumnya**. Apakah Anda dapat mengetahuinya?\r\n\r\nFormat jawaban (DD/MM/YYYY jam:menit WIB)\r\n\r\nContoh: 08/01/2007 12:37 WIB",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 31,
+                "name": "8 Detil Rencana",
+                "points": 100,
+                "solves": 5
+            },
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "**Bagian Kesepuluh**\r\n\r\nBobby akhirnya diketahui telah melakukan tindakan aksi yang sangat meresahkan sehingga membuat ia harus ditahan dulu oleh polisi karena bukti Anda.\r\nDia terdakwa telah **menjual senjata** dengan bukti yang didapatkan **di aplikasi *note-taking* LAIN MESKIPUN notes tersebut telah DIHAPUS**. Dapatkah Anda menyebutkan 2 senjata tajam yang ia jual sebagai supplier?\r\n\r\nAnda juga dapat mengganti jawaban ini jika Anda berhasil menemukan sebuah gambar di dalam notes tersebut. Terdapat tulisan kecil di dalamnya, dan tulisan itu juga dapat menjadi jawaban valid bagi soal ini sebagai **flag** yang valid. \r\n\r\nSehingga, Anda diberikan harapan bahwa ada 2 Flag pada soal ini (bebas yang manapun itu benar).\r\n\r\nFormat Flag 1:\r\nJika Anda berhasil menemukan 2 nama senjatanya yaitu pisau belati dan golok, maka flagnya adalah **pisaubelatigolok**.\r\n\r\nFormat Flag 2 (alternatif):\r\nJika Anda mendapatkan kata-kata pada logo merahnya yakni setanmerah123 asiap, maka flagnya adalah **setanmerah123asiap**. \r\n\r\nSemua jawabannya dalam huruf kecil **TANPA **spasi.\r\n",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 33,
+                "name": "10 Akhir dari Kenakalan",
+                "points": 100,
+                "solves": 3
+            },
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "**Bagian Keenam**\r\n\r\nBobby telah tertangkap basah oleh Anda karena Anda mengetahui bahwa dia telah menyusun rencana usilnya yang masih dalam aplikasi *note-taking*-nya.\r\nSiapakah nama dari **korban pertama** rencana jahatnya? (**huruf kecil semua tanpa spasi**)\r\n\r\nFormat: namabiasa",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 29,
+                "name": "6 Akal Licik Anak SMA",
+                "points": 100,
+                "solves": 12
+            },
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "**Bagian Keempat**\r\n\r\nAnda mengecek jika laman pencarian teratas yang dicari Bobby pada *browser*-nya mengindikasikan perilaku sosiopat. Apakah hasil pencarian **teratas** saat Bobby sedang menggunakan ***search bar browser*** -nya?\r\n\r\nFormat: ini hasil pencariannya guys pakai spasi",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 27,
+                "name": "4 Korek Menyala",
+                "points": 100,
+                "solves": 12
+            },
+            {
+                "category": "Disk Image Forensics - Bully",
+                "description": "**Bagian Ketiga**\r\n\r\nAnda dan pihak Digital Forensik lainnya sedang menganalisa secara detil dari Android Image milik HP Bobby hingga ke akar-akarnya Anda mencurigai sebuah laman yang padahal tidak berbahaya.\r\nApa nilai **Cookie** yang ada ketika ia mengunjungi sebuah laman website dengan domain **account.kompas.com**?\r\n\r\nFormat: `inivaluecookieYangAndaTemukanJanganSubmitInihey8109109902902++_)_)_)`",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 26,
+                "name": "3 Mencari Tahu",
+                "points": 100,
+                "solves": 9
+            }
+        ],
+        "Memory Forensics - Malicious": [
+            {
+                "category": "Memory Forensics - Malicious",
+                "description": "**Bagian Keempat**\r\n\r\nSetelah menganalisa secara statik dari program tersebut, saatnya beralih ke metodologi analisa IOC lebih dalam. Anda diminta untuk mengumpulkan data berikut:\r\n\r\na) Nilai Entropi dari Program (Ambil pembulatan 2 angka di belakang koma, misalkan didapat nilai 3.148927 maka nilainya 3.15 namun jika nilainya 3.14321 maka nilainya 3.14 )\r\n\r\nb) Jumlah *sections* pada Program\r\n\r\nHasil jawaban digabung dengan delimiter *underscore*.\r\n\r\nMisalkan yang Anda temukan untuk nilai entropinya adalah 4.57297 dan jumlah sectionsnya ada 20, maka flagnya adalah **4.57_20**",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 16,
+                "name": "4 Indikator Penyusupan (Bagian 2)",
+                "points": 191,
+                "solves": 4
+            },
+            {
+                "category": "Memory Forensics - Malicious",
+                "description": "**Bagian Kelima**\r\n\r\nDapat diasumsikan bahwa teman Anda melakukan aktivitas *malicious* untuk menanamkan suatu program berbahaya di dalam komputer teman Anda yang lainnya. Meski aksinya tidak berhasil dijalankan 100% karena objektifnya yang tidak terpenuhi, ternyata program ini memiliki kapabilitas untuk merekam jejak ketikan input seorang *user*.\r\n\r\nBerikut merupakan ekstraksi *encrypted* file yang didapatkan dari komputer korban ketika ia sedang diawasi oleh temannya (si jahat) sesaat setelah dia menanamkan programnya. Dapatkah kamu mendekrip *encrypted* file tersebut?\r\n\r\nUntuk melakukan dekrip, tentunya Anda harus melakukan reverse engineering terhadap program malware yang sudah Anda dapatkan dari VMEM-nya.\r\n\r\nFlag = hasil konten dekripsi mengandung flag `LKSN{.*}`, submit konten flagnya",
+                "files": [
+                    "/files/976b7bb05e61dacd5377f9258ec3152b/sniff.bin?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6MTZ9.Y1pNDA.A4QIxp6-iBTroLK9_LLOtPDNaMI"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 17,
+                "name": "5 Finale",
+                "points": 199,
+                "solves": 2
+            },
+            {
+                "category": "Memory Forensics - Malicious",
+                "description": "**Bagian Ketiga**\r\n\r\nSetelah mengetahui *Process ID* dari program yang menurut Anda cukup berbahaya, Anda diminta untuk mengumpulkan IOC dari program tersebut. Informasi yang wajib didapatkan di antaranya adalah:\r\n\r\na) Hash SHA512 dari program. (Cukup gunakan sha512sum pada Linux)\r\n\r\nb) Terdapat 2 *path* yang  diakses oleh program. Sebutkan path tersebut!\r\nCatatan: Jika program dapat mengakses *current directory*, maka dituliskan **curr**, namun jika\r\nada path lain pada direktori lain, maka tuliskan **Absolute Path**-nya **tanpa backlash di direktori paling depan**. Kedua path dipisahkan oleh **spasi**.\r\n\r\nContohnya, jika Anda mendapati bahwa program ini dapat mengakses *current directory* dan \"D:\\Windows\\\", maka\r\npenulisannya adalah  **curr D:\\Windows**\r\n\r\nFlagnya merupakan kedua poin di atas yang digabungkan dengan **Underscore (_)**\r\n\r\nContoh flag jawaban: \r\n**c321643b8d3e3bb19e4d730fc67bfaa4070f20da9f88fd1139f71264dd0d6174e995eb6a531aceb7c3c3f86bb96eaa75b557d32d01349ddc275f91ffb756f6db_curr D:\\Windows**",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 15,
+                "name": "3 Indikator Penyusupan (Bagian 1)",
+                "points": 200,
+                "solves": 0
+            },
+            {
+                "category": "Memory Forensics - Malicious",
+                "description": "Semua Link file berlaku untuk semua challenge Memory Forensics. \r\nSilahkan akses dan download file di link ini:\r\nhttps://drive.google.com/file/d/1ILdsJSYTKRiFXO6yOd_wlSzptuCu9es3/view?usp=sharing\r\n\r\n**Password: saya_bUkan_8j0rka_tapi_g3n3rasi_emas_b4ngs4_Ind0nesia**\r\n\r\nSemua bagian soal kategori ini merupakan seri challenge \"Malicious\"\r\n\r\n**Bagian Pertama**\r\n\r\nAnda telah mendapati teman sekantor Anda tengah melakukan sesuatu yang cukup \"malicious\" pada victim host computer teman Anda dari CCTV. Sebelumnya, dia sedang melakukan shoulder surfing terhadap victim dan tim forensik mengira jika dia ingin mengingat kombinasi password temannya. Tatkala dikira itu sangatlah tidak mungkin, ternyata dia dapat mengakses komputernya dengan mudah. Beberapa menit kemudian, teman sekantor Anda tertangkap basah dan melarikan diri.\r\n\r\nDapatkah Anda mendapatkan **password logon OS** yang memang telah \"diingat\" oleh si penyerang? Tim Digital Forensik telah melakukan akuisisi memori pada laptop korban dan mereka meminta Anda untuk  mengetes jika password tersebut bahkan **sangat mudah untuk didapatkan**.\r\n\r\nFormat: passwordnya",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 13,
+                "name": "1 Shoulder Surfing",
+                "points": 136,
+                "solves": 9
+            },
+            {
+                "category": "Memory Forensics - Malicious",
+                "description": "**Bagian Kedua**\r\n\r\nTim Digital Forensik melanjutkan investigasi dari apa yang dilakukan oleh penyerang di dalam komputer teman Anda, namun karena tim ini sedang sibuk mengurusi event LKSN 2022, dapatkah Anda membantu mereka untuk menemukan proses apa yang menurut Anda sedang berjalan dan cukup malicious? Anda cukup mencantumkan *Process ID*  -nya saja disini sebagai flagnya.",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 14,
+                "name": "2 Awal Mula",
+                "points": 100,
+                "solves": 11
+            }
+        ],
+        "Patching": [
+            {
+                "category": "Patching",
+                "description": "https://drive.google.com/drive/folders/1I418msCxm6vLq414z4U85AygAePkt39j?usp=sharing\r\n\r\nPassword Zip: 4b023086b50ef3e1a89f495c262cab50\r\n\r\nCredential root\r\n\r\nUsername : root\r\n\r\nPassword : PASSrot1313\r\n\r\nCredential Low-Privilege\r\n\r\nfelix:FelixG0d47593\r\n\t\r\nstanley:PKSDJWIQWE@Mantap\r\n\r\nSaran menggunakan ssh agar memudahkan patching ( tidak bisa root )\r\n\r\nssh {username}@{IP}\r\n\r\nFile ini **SAMA DENGAN** file VM 2 di Day 2 kemarin.\r\n\r\nAnda diminta untuk melakukan ***vulnerability patching*** terhadap *instance* OVA ini sekaligus juga melakukan **infrastructure hardening**. Segala bentuk vulnerability yang ada di dalamnya **TIDAK BOLEH** Anda hilangkan atau hapus, tetapi Anda patch dan modifikasi supaya jauh lebih aman.\r\n\r\nContohnya, jika terdapat indikasi adanya penyimpanan suatu password data pada suatu medium kriptografi atau semacamnya, Anda dapat memodifikasi algoritmanya menjadi lebih aman. Jika ada suatu *pblic services* yang terekspos ke publik dengan *credentials* yang cukup lemah dan *predictable*, Anda dapat mengubah konfigurasinya, dan metodologi *patching* lainnya.\r\n\r\nPenilaian soal VM Patching (*Infrastructure Hardening*) ini akan dilihat pada laporan PDF yang akan Anda buat setelah Day 3 selesai dan dikumpulkan pada Google Form yang dikirimkan setelah Day 3 selesai (di Whatsapp Group).\r\n\r\nJika ada pertanyaan mengenai VM Patching, Anda dapat menghubungi Bapak Chrisando atau Stanley Halim di Whatsapp ataupun langsung di Zoom.\r\n\r\nHappy Securing!\r\n\r\n**Free flag submit challenge ini:\r\nLKSN{VM_P4tcH1ng}**",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 22,
+                "name": "VM 2",
+                "points": 1337,
+                "solves": 19
+            }
+        ],
+        "Reverse Engineering": [
+            {
+                "category": "Reverse Engineering",
+                "description": "Selamat datang di challenge reversing kedua!\r\nSudahkah Anda belajar Reverse Engineering dengan baik? Yuk coba tebak input apa yang benar pada program ini?",
+                "files": [
+                    "/files/667cffce7632c9ae0211ebd2db31a7f1/tidakada?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6NX0.Y1pNDA.Zv0uqWfz4HdJcG_yhdXslS3WtTI"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 2,
+                "name": "Tidak Ada",
+                "points": 300,
+                "solves": 0
+            },
+            {
+                "category": "Reverse Engineering",
+                "description": "Selamat datang di challenge reversing terakhir!\r\nTakumi ingin membuat sebuah program yang dapat memvalidasi input user kembali namun sekarang jauh lebih aman!\r\nBagaimana jika kamu *crack* program yang satu ini?",
+                "files": [
+                    "/files/6d13d690ec3a55e2384fe64ea661e6d8/passwordaman.exe?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6Nn0.Y1pNDA.ov2WX9UqneUbafRjc9RlKRVI7-w"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 3,
+                "name": "Password Aman",
+                "points": 500,
+                "solves": 0
+            },
+            {
+                "category": "Reverse Engineering",
+                "description": "Selamat datang di challenge reversing pertama!\r\nYuk kita pahami bersama bahasa \"ular\" ini ~\r\nBahasa ini sangat umum digunakan untuk melakukan `scripting` lho!\r\nDapatkah kamu me-recover hasil orisinil dari flag.txt yang sudah terenkripsi? :(",
+                "files": [
+                    "/files/a851967c4fccf7f47e4407064ad4359f/bahasaular.pyc?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6M30.Y1pNDA.g_YkSaQ2JCaViNlIqyHEDRKyBdQ",
+                    "/files/30653ff599650169990563a25e592987/flag.txt.malware?token=eyJ1c2VyX2lkIjoxLCJ0ZWFtX2lkIjoyMCwiZmlsZV9pZCI6NH0.Y1pNDA.zKsNwW37a-qM1E0oGIOlcwOE5tk"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 1,
+                "name": "Bahasa Ular",
+                "points": 200,
+                "solves": 0
+            }
+        ],
+        "Server Exploitation": [
+            {
+                "category": "Server Exploitation",
+                "description": "Laman file:\r\nhttps://drive.google.com/file/d/1V6z9aVKIux-P9A4XBVaM29qbyTKl1QMB/view?usp=sharing\r\n\r\n**Password Zip: v0te_saya_j4di_pr3siden_2023**\r\n\r\nFlagnya merupakan hasil konten root-final-flag.txt dari user **root**\r\n\r\nJika ada kendala flagnya tidak ada atau rusak atau hilang, boleh langsung hubungi problem setter ya, terima kasih!",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 20,
+                "name": "VM 1",
+                "points": 1750,
+                "solves": 0
+            },
+            {
+                "category": "Server Exploitation",
+                "description": "https://drive.google.com/drive/folders/1_x8VldBrK3HQ14BuzvVu1p_pvHaJH2Lm?usp=sharing\r\n\r\nPassword Zip: 4b023086b50ef3e1a89f495c262cab50\r\n\r\nFlagnya adalah konten dari flag.txt dari low-privileged user.",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 10,
+                "name": "VM 2 - User",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Server Exploitation",
+                "description": "https://drive.google.com/drive/folders/1_x8VldBrK3HQ14BuzvVu1p_pvHaJH2Lm?usp=sharing\r\n\r\nPassword: 4b023086b50ef3e1a89f495c262cab50\r\n\r\nFlagnya adalah konten dari flag.txt dari user **root**.",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 11,
+                "name": "VM 2 - Root",
+                "points": 1750,
+                "solves": 0
+            }
+        ],
+        "Web Exploitation": [
+            {
+                "category": "Web Exploitation",
+                "description": "Katanya sih, katanya nih, katanya...\r\n2023 akan resesi. Kalo gitu mumpung masih 2022, kita cari kekayaan lewat saham.\r\n",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 18,
+                "name": "Anti Resesi",
+                "points": 500,
+                "solves": 0
+            },
+            {
+                "category": "Web Exploitation",
+                "description": "Apakah kita dapat melihat jauh ke dalam? Misal, ke dalam server?",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 21,
+                "name": "Ingatan Terdalam",
+                "points": 300,
+                "solves": 0
+            },
+            {
+                "category": "Web Exploitation",
+                "description": "Saya suka bermain game. Tapi saya gamau ngecheat. Eh saya dibully.",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 19,
+                "name": "Arcade Sidescreen",
+                "points": 200,
+                "solves": 0
+            }
+        ]
+    },
+    "title": "LKSN SMK 30 Cybersecurity",
+    "url": "https://lksiber.com"
+}

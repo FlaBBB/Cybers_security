@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CTF-Joints 2023/Misc/Mega SUS/maplistmaker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CTF-Joints 2023/Misc/Mega SUS/try/python-osu-parser" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tools/DeepBlueCLI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tools/python-xasm" vcs="Git" />
+  </component>
+</project>
