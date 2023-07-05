@@ -19,11 +19,7 @@ def get_combinations(lst, seed):
     return [res]
 
 def get_seed(lst):
-    res = 0
-    for i in range(1, len(lst) + 1):
-        res += (max(lst) - min(lst) + 1) ** (i - 1)
-    for i in range(len(lst)):
-        res += (max(lst) - min(lst) + 1) ** (len(lst) - i - 1) * (lst[i] - min(lst))
+    res = sum((max(lst) - min(lst) + 1) ** (len(lst) - i - 1) * (val - min(lst)) + (max(lst) - min(lst) + 1) ** i for i, val in enumerate(lst))
     assert get_combinations(range(min(lst), max(lst) + 1), res) == lst
     return res
 
