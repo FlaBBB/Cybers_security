@@ -194,7 +194,7 @@ class globfuscator:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description='Obfuscate path string using wildcard. *note: only work on local')
+        description='Obfuscate path string using wildcard.')
 
     parser.add_argument('-p', '--path', type=str, help='Specify the path.')
     parser.add_argument('-d', '--banned_string', type=str,
