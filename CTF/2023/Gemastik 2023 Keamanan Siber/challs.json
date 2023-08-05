@@ -1,0 +1,209 @@
+{
+    "data": {
+        "Cryptography": [
+            {
+                "category": "Cryptography", 
+                "description": "Attack on AES OFB\r\n\r\nAuthor: prajnapras19", 
+                "files": [
+                    "/files/48f59ca0bc3886cffc5f9b1460f160e2/easy-aes.zip?token=eyJ1c2VyX2lkIjo3NjgsInRlYW1faWQiOjI1NywiZmlsZV9pZCI6MTV9.ZMcsNA.AtAbIkKNQznr8tf2nPNvzD2Y4-c"
+                ], 
+                "hints": [
+                    "-"
+                ], 
+                "id": 14, 
+                "name": "easy AES", 
+                "points": 50, 
+                "service": "nc ctf-gemastik.ub.ac.id 10002", 
+                "solves": 35
+            }, 
+            {
+                "category": "Cryptography", 
+                "description": "**L**a **L**a **L**a - Naughty Boy\r\n\r\nLyrics\r\n**L**a **L**a, **L**a **L**a **L**a **L**a **L**a na na na na na\r\n**L**a **L**a na na, **L**a **L**a **L**a **L**a **L**a na na na na na\r\n**L**a **L**a, **L**a **L**a **L**a **L**a **L**a na na na na na\r\n**L**a **L**a na na, **L**a **L**a **L**a **L**a **L**a na na na na na\r\n\r\nAuthor: Chovid99", 
+                "files": [
+                    "/files/da9bfbd935111cc1c1c8a84b7e2f1961/naughty-boy.zip?token=eyJ1c2VyX2lkIjo3NjgsInRlYW1faWQiOjI1NywiZmlsZV9pZCI6MTd9.ZMcsNA.b4RqFiZtcaPpvYUFvZeFQR-6MN0"
+                ], 
+                "hints": [
+                    "-"
+                ], 
+                "id": 16, 
+                "name": "naughty-boy", 
+                "points": 482, 
+                "service": "nc ctf-gemastik.ub.ac.id 10001", 
+                "solves": 7
+            }, 
+            {
+                "category": "Cryptography", 
+                "description": "Shamir said we need `k` shares to recover the secret.\r\n\r\nAuthor: prajnapras19", 
+                "files": [
+                    "/files/45599d3f60bdbd7d616e579648b2e5c8/k-1.zip?token=eyJ1c2VyX2lkIjo3NjgsInRlYW1faWQiOjI1NywiZmlsZV9pZCI6MTZ9.ZMcsNA.4L3H1Ah8RYAcUJFai58Dkg2JGJo"
+                ], 
+                "hints": [
+                    "-"
+                ], 
+                "id": 15, 
+                "name": "k-1", 
+                "points": 416, 
+                "service": "nc ctf-gemastik.ub.ac.id 10000", 
+                "solves": 13
+            }
+        ], 
+        "Digital Forensics": [
+            {
+                "category": "Digital Forensics", 
+                "description": "Our network was repeatedly bombarded by a port scanner targeting a specific `ports`. Interestingly, our server seems to provide different responses depending on its current state and the specific request it receives. Although nothing major happened, we believe there was a hidden intention behind the attacks.\r\n\r\nAuthor: orie", 
+                "files": [
+                    "/files/740d2c88d846c6bff3063e124c3ac5a2/log.tar.xz?token=eyJ1c2VyX2lkIjo3NjgsInRlYW1faWQiOjI1NywiZmlsZV9pZCI6MTR9.ZMcsNA.yJREUJdcrCX1yANwT5nkRWzcWuI"
+                ], 
+                "hints": [
+                    "We discovered that the actor was attempting to determine whether our service was open, closed, or blocked by the firewall."
+                ], 
+                "id": 13, 
+                "name": "Network Discovery", 
+                "points": 500, 
+                "service": [], 
+                "solves": 1
+            }, 
+            {
+                "category": "Digital Forensics", 
+                "description": "A DFIR enjoyer who love analyze dump memory ask your help for analyze `sus` file. He says \"Aku menemukan ini dari hasil *dump memory* *client* ku, *client*-ku berkata bahwa *file* dia pada direktori tertentu tiba-tiba menghilang, dan ia terakhir kali menjalankan sebuah *executables*, dan mungkin ini penyebabnya. Aku mengambil beberapa file yang `sus` dan sepertinya ini kunci untuk menemukan penyebab hilangnya file-file tersebut. Bisa kah kau menolong ku?\"\r\n\r\n**Notes : Jangan di run *exe*-nya ya, kecuali di *sandbox* yang emang buat coba-coba**\r\n\r\nFile : https://mega.nz/file/a2oixaib#Y7hu00KLlvhqVV43BzYYKcqxy8hEkUbZ1iL2rDg2wCM\r\n\r\nAuthor: blacowhait", 
+                "files": [], 
+                "hints": [
+                    "Decompile the exe first maybe? Using some famous decompiler? but you must know, with what the exe was made", 
+                    "Parsing PCAP file is fun! maybe you must know how to parse it correctly based on source code from decompiled EXE", 
+                    "Maybe you must 'carefully' read the source code from the exe"
+                ], 
+                "id": 19, 
+                "name": "GreyHat", 
+                "points": 500, 
+                "service": [], 
+                "solves": 0
+            }
+        ], 
+        "Pwn": [
+            {
+                "category": "Pwn", 
+                "description": "Please solve this with intended not using pub cve or something, I hope you guys learning from the process not for the result, Enjoy\r\n\r\nhttps://dangokyo.me/2020/03/14/ctf-linux-kernel-pwn-debugging/\r\n```\r\nextract:\r\n\r\ngunzip < ../initramfs.cpio.gz|cpio -idmv\r\n\r\ncompress:\r\nfind . | cpio  -H newc -o | gzip > ../initramfs.cpio.gz\r\n```\r\n\r\nAuthor: Linz", 
+                "files": [
+                    "/files/9b8d55640430add309edf042debc30f4/release.zip?token=eyJ1c2VyX2lkIjo3NjgsInRlYW1faWQiOjI1NywiZmlsZV9pZCI6MjF9.ZMcsNA.eWngx1ECaYgvskCNAbFIPgrBDtk"
+                ], 
+                "hints": [
+                    "First step:\nPahamin cara interaksi/communicate dengan kernel\nOne of good resources:\nhttps://lkmidas.github.io/posts/20210123-linux-kernel-pwn-part-1/"
+                ], 
+                "id": 18, 
+                "name": "Introduction into Kernel Exploitation", 
+                "points": 500, 
+                "service": "nc ctf-gemastik.ub.ac.id 10011", 
+                "solves": 1
+            }, 
+            {
+                "category": "Pwn", 
+                "description": "Ini Apa\r\n\r\nAuthor: Enryu", 
+                "files": [
+                    "/files/095de6b0052b9115fb0b9f733574e2ea/apa-ini.zip?token=eyJ1c2VyX2lkIjo3NjgsInRlYW1faWQiOjI1NywiZmlsZV9pZCI6MTh9.ZMcsNA.pksSfaspm09xzviRbL3Hu37-ofg"
+                ], 
+                "hints": [
+                    "Googling 'How to exploit FSOP' and experiment on FSOP. Debug and debug and debug, try harder bang"
+                ], 
+                "id": 17, 
+                "name": "Apa ini", 
+                "points": 500, 
+                "service": "nc ctf-gemastik.ub.ac.id 10010", 
+                "solves": 0
+            }, 
+            {
+                "category": "Pwn", 
+                "description": "Author: Linz", 
+                "files": [
+                    "/files/3ca20217bf7050b7e218b07898130a27/pwnworld.zip?token=eyJ1c2VyX2lkIjo3NjgsInRlYW1faWQiOjI1NywiZmlsZV9pZCI6MjJ9.ZMcsNA.yhxJCxTgQtAGZ3dT8wwaHXb88VY"
+                ], 
+                "hints": [
+                    "-"
+                ], 
+                "id": 20, 
+                "name": "Pwnworld", 
+                "points": 356, 
+                "service": "nc ctf-gemastik.ub.ac.id 10012", 
+                "solves": 16
+            }
+        ], 
+        "Reverse Engineering": [
+            {
+                "category": "Reverse Engineering", 
+                "description": "Our Administrator needs your help!\r\n\r\nVaints, ex-CEO of Gemastik Branch Office, `fluttish.org` company has just been fired since he was caught becoming a black hat hacker. However, the corporate's files and directories need a masterkey which he embeds on the binary file that **triggers** some kind of an API call to our database.\r\n\r\nSadly, our administrator has blacklisted his email yet the binary requires to have other attributes information related to Vaints, as his account already **deleted and blacklisted**. Are you able to reverse engineer this binary app and finds a way to get that masterkey (`flag.txt`) ?\r\n\r\nA gentle reminder from the Administrator, this mission does not require you to:\r\n\r\n* Do Brute Force\r\n* Do a Service Exploitation\r\n\r\nYet, there might be a chance of security misconfiguration from the corp's backend which may aid you to complete the objective, unfortunately no backend source provided so it's blackbox.\r\n\r\n***\r\n<a class=\"btn btn-secondary\" href=\"https://drive.google.com/file/d/1OSH_EjTf3gF0w7WK18_8GXM3BhNTqoB4/view?usp=sharing\"><i class=\"fa fa-download\"></i>&nbsp;&nbsp;Attachment</a>\r\n\r\n\r\nAuthor: aseng", 
+                "files": [], 
+                "hints": [
+                    "This binary is built-in with an unusual programming language and mostly used in a well-known framework, [Flutter](https://flutter.dev/)", 
+                    "Understand the DartVM Object and its logic.", 
+                    "Have you figured out the database service? There's a hardcoded URL and other attributes in there."
+                ], 
+                "id": 11, 
+                "name": "Fluttish", 
+                "points": 500, 
+                "service": [], 
+                "solves": 0
+            }, 
+            {
+                "category": "Reverse Engineering", 
+                "description": "Like usual flag checker. Nothing new, but now running as a service\r\n\r\nAuthor: _kosong\r\n\r\n", 
+                "files": [
+                    "/files/36a275a8e8efe05b8cda7f929a0a8c09/chall?token=eyJ1c2VyX2lkIjo3NjgsInRlYW1faWQiOjI1NywiZmlsZV9pZCI6MTN9.ZMcsMw.dYrVBgBKtKB8Zmye_mQ7ynh2igo"
+                ], 
+                "hints": [
+                    "Some functions have patterns", 
+                    "First, you need to know how the `program` stores input"
+                ], 
+                "id": 12, 
+                "name": "FCaaS", 
+                "points": 500, 
+                "service": [], 
+                "solves": 0
+            }
+        ], 
+        "Web Exploitation": [
+            {
+                "category": "Web Exploitation", 
+                "description": "Running program without installing\r\n\r\nAuthor: Bonceng\r\n\r\n***\r\n<a class=\"btn btn-secondary\" href=\"https://drive.google.com/file/d/1jcRVr_AEM65DBEMRTfEDMzCHGNqwxGPe/view?usp=sharing\"><i class=\"fa fa-download\"></i>&nbsp;&nbsp;Attachment</a>\r\n", 
+                "files": [], 
+                "hints": [
+                    "User execution is safe because I'm using whitelist method, right?", 
+                    "Debian is using C for their OS implementation."
+                ], 
+                "id": 21, 
+                "name": "Web Tool", 
+                "points": 500, 
+                "service": "http://ctf-gemastik.ub.ac.id:10020/", 
+                "solves": 0
+            }, 
+            {
+                "category": "Web Exploitation", 
+                "description": "Simple website to store notes in Gemastik 2023\r\n\r\nP.S. The challenge machine will be reset every 5 minutes.\r\n\r\nAuthor: Bonceng\r\n\r\nhttp://ctf-gemastik.ub.ac.id:10021/\r\n\r\nmirrors:\r\n\r\nhttp://ctf-gemastik.ub.ac.id:10023/\r\n\r\nhttp://ctf-gemastik.ub.ac.id:10024/", 
+                "files": [
+                    "/files/e146497659dc0f967f36b6cec36366db/gemashnotes.zip?token=eyJ1c2VyX2lkIjo3NjgsInRlYW1faWQiOjI1NywiZmlsZV9pZCI6MTl9.ZMcsNA.Z86dWXy-tpiUrfc3QXLdg1qmldA"
+                ], 
+                "hints": [
+                    "Versi ejs yang digunakan adalah yang terbaru"
+                ], 
+                "id": 22, 
+                "name": "Gemashnotes", 
+                "points": 482, 
+                "service": [], 
+                "solves": 4
+            }, 
+            {
+                "category": "Web Exploitation", 
+                "description": "Author: Linz", 
+                "files": [], 
+                "hints": [
+                    "-"
+                ], 
+                "id": 23, 
+                "name": "Databreach", 
+                "points": 476, 
+                "service": "http://ctf-gemastik.ub.ac.id:10022/", 
+                "solves": 7
+            }
+        ]
+    }, 
+    "title": "Gemastik 2023 Keamanan Siber", 
+    "url": "https://ctf-gemastik.ub.ac.id"
+}

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "escodegen": "^2.0.0",
+    "estraverse": "^5.3.0"
+  },
+  "scripts": {
+    "rev": "reverse.js"
+  }
+}

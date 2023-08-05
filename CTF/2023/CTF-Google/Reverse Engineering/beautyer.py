@@ -1,0 +1,6 @@
+f = open("bf34d88e43685d6b540e5c80e8e6a1fe5f40b897589527df51f70b0ca4419c47119733624d65258b4c24e6037cfb550738ae0fb1807f16b11b1cc3c7c8896eb8/zermatt.lua").read()
+
+f = f.replace(";", ";\n")
+
+with open("bf34d88e43685d6b540e5c80e8e6a1fe5f40b897589527df51f70b0ca4419c47119733624d65258b4c24e6037cfb550738ae0fb1807f16b11b1cc3c7c8896eb8/zermatt-b.lua", "w") as F:
+    F.write(f)

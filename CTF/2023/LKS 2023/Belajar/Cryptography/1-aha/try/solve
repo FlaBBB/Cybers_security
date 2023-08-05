@@ -1,0 +1,60 @@
+import string
+from pwn import *
+
+DICTIONARY = string.ascii_letters+string.digits+string.punctuation
+
+
+def combine(a, b):
+    res = []
+    for x in a:
+        for y in b:
+            res.append(x+y)
+    return res
+
+
+def decrypt(cipher):
+    chunks = cipher.split('g')
+    length_char = int(chunks[0], 16)
+    result = ['']
+    for c in range(1, len(chunks)):
+        if 'x' in chunks[c]:
+            last_int = -int(chunks[c][1:], 16)
+        else:
+            last_int = int(chunks[c], 16)
+        if c >= len(chunks)-1 and (length_char%2)==1:
+            result = combine(result, [chr(int(last_int**(1/2)))])
+        else:
+            if last_int == 0:
+                temp = []
+                for b in result:
+                    for a in DICTIONARY:
+                        temp.append(b+a+a)
+                result = temp
+                continue
+            temp = []
+            if last_int > 0:
+                for a in DICTIONARY:
+                    for b in DICTIONARY:
+                        if ord(a) <= ord(b):
+                            continue
+                        temp_res = (ord(a)**3 - ord(b)**3) * ord(b)
+                        if temp_res == last_int:
+                            temp.append(a+b)
+            else:
+                for a in DICTIONARY:
+                    for b in DICTIONARY:
+                        if ord(a) >= ord(b):
+                            continue
+                        temp_res = (ord(a)**3 - ord(b)**3) * ord(b)
+                        if temp_res == last_int:
+                            temp.append(a+b)
+            result = combine(result, temp)
+    return result
+
+flag_hash = ('1dg0gx1acf64ga8d80ga8d80g63082b6g2b76d77gx1fe00e6g169b0fcg78c092gx3ab29dcgx347d21g1767ba7g1080168gx24090e8g3d09')
+dec = decrypt(flag_hash)
+i = 1
+print('Decrypt: ')
+for d in dec:
+    print(i,"=",d)
+    i+=1
