@@ -13,13 +13,13 @@ def combine(a, b):
 
 brute = string.printable
 knowed_text = "ARA2023{"
-brute_list = ['']
+key = ['']
 is_breaks = False
 loops = 1
 while True:
     print("length key: " + str(loops))
-    brute_list = combine(brute_list, brute)
-    for b in brute_list:
+    key = combine(key, brute)
+    for b in key:
         text = ''
         for t in cipher:
             for x in b:
