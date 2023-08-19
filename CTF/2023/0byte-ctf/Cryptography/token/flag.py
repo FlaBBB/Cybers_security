@@ -1,0 +1,1 @@
+flag = "0byteCTF{emang_boleh_sedekat_ini_dek?}"

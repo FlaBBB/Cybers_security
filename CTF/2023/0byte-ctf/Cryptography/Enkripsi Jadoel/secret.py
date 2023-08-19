@@ -1,0 +1,1 @@
+flag = "0byteCTF{y4_m4u_b4g4im4n4_l4g1_3nkr1ps1_j4d03l_347fd48d64}"
