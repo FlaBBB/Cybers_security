@@ -2,3 +2,6 @@ tests/*
 
 *.exe
 tempCodeRunnerFile.*
+session.log
+factor.log
+factor.json
