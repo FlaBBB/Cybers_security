@@ -32,8 +32,8 @@ def get_flag_size(io, enc_oracle, salt_size):
 def attack(io, encrypt_oracle, decrypt_oracle, salt_size=8):
     flag_size = get_flag_size(io, encrypt_oracle, salt_size)
 
-    total_padding = (16 * ((flag_size // 16) + 3)) - (flag_size + salt_size)
-    padding = b"A" * total_padding
+    padding_size = (16 * ((flag_size // 16) + 3)) - (flag_size + salt_size)
+    padding = b"A" * padding_size
     cipher = encrypt_oracle(io, padding)
 
     offset_block = 1
@@ -48,8 +48,8 @@ def attack(io, encrypt_oracle, decrypt_oracle, salt_size=8):
         flag_size -= 16
 
     if flag_size > 0:
-        total_padding = (16 * ((flag_size // 16) + 3)) - (flag_size + salt_size) - (16 - flag_size)
-        padding = b"A" * total_padding
+        padding_size = (16 * ((flag_size // 16) + 3)) - (flag_size + salt_size) - (16 - flag_size)
+        padding = b"A" * padding_size
         cipher = encrypt_oracle(io, padding)
 
         offset_block -= 1
