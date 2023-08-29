@@ -31,47 +31,53 @@
 
 ### Apache :
 1. Run auto-script to hardening ssh 
-> Thats already contain:
-> 1. Instal Modsecurity and use OWASP rules + settings them all
-> 2. Disable directory listing with `a2dismod --force autoindex`
+```
+Thats already contain:
+1. Instal Modsecurity and use OWASP rules + settings them all
+2. Disable directory listing with `a2dismod --force autoindex`
+```
 
 2. Disable server signature with `ServerSignature Off` and `ServerTokens Prod` in `/etc/apache2/apache2.conf` (not used in this LKS Prov case)
 
 ### Nginx :
 1. Disable server signature with `server_tokens off;` in `/etc/nginx/nginx.conf` (not used in this LKS Prov case)
 2. Install Modsecurity (this hardening might be takes quite long time)
-> Steps: (Ref: https://www.tecmint.com/install-modsecurity-nginx-debian-ubuntu/)
-> 1. Install dependencies `apt install libmodsecurity3`
-> 2. Clone Nginx modsecurity `git clone --depth 1 -b v3/master --single-branch https://github.com/SpiderLabs/ModSecurity /usr/local/src/ModSecurity/`
-> 3. Move dir `cd /usr/local/src/ModSecurity/`
-> 4. Install Sub Modules `sudo git submodule init` & `sudo git submodule update`
-> 5. Build environment `sudo ./build.sh` & `sudo ./configure`
-> 6. Install library `sudo make -j4` (this process can takes 25 min) & `sudo make install`
-> 7. Install Nginx connector `git clone --depth 1 https://github.com/SpiderLabs/ModSecurity-nginx.git /usr/local/src/ModSecurity-nginx/`
-> 8. Move dir `cd /usr/local/src/ModSecurity-nginx/`
-> 9. Install build dependencies `sudo apt build-dep nginx` & `sudo apt install uuid-dev`
-> 10. Compile Nginx connector `sudo ./configure --with-compat --add-dynamic-module=/usr/local/src/ModSecurity-nginx
-> 11. Build Nginx connector `sudo make modules`
-> 12. Copy builded modules `sudo cp objs/ngx_http_modsecurity_module.so /usr/share/nginx/modules/`
-> 13. Load module in `/etc/nginx/nginx.conf` and Enable Modsecurity in all virtual hosted 
-> > load_module modules/ngx_http_modsecurity_module.so; \
-> > modsecurity on; \
-> > modsecurity_rules_file /etc/nginx/modsec/main.conf;
-> ![Enable-Mod_Security-for-Nginx-vHosts](https://github.com/FlaBBB/Cybers_security/assets/91487840/f62f8035-002c-4f03-a9b8-7f28f815cd4e)
-> 14. Create main.conf directory `sudo mkdir /etc/nginx/modsec/` and copy Modsecurity conf `sudo cp /usr/local/src/ModSecurity/modsecurity.conf-recommended /etc/nginx/modsec/modsecurity.conf`
-> 15. Edit main.conf `sudo nano /etc/nginx/modsec/main.conf` and change `SecRuleEngine DetectionOnly` to `SecRuleEngine On`
-> 16. Create `/etc/nginx/modsec/main.conf` and append `Include /etc/nginx/modsec/modsecurity.conf` inside the file
-> 17. (Additionally) Copy unicode mapping file `sudo cp /usr/local/src/ModSecurity/unicode.mapping /etc/nginx/modsec/`
-> 18. Test the config `sudo nginx -t` and restart nginx `sudo systemctl restart nginx`
-> 19. Download OWASP rule `wget https://github.com/coreruleset/coreruleset/archive/v3.3.0.tar.gz`
-> 20. Extract the file `tar -xvzf v3.3.0.tar.gz`
-> 21. Move the file `sudo mv coreruleset-3.3.0/ /etc/nginx/modsec/`
-> 22. Rename the conf file `sudo mv /etc/nginx/modsec/coreruleset-3.3.0/crs-setup.conf.example /etc/nginx/modsec/coreruleset-3.3.0/crs-setup.conf`
-> 23. Edit ModSecurity conf file and append below text to the file
-> > Include /etc/nginx/modsec/coreruleset-3.3.0/crs-setup.conf \
-> > Include /etc/nginx/modsec/coreruleset-3.3.0/rules/*.conf 
-> ![Configure-ModSecurity-Rules](https://github.com/FlaBBB/Cybers_security/assets/91487840/6854b5fe-4ba8-4d8c-8115-52ba8b2ba25d)
-> 24. Finally restart nginx `sudo systemctl restart nginx`
+```
+Steps: (Ref: https://www.tecmint.com/install-modsecurity-nginx-debian-ubuntu/)
+1. Install dependencies `apt install libmodsecurity3`
+2. Clone Nginx modsecurity `git clone --depth 1 -b v3/master --single-branch https://github.com/SpiderLabs/ModSecurity /usr/local/src/ModSecurity/`
+3. Move dir `cd /usr/local/src/ModSecurity/`
+4. Install Sub Modules `sudo git submodule init` & `sudo git submodule update`
+5. Build environment `sudo ./build.sh` & `sudo ./configure`
+6. Install library `sudo make -j4` (this process can takes 25 min) & `sudo make install`
+7. Install Nginx connector `git clone --depth 1 https://github.com/SpiderLabs/ModSecurity-nginx.git /usr/local/src/ModSecurity-nginx/`
+8. Move dir `cd /usr/local/src/ModSecurity-nginx/`
+9. Install build dependencies `sudo apt build-dep nginx` & `sudo apt install uuid-dev`
+10. Compile Nginx connector `sudo ./configure --with-compat --add-dynamic-module=/usr/local/src/ModSecurity-nginx
+11. Build Nginx connector `sudo make modules`
+12. Copy builded modules `sudo cp objs/ngx_http_modsecurity_module.so /usr/share/nginx/modules/`
+13. Load module in `/etc/nginx/nginx.conf` and Enable Modsecurity in all virtual hosted 
+load_module modules/ngx_http_modsecurity_module.so; 
+modsecurity on; 
+modsecurity_rules_file /etc/nginx/modsec/main.conf;
+```
+![Enable-Mod_Security-for-Nginx-vHosts](https://github.com/FlaBBB/Cybers_security/assets/91487840/f62f8035-002c-4f03-a9b8-7f28f815cd4e)
+```
+14. Create main.conf directory `sudo mkdir /etc/nginx/modsec/` and copy Modsecurity conf `sudo cp /usr/local/src/ModSecurity/modsecurity.conf-recommended /etc/nginx/modsec/modsecurity.conf`
+15. Edit main.conf `sudo nano /etc/nginx/modsec/main.conf` and change `SecRuleEngine DetectionOnly` to `SecRuleEngine On`
+16. Create `/etc/nginx/modsec/main.conf` and append `Include /etc/nginx/modsec/modsecurity.conf` inside the file
+17. (Additionally) Copy unicode mapping file `sudo cp /usr/local/src/ModSecurity/unicode.mapping /etc/nginx/modsec/`
+18. Test the config `sudo nginx -t` and restart nginx `sudo systemctl restart nginx`
+19. Download OWASP rule `wget https://github.com/coreruleset/coreruleset/archive/v3.3.0.tar.gz`
+20. Extract the file `tar -xvzf v3.3.0.tar.gz`
+21. Move the file `sudo mv coreruleset-3.3.0/ /etc/nginx/modsec/`
+22. Rename the conf file `sudo mv /etc/nginx/modsec/coreruleset-3.3.0/crs-setup.conf.example /etc/nginx/modsec/coreruleset-3.3.0/crs-setup.conf`
+23. Edit ModSecurity conf file and append below text to the file
+Include /etc/nginx/modsec/coreruleset-3.3.0/crs-setup.conf 
+Include /etc/nginx/modsec/coreruleset-3.3.0/rules/*.conf 
+![Configure-ModSecurity-Rules](https://github.com/FlaBBB/Cybers_security/assets/91487840/6854b5fe-4ba8-4d8c-8115-52ba8b2ba25d)
+24. Finally restart nginx `sudo systemctl restart nginx`
+```
 3. Disable directory listing with `autoindex off;` in `/etc/nginx/sites-available/default` (not used in this LKS Prov case)
 
 ### MySQL :
