@@ -6,5 +6,6 @@
     "files.associations": {
         "cstdlib": "c",
         "cmath": "c"
-    }
+    },
+    "python.analysis.autoImportCompletions": true
 }

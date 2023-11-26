@@ -1,0 +1,145 @@
+Delivered-To: offensiveseclab@gmail.com
+Received: by 2002:a05:7208:15a3:b0:6d:a39b:3f4a with SMTP id bv35csp65042rbb;
+        Wed, 6 Sep 2023 09:50:52 -0700 (PDT)
+X-Received: by 2002:a05:6808:1308:b0:3a7:b011:8960 with SMTP id y8-20020a056808130800b003a7b0118960mr22254615oiv.40.1694019051949;
+        Wed, 06 Sep 2023 09:50:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1694019051; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ld5pdnlwvP6Xvu8Ku9NX5EkWIaDSWzQwsq6uUMWnBwx5QZcIJA2SG84nxewIhijDqg
+         1MPoIYA0/cOdEvKZzeVdPZJFEqvSebhRMcAiE5JioCCpla9crRAuECZ7U259ihuTrVJN
+         ZAoZejKg7l7hnOOXl2aED5zyayEK17YdFae+3KKM5DxEUy/dhcBaNVUSqSbnEL9foLPu
+         076s1HYURZ3IcueehaFyStLrQUFOavbxJ6ZQbPyGZyFzQYiDEt2ISbTwhfQ+76Uh81gb
+         Pkffli6hyyWs9NW8lbUaE5OtPlTxY9DDZAWL4FDHUqDPlRTMfjNNdWKvlLDkrxFq768+
+         6DJg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=LwT7et9olXfpb4SVpUe2GA3wwaR/6IQ8VczlEJbmdP0=;
+        fh=uJlvuNGfK0l7U4yaNlpuhFnxrh1Nuiro8S7OQxPso1E=;
+        b=JKUFWh0eihYlEf56QPqjngvoUKdMbVqHmq9sYLmRkOd3w4InGS9U5oIoGVE7SGVgau
+         Xu7Cp5t27/Ub/1lHME5DdWVDguID7Lt3IFioDZ1Nr/+cmRlAXmY7LW8vpGQG9T+MH8ej
+         cAWA+VILChVV44WgIXRTzOcXvOtQMDsS0EcmBWf41mQZFBz9G1dlmxDvnZRMslOh7n2m
+         J5X+4m415ehXQAtbYaXBiIFagBKJBWqKT75EDZKPfxqCDbVBilSIBtMZCp5NM6Y7/cbB
+         by+EVMBP5SM4HD/soHorzmmCkyQgbA1JosQqr0pMTjzyfsQVjBtxShwWOUrzyT3Ep2iD
+         5xRw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=fStS8HJw;
+       spf=pass (google.com: domain of offsec.redteam@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=offsec.redteam@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <offsec.redteam@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5-20020aca0b05000000b003a40583135fsor6592786oil.18.2023.09.06.09.50.51
+        for <offensiveseclab@gmail.com>
+        (Google Transport Security);
+        Wed, 06 Sep 2023 09:50:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of offsec.redteam@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20221208 header.b=fStS8HJw;
+       spf=pass (google.com: domain of offsec.redteam@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=offsec.redteam@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20221208; t=1694019051; x=1694623851; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=LwT7et9olXfpb4SVpUe2GA3wwaR/6IQ8VczlEJbmdP0=;
+        b=fStS8HJwqEG8rJPweZj8m7LL/pu6prWjc67b+yK9I+vAx+ci15Y5BBqKjCWtd7D936
+         4mlOy/2srjFZn/Mgdhi9O0AeWL3mT0cCyFmQOE3aOvtGG/WZiUf7ukytZBJfx5dufDEi
+         aGt68rKKuGKpZxEhUSXbmTKNg3Zeeb4uO23p+PF2aPUeTaiuJc3g04DeTn1Yf7aFJ2hw
+         iDH265g6jIchJZ8ni793n39EI3wOgawVqQKMxIg/JsmeLisIWoxz/LoqkQDsu1oyulz/
+         vMmH0TwWtLEOA0dvYaimlyanF9UcRJfvCACGlgMFWYNrq2/BIYGaGr4f2Ty6Y1z4+EAy
+         lgpw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1694019051; x=1694623851;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=LwT7et9olXfpb4SVpUe2GA3wwaR/6IQ8VczlEJbmdP0=;
+        b=LWwI3dbhdfrZsgFCRJ6Oar5puQ1YIh5pPZs1JXDzAzvM0dgqdHED4YE9cIrucUPMI3
+         Uu2wS2bFbStfoO1+BmG11ttA6M2ny3cdWfE+gB4YEc/2sXHIuUF19k8FszVgmmsgzjj/
+         lMtTaHa2fMwIQ7O7CYTIW2FAs0JJUQKXX6RmIMUM/qpk6HO+AIqooLFTfRGdBX6Usj6p
+         LyU0TAAEG7i7L1VWGdW0AV36K+2/7I5wHFdmj6yiWXl0if4qKBOWcdDbADD3+eDf346b
+         WXdltaEZXN37MV0P6tE7vW3LmcD1WqveRcnGVxSCwxHDo0VMpVWEq3PhVKnXZ/23qYxS
+         bs1Q==
+X-Gm-Message-State: AOJu0YwEghu8629lVN3raXydy/Mu6U4rfA2J0kuXkyYLmC7eedg2Oe1V
+	XgPOi7cjibL8Jojsnno1ZXnbv/qwonYFEkw7B1owi7nb
+X-Google-Smtp-Source: AGHT+IGv/hDgr+ER8tXcR/4hAU/casj/cZKASJqGbRokZFqYDSiNKak3N7FFEsZ3LwWjVecmYigEAtlKQf0S01l8zVU=
+X-Received: by 2002:a05:6808:1d4:b0:3a8:80ea:f0c6 with SMTP id
+ x20-20020a05680801d400b003a880eaf0c6mr15703623oic.29.1694019051354; Wed, 06
+ Sep 2023 09:50:51 -0700 (PDT)
+MIME-Version: 1.0
+References: <CA+cknHDJcgDmNocJd7ebFc-gwzccveNpSLY=Merxo-7ZoVBZiA@mail.gmail.com>
+ <CAMxbaamGaFHFMZZsVCpb=PkmCPHVmOGzPabDtMHMngERG0-FLA@mail.gmail.com> <CA+cknHAedka-wX5SLHac0JD6NGsyaPtTWbjLH9YbQw8-3xtbcA@mail.gmail.com>
+In-Reply-To: <CA+cknHAedka-wX5SLHac0JD6NGsyaPtTWbjLH9YbQw8-3xtbcA@mail.gmail.com>
+From: offsec redteam <offsec.redteam@gmail.com>
+Date: Wed, 6 Sep 2023 23:50:41 +0700
+Message-ID: <CAMxbaamE1yxXzKrwo=Ef_7DvU9jb6-j99i4oAtfRi6UP1CV=eQ@mail.gmail.com>
+Subject: Re: help bahas crypto
+To: offsec lab <offensiveseclab@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000cc7e7f0604b38bf4"
+
+--000000000000cc7e7f0604b38bf4
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+oke siap
+
+On Wed, Sep 6, 2023 at 11:50=E2=80=AFPM offsec lab <offensiveseclab@gmail.c=
+om>
+wrote:
+
+> kurang lebih antara 1-3?? kurang tahu juga gue hahaha
+>
+> On Wed, Sep 6, 2023 at 11:49=E2=80=AFPM offsec redteam <offsec.redteam@gm=
+ail.com>
+> wrote:
+>
+>> e : berapa tuh?
+>>
+>> On Wed, Sep 6, 2023 at 11:49=E2=80=AFPM offsec lab <offensiveseclab@gmai=
+l.com>
+>> wrote:
+>>
+>>> Bro bantu gue solving crypto ini. hahaha
+>>>
+>>> N:
+>>> 91406439300743509325315969984973213045744110312621946191616736207930146=
+165027570976166021084578399798837619636672618941564295684741481169391191275=
+41930323
+>>> e: x
+>>>
+>>> The encrypted flag is:
+>>> 19992867844132475645844897013037816983003574269368276141736284659211040=
+6599679441172146714110153974990654315232857397207359840948462989524435557
+>>>
+>>
+
+--000000000000cc7e7f0604b38bf4
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">oke siap</div><br><div class=3D"gmail_quote"><div dir=3D"l=
+tr" class=3D"gmail_attr">On Wed, Sep 6, 2023 at 11:50=E2=80=AFPM offsec lab=
+ &lt;<a href=3D"mailto:offensiveseclab@gmail.com">offensiveseclab@gmail.com=
+</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:=
+0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">=
+<div dir=3D"ltr">kurang lebih antara 1-3?? kurang tahu juga gue hahaha</div=
+><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On We=
+d, Sep 6, 2023 at 11:49=E2=80=AFPM offsec redteam &lt;<a href=3D"mailto:off=
+sec.redteam@gmail.com" target=3D"_blank">offsec.redteam@gmail.com</a>&gt; w=
+rote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0p=
+x 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=
+=3D"ltr">e : berapa tuh?</div><br><div class=3D"gmail_quote"><div dir=3D"lt=
+r" class=3D"gmail_attr">On Wed, Sep 6, 2023 at 11:49=E2=80=AFPM offsec lab =
+&lt;<a href=3D"mailto:offensiveseclab@gmail.com" target=3D"_blank">offensiv=
+eseclab@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote"=
+ style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);p=
+adding-left:1ex"><div dir=3D"ltr">Bro bantu gue solving crypto ini. hahaha<=
+div><br></div><div>N: 91406439300743509325315969984973213045744110312621946=
+191616736207930146165027570976166021084578399798837619636672618941564295684=
+74148116939119127541930323<br>e: x<br><br>The encrypted flag is: 1999286784=
+413247564584489701303781698300357426936827614173628465921104065996794411721=
+46714110153974990654315232857397207359840948462989524435557<br></div></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+
+--000000000000cc7e7f0604b38bf4--

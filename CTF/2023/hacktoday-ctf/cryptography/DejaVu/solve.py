@@ -54,7 +54,7 @@ def crack_unknown_modulus(states):
     modulus = abs(functools.reduce(GCD, zeroes))
     return crack_unknown_multiplier(states, modulus)
 
-def enc_message(io, msg:bytes):
+def enc_message(io:remote, msg:bytes):
     io.sendlineafter(b'[>]', b'1')
     io.sendlineafter(b':', msg)
     start_time = time.time()
@@ -62,11 +62,11 @@ def enc_message(io, msg:bytes):
     long_time = time.time() - start_time
     return res, floor(long_time)
 
-def get_flag(io):
+def get_flag(io:remote):
     io.sendlineafter(b'[>]', b'2')
     return bytes.fromhex(io.recvline().strip().decode().split(': ')[1])
 
-def get_6_state(io):
+def get_6_state(io:remote):
     state = []
     half_first_state = None
     for _ in range(7):
@@ -82,7 +82,7 @@ def get_6_state(io):
                 break
     return state, half_first_state
 
-def decrypt_flag(io, ct):
+def decrypt_flag(io:remote, ct):
     state, half_first_state = get_6_state(io)
     modulus, multiplier, increment = crack_unknown_modulus(state)
     print(f'[+] modulus = {modulus}')

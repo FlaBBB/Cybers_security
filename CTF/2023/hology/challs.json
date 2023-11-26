@@ -1,0 +1,140 @@
+{
+    "data": {
+        "Crypto": [
+            {
+                "category": "Crypto",
+                "description": "Author: `Hazbiy`\r\n\r\nToday i visit a museum. It was an animal museum While it was fun, i see some gold bug with strange name displayed It says \"3\u20210\u20202?3\", what does that even mean?",
+                "files": [
+                    "/files/6f1b490f6b3ee2b391a98fe34cab268e/encrypted?token=eyJ1c2VyX2lkIjo4NCwidGVhbV9pZCI6MzcsImZpbGVfaWQiOjZ9.ZSIECg.rTHevTQQR2fSQBNCJzVbRXzUlb8"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 10,
+                "name": "XOR",
+                "points": 90,
+                "solves": 2
+            },
+            {
+                "category": "Crypto",
+                "description": "Author: `Hazbiy`\r\n  \r\nToday i ordered online book with title of \"Basic concept of affine frame in wavelet theory\", but why do i only get this file, does the file corrupt while download it?\r\n  ",
+                "files": [
+                    "/files/5a66000918b23860ec7262babeb7942a/encrypted-img.bin?token=eyJ1c2VyX2lkIjo4NCwidGVhbV9pZCI6MzcsImZpbGVfaWQiOjd9.ZSIECg.uxVkXomBELOMNi1bOh2KI_pwvJ0"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 11,
+                "name": "It Is Strange",
+                "points": 100,
+                "solves": 0
+            }
+        ],
+        "Forensic": [
+            {
+                "category": "Forensic",
+                "description": "Author: `Hazbiy`\r\n\r\nWhy someone hold this poster so dearly, it's 23th year of this century already!\r\n\r\n",
+                "files": [
+                    "/files/83c6d7ac2fb5ca23bd2c1116e6f7cabe/beep_boop.wav?token=eyJ1c2VyX2lkIjo4NCwidGVhbV9pZCI6MzcsImZpbGVfaWQiOjl9.ZSIECw.7nZ7xmDTHnfJrJo1XfXrDl41xD8"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 14,
+                "name": "Beep Boop",
+                "points": 40,
+                "solves": 7
+            },
+            {
+                "category": "Forensic",
+                "description": "Author: `Hazbiy`\r\n\r\nWhy someone hold this poster so dearly, it's 23th year of this century already!",
+                "files": [
+                    "/files/1bf6387210ed2fdd0b7747d5d55cfc43/poster.jpg?token=eyJ1c2VyX2lkIjo4NCwidGVhbV9pZCI6MzcsImZpbGVfaWQiOjh9.ZSIECg._8Q_K9Blkpqi4MvKdJAejuolmfc"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 12,
+                "name": "His Idol",
+                "points": 100,
+                "solves": 1
+            }
+        ],
+        "Reverse Engineering": [
+            {
+                "category": "Reverse Engineering",
+                "description": "Author: `aimardcr`\r\n\r\nBehold, the latest flag checker with not-so military grade security!",
+                "files": [
+                    "/files/fcb8d389551f3f25fe49a34262191a60/main?token=eyJ1c2VyX2lkIjo4NCwidGVhbV9pZCI6MzcsImZpbGVfaWQiOjV9.ZSIECw.t4X9j_KboTybIMl_iFN8ramRHY0"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 4,
+                "name": "ELF",
+                "points": 100,
+                "solves": 0
+            },
+            {
+                "category": "Reverse Engineering",
+                "description": " Author: `aimardcr`\r\n  \r\nYet another easy flag checker.",
+                "files": [
+                    "/files/f87428b5b1fbd2ebd65fff80a31fec2a/main?token=eyJ1c2VyX2lkIjo4NCwidGVhbV9pZCI6MzcsImZpbGVfaWQiOjR9.ZSIECw.ykCrPcrB78CS6lFMxtfKy0hSKfA"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 3,
+                "name": "BF",
+                "points": 100,
+                "solves": 1
+            }
+        ],
+        "Web": [
+            {
+                "category": "Web",
+                "description": "**Author**: `dimas`\r\n\r\nThe Holo Agency has built a web application that allows you to fetch content from other websites. Would you check it for me?\r\n\r\nhttp://175.45.187.254:31530/",
+                "files": [
+                    "/files/779bbea5fbeab12f49e40bedf564540d/dist.zip?token=eyJ1c2VyX2lkIjo4NCwidGVhbV9pZCI6MzcsImZpbGVfaWQiOjEwfQ.ZSIECw.np-Q5CTYLLaNwgUo6mzRKFaJTP8"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 5,
+                "name": "Holo Curl",
+                "points": 100,
+                "solves": 0
+            },
+            {
+                "category": "Web",
+                "description": "**Author**: `dimas`\r\n\r\nJust finished a new website for Hololep, can you test it for me?\r\n    ![](https://c.tenor.com/P3CZFZ40xgEAAAAC/tenor.gif)\r\n\t\t\r\nhttp://175.45.187.254:45194/",
+                "files": [
+                    "/files/b5e6cbd6417b053c64df1c774ab0bafb/dist.zip?token=eyJ1c2VyX2lkIjo4NCwidGVhbV9pZCI6MzcsImZpbGVfaWQiOjEyfQ.ZSIECw.XP2fg3Nw0BOY0Zb2Q6-uly7qMHA"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 7,
+                "name": "Holo Subtitle",
+                "points": 100,
+                "solves": 0
+            },
+            {
+                "category": "Web",
+                "description": "**Author**: `dimas`\r\n\r\nHolo agency has a secret that you need to obtain.\r\nCan you get their secret for me?\r\n\r\napp: http://175.45.187.254:15907/  \r\nbot: http://175.45.187.254:10338/\r\n",
+                "files": [
+                    "/files/310047ab562b78f135c557e945173375/dist.zip?token=eyJ1c2VyX2lkIjo4NCwidGVhbV9pZCI6MzcsImZpbGVfaWQiOjExfQ.ZSIECw.haKNySAU7UcCfojzev3xy9aYbTI"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 6,
+                "name": "Holo Secret",
+                "points": 100,
+                "solves": 0
+            }
+        ]
+    },
+    "title": "CTF - HOLOGY 6.0",
+    "url": "https://eface-filkom.ub.ac.id"
+}

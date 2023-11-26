@@ -1,8 +1,8 @@
-from Crypto.Util.number import getPrime, inverse, bytes_to_long
+from Crypto.Util.number import getPrime, inverse, bytes_to_long, long_to_bytes
 import random
 import math
 
-FLAG = b'crypto{??????????????}'
+FLAG = b'crypto{testing}'
 
 
 def gen_key():
@@ -40,3 +40,5 @@ e = encrypt(q, h, m)
 
 print(f'Public key: {(q,h)}')
 print(f'Encrypted Flag: {e}')
+
+print(f'Private key: {(f,g)}')
