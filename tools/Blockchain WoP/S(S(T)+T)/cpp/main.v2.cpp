@@ -60,7 +60,7 @@ bool checkZeroPadding(unsigned char* sha, size_t difficulty) {
 int main() {
 	unsigned difficulty = 1; // Number of zero before
 	size_t threads_n = 2; // Concurrent threads
-    srand((unsigned) time(NULL));
+	srand((unsigned) time(NULL));
 	uint64_t ticket = 100000000 + rand() % 200000000000; // Initial ticket is equal to zero
 	uint64_t range = 20000000000;
 
