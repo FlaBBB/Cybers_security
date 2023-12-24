@@ -20,10 +20,7 @@ $WoP = Sha256(Sha256(Ticket) + Ticket)$
 - **Compile Flags**: -O3 -march=native -flto
 - **Average Speed**: 653,901.00 H/s 
 </br>
-<<<<<<< HEAD
 
-=======
->>>>>>> 27c01afc07c37ff51aa3027ec174642d468aba76
 - **Code Version**: 2.0.0
 - **Compiler Version**: 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04)
 - **Compile Flags**: -O3 -march=native -flto
