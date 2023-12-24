@@ -52,5 +52,6 @@ print(s.check())
 model = s.model()
 res = bytearray(75)
 for m in model:
+    print(m)
     res[int(m.name()[5:])] = model[m].as_long()
 print(res)

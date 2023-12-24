@@ -1,0 +1,237 @@
+{
+    "data": {
+        "Cryptography": [
+            {
+                "category": "Cryptography",
+                "description": "**Author**: `Dimas`\n\nWeb-Crypto :')\n",
+                "files": [
+                    "/files/fdf79ed84834da7fc94c3c292aee200f/dist.zip?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6MzR9.ZXphtQ.lUvkvtZJG5Drlb3zlIenNJmiBpQ"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 1,
+                "name": "JWT ARCANUM",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Cryptography",
+                "description": "**Author**: `fire`\r\n\r\nCryptography is always related to math, so I think you need to learn algebra to solve this problem. Good luck!",
+                "files": [
+                    "/files/4460cea2d2f3f1de58fd63f21ee4b492/output.txt?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6MzZ9.ZXphtQ.n_Rj41-K4Ee1W8v67CQfzV4D-IQ",
+                    "/files/2a2af89f60fc489f56c18737bab3cef4/soal.py?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6Mzd9.ZXphtQ.Lirw-cAxUsUbIUExL_L6bIM3DyU"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 3,
+                "name": "calculus",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Cryptography",
+                "description": "**Author**: `aimardcr`\n\nA simple service to encrypt/decrypt your message, let's hope it's safe enough!\n",
+                "files": [
+                    "/files/15c2760646a34ef18ba427946248796c/app.py?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6MzV9.ZXphtQ._9vDUYoC4UX6fPhdtYkt4Ns5HB4"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 15,
+                "name": "Not So Old School",
+                "points": 1000,
+                "solves": 0
+            }
+        ],
+        "Forensics": [
+            {
+                "category": "Forensics",
+                "description": "**Author**: `fire`\r\n\r\nSo, here's the thing. I just came to the Internet caffee (warnet) and \r\nafter several minutes using the computer, I found a strange process \r\nrunning in the backround. Then i found out it was a keylogger. Luckily \r\nI can stop the process and don't let the attacker get this keylogger \r\nfile. Because i just logged in to my server before.\r\n\r\nflag = STS23{`<my server password>`}\r\n",
+                "files": [
+                    "/files/8ff49842ce1ecafc4180f1d40e8a9acf/log.pcapng?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6Mzh9.ZXphtQ.4gIApLgSmhueehMn6hJpP-3z2oc"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 4,
+                "name": "keylogger",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Forensics",
+                "description": "Is that a `qrcode`? why is it so big?",
+                "files": [
+                    "/files/171ca9b3b5ae2005783cc1d6330b4160/pemanasan.rar?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6Mzl9.ZXphtQ.veL63M--XFBiKqpu8byMG-vaVxs"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 5,
+                "name": "pemanasan",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Forensics",
+                "description": "**Author**: `fire`\r\n\r\nSo, I found an USB in my class, I took it and I put it in my laptop. \r\nThen i found interesting anime (the anime is in mp4) and rar file and I \r\ncopied it on my laptop. When i tried to open the file it showed pop up \r\nthat my computer has been comprimized and my laptop restared after 1 minutes \r\nand I immediately remove all file that've been copied to my computer. As \r\nan engineer i always capture usb traffic using wireshark. Please help \r\nme to figure out what's happening in my laptop.\r\n\r\n[download](https://drive.google.com/file/d/1JFQ2p1tRGp_s1rrHWX6glHP2r4nftjR7/view?usp=sharing)\r\n\r\nwrap your flag with STS23{`<value>`}\r\n",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 16,
+                "name": "sloppy",
+                "points": 1000,
+                "solves": 0
+            }
+        ],
+        "PWN": [
+            {
+                "category": "PWN",
+                "description": "**Author**: `izin bertanya`\n\ntingkat kesetresan kuliah:\nsemester 3: prepare mancing (survey joran)\nsemester 4-6: full mancing \nsemester 7+: nyelem dalem empang\n",
+                "files": [
+                    "/files/c2b7eb8d935a3cd80372eafd4e071e98/crynote.zip?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6NDB9.ZXphtQ.EmbVzwRz1r0YAN1t7hfG6CUNM7U"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 6,
+                "name": "crynote",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "PWN",
+                "description": "**Author**: `izin bertanya`\n\n~~Open~~ Only Read Write.\n",
+                "files": [
+                    "/files/1509806fbbb54312329a2992dece9e35/orw.zip?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6NDJ9.ZXphtQ.onkwX-cSXeR4xLJhU3OTMln5SBw"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 7,
+                "name": "orw",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "PWN",
+                "description": "**Author**: `izin bertanya`\n\nlast time in TCP1PCTF I dropped a kernel chall, but apparently no one solved with intended solution. Pls this time solve it with intended one :prayge:\n",
+                "files": [
+                    "/files/b4541d890b1f1dd44387828e1129fe8b/skull.zip?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6NDF9.ZXphtQ.Qh0Yiekdfgwr29eqqbrzynE5q9g"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 17,
+                "name": "\ud83d\udc80\ud83d\udc80",
+                "points": 1000,
+                "solves": 0
+            }
+        ],
+        "Reverse Engineering": [
+            {
+                "category": "Reverse Engineering",
+                "description": "**Author**: `aimardcr`\r\n\r\nctf gaseru tanpa reversing apk kalo probsetnya aimar.\r\n",
+                "files": [
+                    "/files/df4e42558e8d1b7b632ace1e9bddf31e/JNI.apk?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6OX0.ZXphtg.Be2CQr5OY7zpLo87W0JhyCOTqvw"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 8,
+                "name": "Just Normal Interface",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Reverse Engineering",
+                "description": "**Author**: `izin bertanya`\r\n\r\nYet Another Reversing Flag Checker Challenge\r\n",
+                "files": [
+                    "/files/fe575c7017e34837e92092f0d2ff71cb/yarfcc?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6MjZ9.ZXphtQ.vGS8kXnZn9f--fMbXL4qiEdq52o"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 9,
+                "name": "yarfcc",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Reverse Engineering",
+                "description": "**Author**: `aimardcr`\r\n\r\nbingung mau bikin chall apa, jadi yaudah have fun aja main ni game.\r\nbtw wrong moves = wrong flag, even if u finished the game.\r\n",
+                "files": [
+                    "/files/c994e6f50888f3f522ca7dfc2f51a9c0/app.py?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6MTR9.ZXphtg.PO4SOvnWYuiGVsuoSfTclV48Pho"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 14,
+                "name": "Into the Maze",
+                "points": 1000,
+                "solves": 0
+            }
+        ],
+        "Web": [
+            {
+                "category": "Web",
+                "description": "**Author**: `Dimas`\n\nBlue Monday, Red Sunday...\n",
+                "files": [
+                    "/files/3bbe68fc4fef5242e6c27b68804b80b1/dist.zip?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6NDN9.ZXphtg.AgWz6mfd49PWNCm_pn6eoMJtTD4"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 10,
+                "name": "Blue Monday",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Web",
+                "description": "**Author**: `aimardcr`\n\nYou are a penetration tester hired by a small company who got their website hacked recently.\nThey said the hacker somehow got administrative privilege to the website, but there were no logs indicated that an our main admin account has been used/logged-on in other IP Address else than our administrator IP Address.\nCan you help this company to find the vulnerabilities so that they can patch it ASAP?\n",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 11,
+                "name": "Notes Manager",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Web",
+                "description": "**Author**: `Dimas`\n\nHave you heard the exciting news? The little princess has just created a website for fellow GT fans to connect and chat!\nBefore the official launch, we want to ensure a secure experience for everyone. Could you help us by testing it for potential XSS vulnerabilities?\nWe want to make sure her fans don't encounter any issues with data security,\nespecially from those pesky Android robots.\n",
+                "files": [
+                    "/files/5f6cb517cddbb8f9d6e7b3ff0ccf928a/dist.zip?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6NDV9.ZXphtg.zibzQdoJ2FwHO-zt5j8EAiV1lr8"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 12,
+                "name": "UREL-EX2S",
+                "points": 1000,
+                "solves": 0
+            },
+            {
+                "category": "Web",
+                "description": "**Author**: `Dimas`\n\nHave you heard about 'Bun,' the latest JavaScript compiler on the block?\nBeing a newcomer, there might be vulnerabilities waiting to be discovered, don't you think?\nI'm seeking your expertise to assist me in hacking into this Bun application of mine.\nYour skills could unveil potential weaknesses in this cutting-edge JavaScript compiler.\n",
+                "files": [
+                    "/files/0f7b61dd2b9cd042e3cd8cd91a305de9/dist.zip?token=eyJ1c2VyX2lkIjo4LCJ0ZWFtX2lkIjoxMiwiZmlsZV9pZCI6NDZ9.ZXphtg.5OlrWZF1mO6NP80JvpQQMBG1208"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 13,
+                "name": "Bun",
+                "points": 1000,
+                "solves": 0
+            }
+        ]
+    },
+    "title": "Secur{i}e The System",
+    "url": "http://34.101.126.116"
+}

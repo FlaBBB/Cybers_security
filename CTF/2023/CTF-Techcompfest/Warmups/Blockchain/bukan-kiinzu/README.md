@@ -1,0 +1,17 @@
+# bukan-kiinzu
+
+**Category** : Blockchain
+**Points** : 500
+
+**Author**: `Dimas`
+
+Yang buat bukan mas Kiinzu, tapi semoga enjoyable for you...
+
+
+http://103.152.242.78:11661
+
+## Files : 
+ - [Setup.sol](./Setup.sol)
+ - [Chall.sol](./Chall.sol)
+
+

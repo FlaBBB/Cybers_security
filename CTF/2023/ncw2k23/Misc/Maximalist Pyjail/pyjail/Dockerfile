@@ -15,5 +15,4 @@ RUN chown root:ctf /home/ctf/feedback
 RUN chmod 770 /home/ctf/feedback
 
 USER ctf
-
 CMD socat TCP-L:13337,fork EXEC:"python3 /home/ctf/maximalist_pyjail.py",reuseaddr,stderr

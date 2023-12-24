@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matryoshka</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .centered-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px; /* Set a minimum height to create space for the image */
+        }
+
+        .centered-image img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <img class="img-fluid" src="matryoshka.png">
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <!-- First Panel -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Combine multiple secrets</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="inputName">Username</label>
+                                <input type="text" class="form-control" id="inputName">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputMessage">Secret</label>
+                                <input type="password" class="form-control" id="inputMessage">
+                            </div>
+                            <button id="btn-store" type="button" class="btn btn-primary">Submit</button>
+                            <div class="form-group mt-3">
+                                <textarea rows="5" id="response-1" class="form-control" readonly></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Panel -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Verify Token</h5>
+                        <div class="form-group">
+                            <textarea class="form-control" id="textArea" rows="8"
+                                placeholder="Enter token here..."></textarea>
+                        </div>
+                        <button id="btn-verify" class="btn btn-success btn-lg btn-block">Verify</button>
+                        <div class="my-3"></div>
+                        <p id="response-2"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#btn-store').click(function() {
+
+                let postData = {
+                    'username': $("#inputName").val(),
+                    'secret': $("#inputMessage").val()
+                }
+                
+                $.ajax({
+                    url: '/store', // Replace with your API endpoint
+                    method: 'POST',
+                    data: JSON.stringify(postData),
+                    contentType: "application/json",
+                    dataType: 'json',
+                    success: function(response) {
+                        $("#response-1").val(response.token);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+
+            });
+
+            $('#btn-verify').click(function() {
+
+                const token = $("#textArea").val();
+
+                $.ajax({
+                    url: `/verify/${token}`, // Replace with your API endpoint
+                    method: 'GET',
+                    success: function(response) {
+                        let users = response.users.join(", ")
+                        let text = `Secrets belong to: ${users}`
+                        $("#response-2").text(text);
+                    },
+                    error: function(xhr, status, error) {
+                        $("#response-2").text(error);
+                    }
+                });
+
+});
+        });
+       
+        
+    </script>
+</body>
+
+</html>

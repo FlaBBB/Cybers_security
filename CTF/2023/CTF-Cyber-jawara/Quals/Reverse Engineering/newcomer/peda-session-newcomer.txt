@@ -1,0 +1,2 @@
+break rand.Xoshiro256.init
+

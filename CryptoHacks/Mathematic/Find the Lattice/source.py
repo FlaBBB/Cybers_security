@@ -9,7 +9,7 @@ def gen_key():
     q = getPrime(512)
     upper_bound = int(math.sqrt(q // 2))
     lower_bound = int(math.sqrt(q // 4))
-    f = random.randint(2, upper_bound)
+    f = random.randint(2, upper_bound) 
     while True:
         g = random.randint(lower_bound, upper_bound)
         if math.gcd(f, g) == 1:
