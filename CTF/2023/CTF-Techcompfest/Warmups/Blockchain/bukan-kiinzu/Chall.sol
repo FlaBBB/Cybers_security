@@ -9,15 +9,18 @@ contract Chall {
     constructor(){
         owner = msg.sender;
     }
+
     function free_token() external payable {
         require(tokens[msg.sender] < 10, "Kamu sudah mengeclaim token ini");
         require(already_claims[msg.sender] == false, "Kamu sudah mengeclaim token ini");
         tokens[msg.sender] = 10;
         already_claims[msg.sender] = true;
     }
+    
     function random() internal view returns (uint256) {
         return uint256(blockhash(block.number));
     }
+
     function start(uint256 your_guess) external payable {
         require(tokens[msg.sender] > 0, "Kamu bangkrut");
         uint256 to_guess = random();
@@ -27,6 +30,7 @@ contract Chall {
             tokens[msg.sender] -= 10;
         }
     }
+
     function win() external payable {
         require(tokens[msg.sender] > 100, "Kamu belum menang");
         is_win = true;

@@ -1,0 +1,8 @@
+version: "3"
+services:
+  gimmick-dsa:
+    build: .
+    ports:
+      - "17425:17425"
+    container_name: gimmick-dsa
+    restart: always

@@ -8,6 +8,7 @@ contract Setup {
     constructor() payable {
         TARGET = new Chall();
     }
+    
     function isSolved() public view returns (bool) {
         return TARGET.is_win();
     }

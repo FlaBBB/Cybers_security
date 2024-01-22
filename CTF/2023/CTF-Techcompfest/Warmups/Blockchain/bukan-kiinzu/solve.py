@@ -117,8 +117,8 @@ class HackContract(BaseUndeployedContract):
 
 if __name__ == "__main__":
     setup = SetupContract()
-    setup.get_balance(setup.account_address)
     target = setup.target()
+    # print(target)
     chall = ChallContract(target)
     hack_base = HackContract()
     hack = hack_base.deploy_to_target(target)
