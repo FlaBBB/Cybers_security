@@ -1,0 +1,107 @@
+export memory memory(initial: 256, max: 256);
+
+global g_a:int = 5260384;
+
+export table indirect_function_table:funcref(min: 2, max: 2);
+
+data d_kuRGXv1f159xdbwXIs1(offset: 1024) =
+  "k\eeuR\d4\09\c7\f9(\17\cf\eb\ee\1dG\1bX\8av\b4)\ac\e4\1c1\98\b2f\a21*\8d"
+  "5\05\fd\0c\ad\1a\e79xdb\03\87\bfw\d1\9f\90X~I\cf\80 \16\f3\0e\01\d2s\e2"
+  "1";
+data d_b(offset: 1092) = "\ff\0f\00\00\c4\87\05\00\00\04";
+
+export function initialize() {
+  nop
+}
+
+export function get_flag():int {
+  var f:int;
+  var d:int;
+  var e:int;
+  var h:long;
+  var i:long;
+  var b:{ a:long, b:long, c:long, d:long, e:long, f:long, g:long, h:long } = 
+    g_a + -64;
+  1112[0]:int = 1097790850;
+  1104[0]:long = -6685739018505682416L;
+  var a:int = 3;
+  var c:int = 83886608;
+  loop L_a {
+    d = a << 2;
+    (d + 1104)[0]:int = ((f = (d + 1096)[0]:int) ^ (a ^ c)) ^ -1640531527;
+    e = a + 1;
+    if (eqz(e == 4096)) {
+      ((e << 2) + 1104)[0]:int =
+        ((c = (d + 1100)[0]:int) ^ (e ^ f)) ^ -1640531527;
+      a = a + 2;
+      continue L_a;
+    }
+  }
+  b.h = -4775302468169978968L;
+  b.g = -6511466616283819120L;
+  b.f = -8247630764397659272L;
+  b.e = 8462949161198052192L;
+  b.d = 6726785013084212040L;
+  b.c = 4990620864970371888L;
+  b.b = 3254456716856531736L;
+  b.a = 1518292568742691584L;
+  a = d_b[1]:int;
+  d = d_b[0]:int;
+  c = 0;
+  loop L_c {
+    d = d + 1 & 4095;
+    e = (d << 2) + 1104;
+    e[0]:int =
+      (a = 
+         select_if(
+           -1,
+           0,
+           f = 
+             (a = 
+                i32_wrap_i64(
+                  (i = (h = i64_extend_i32_u(a) + e[0]:uint * 18782L) >> 32L) + h)) <
+             (e = i32_wrap_i64(i))) -
+         a -
+         2);
+    var g:int = b + (a >> 16 & 63);
+    g[0]:byte = g[0]:ubyte ^ a;
+    a = e + f;
+    c = c + 1;
+    if (c != -1) continue L_c;
+  }
+  d_b[1]:int = a;
+  d_b[0]:int = d;
+  a = 0;
+  loop L_d {
+    c = d_b[2]:int + a;
+    c[0]:byte = (a + b)[0]:ubyte ^ c[0]:ubyte;
+    c = a | 1;
+    d = c + d_b[2]:int;
+    d[0]:byte = (b + c)[0]:ubyte ^ d[0]:ubyte;
+    a = a + 2;
+    if (a != 64) continue L_d;
+  }
+  return d_b[2]:int;
+}
+
+export function get_flag_length():int {
+  return 64
+}
+
+export function stackSave():int {
+  return g_a
+}
+
+export function stackRestore(a:int) {
+  g_a = a
+}
+
+export function stackAlloc(a:int):int {
+  a = g_a - a & -16;
+  g_a = a;
+  return a;
+}
+
+export function errno_location():int {
+  return 17488
+}

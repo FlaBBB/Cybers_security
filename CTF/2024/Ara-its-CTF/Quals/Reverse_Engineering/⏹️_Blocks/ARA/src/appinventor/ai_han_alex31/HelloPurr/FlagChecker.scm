@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["ai2.appinventor.mit.edu"],"YaVersion":"226","Source":"Form","Properties":{"$Name":"FlagChecker","$Type":"Form","$Version":"31","AppName":"HelloPurr","ShowListsAsJson":"False","Sizing":"Fixed","Theme":"Classic","Title":"FlagChecker","Uuid":"0","$Components":[{"$Name":"Label1","$Type":"Label","$Version":"5","Text":"Input the flag as Unsigned Long Data Type","Uuid":"2054815543"},{"$Name":"TextBox1","$Type":"TextBox","$Version":"6","Hint":"For example: 1337","Uuid":"191153314"},{"$Name":"Button1","$Type":"Button","$Version":"7","Text":"Check","Uuid":"2007138951"},{"$Name":"Notifier1","$Type":"Notifier","$Version":"6","Uuid":"-388680583"}]}}
+|#

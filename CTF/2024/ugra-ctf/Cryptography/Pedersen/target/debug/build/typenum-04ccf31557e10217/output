@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=D:\Programming\CySec\Cyber Security\CTF\2024\ugra-ctf\Cryptography\Pedersen\target\debug\build\typenum-04ccf31557e10217\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=D:\Programming\CySec\Cyber Security\CTF\2024\ugra-ctf\Cryptography\Pedersen\target\debug\build\typenum-04ccf31557e10217\out\op.rs

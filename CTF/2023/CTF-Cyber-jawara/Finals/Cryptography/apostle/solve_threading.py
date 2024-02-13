@@ -42,7 +42,12 @@ while True:
     rkp1 = copy.deepcopy(key_matrices[1])
     rkp1_im = copy.deepcopy(rkp1)
     inv_mix_columns(rkp1_im)
-    if rkp1_im[0][1] % 2 == 0 and rkp1_im[0][2] % 2 == 0 and rkp1_im[1][3] % 2 == 0 and rkp1_im[2][3] % 2 == 0:
+    if (
+        rkp1_im[0][1] % 2 == 0
+        and rkp1_im[0][2] % 2 == 0
+        and rkp1_im[1][3] % 2 == 0
+        and rkp1_im[2][3] % 2 == 0
+    ):
         continue
     break
 
@@ -85,9 +90,13 @@ class Attack:
                     r = kp[i] ^ w
                     if self.K[0][i] != None:
                         if self.K[0][i] != r:
-                            print(
-                                f"KP[0][{i}] ^ w[{i}] -> K[0][{i}]", r, self.K[0][i]
-                            ) if self.DEBUG else None
+                            (
+                                print(
+                                    f"KP[0][{i}] ^ w[{i}] -> K[0][{i}]", r, self.K[0][i]
+                                )
+                                if self.DEBUG
+                                else None
+                            )
                             return False
                     else:
                         self.K[0][i] = r
@@ -101,11 +110,15 @@ class Attack:
                 if kp != None:
                     r = w[i] ^ kp
                     if self.K_im[0][i] != None and self.K_im[0][i] != r:
-                        print(
-                            f"w[{i}] ^ KP_im[0][{i}] -> K_im[0][{i}]",
-                            r,
-                            self.K_im[0][i],
-                        ) if self.DEBUG else None
+                        (
+                            print(
+                                f"w[{i}] ^ KP_im[0][{i}] -> K_im[0][{i}]",
+                                r,
+                                self.K_im[0][i],
+                            )
+                            if self.DEBUG
+                            else None
+                        )
                         return False
                     self.K_im[0][i] = r
 
@@ -125,11 +138,15 @@ class Attack:
                     r = kp ^ w
                     if self.K_im[i][j] != None:
                         if self.K_im[i][j] != r:
-                            print(
-                                f"KP_im[{i - 1}][{j}] ^ KP_im[{i}][{j}] -> K_im[{i}][{j}]",
-                                r,
-                                self.K_im[i][j],
-                            ) if self.DEBUG else None
+                            (
+                                print(
+                                    f"KP_im[{i - 1}][{j}] ^ KP_im[{i}][{j}] -> K_im[{i}][{j}]",
+                                    r,
+                                    self.K_im[i][j],
+                                )
+                                if self.DEBUG
+                                else None
+                            )
                             return False
                     else:
                         self.K_im[i][j] = r
@@ -140,9 +157,13 @@ class Attack:
                 for j, k_t in enumerate(K_temp):
                     if self.K[i][j] != None:
                         if self.K[i][j] != k_t:
-                            print(
-                                f"K_im[{i}][{j}] != K[{i}][{j}]", k_t, self.K[i][j]
-                            ) if self.DEBUG else None
+                            (
+                                print(
+                                    f"K_im[{i}][{j}] != K[{i}][{j}]", k_t, self.K[i][j]
+                                )
+                                if self.DEBUG
+                                else None
+                            )
                             return False
                     else:
                         self.K[i][j] = k_t
@@ -176,11 +197,15 @@ class Attack:
                 res = inv_s_box[r ^ self.K[0][i] ^ [1, 0, 0, 0][i]]
                 if self.K[3][i - 3] != None:
                     if self.K[3][i - 3] != res:
-                        print(
-                            f"KP[0][{i}] ^ K[0][{i}] -> K[3][{i} - 3]",
-                            res,
-                            self.K[3][i - 3],
-                        ) if self.DEBUG else None
+                        (
+                            print(
+                                f"KP[0][{i}] ^ K[0][{i}] -> K[3][{i} - 3]",
+                                res,
+                                self.K[3][i - 3],
+                            )
+                            if self.DEBUG
+                            else None
+                        )
                         return False
                 else:
                     self.K[3][i - 3] = res
@@ -195,9 +220,11 @@ class Attack:
                     return False
                 self.KP[0][i] = res
             elif r != None and l != None and r ^ l != self.K[0][i]:
-                print(
-                    f"KP[0][{i}] ^ w[{i}] != K[0][{i}]", r ^ l, self.K[0][i]
-                ) if self.DEBUG else None
+                (
+                    print(f"KP[0][{i}] ^ w[{i}] != K[0][{i}]", r ^ l, self.K[0][i])
+                    if self.DEBUG
+                    else None
+                )
                 return False
 
         return True
@@ -218,22 +245,30 @@ class Attack:
                 if l == None and r != None:
                     res = k[j] ^ r
                     if self.KP[i - 1][j] != None and self.KP[i - 1][j] != res:
-                        print(
-                            f"K[{i}][{j}] ^ KP[{i}][{j}] -> KP[{i - 1}][{j}]",
-                            res,
-                            self.KP[i][j],
-                        ) if self.DEBUG else None
+                        (
+                            print(
+                                f"K[{i}][{j}] ^ KP[{i}][{j}] -> KP[{i - 1}][{j}]",
+                                res,
+                                self.KP[i][j],
+                            )
+                            if self.DEBUG
+                            else None
+                        )
                         return False
                     self.KP[i - 1][j] = res
                     # assert res == rkp1[i - 1][j]
                 elif r == None and l != None:
                     res = k[j] ^ l
                     if self.KP[i][j] != None and self.KP[i][j] != res:
-                        print(
-                            f"K[{i}][{j}] ^ KP[{i - 1}][{j}] -> KP[{i}][{j}]",
-                            res,
-                            self.KP[i][j],
-                        ) if self.DEBUG else None
+                        (
+                            print(
+                                f"K[{i}][{j}] ^ KP[{i - 1}][{j}] -> KP[{i}][{j}]",
+                                res,
+                                self.KP[i][j],
+                            )
+                            if self.DEBUG
+                            else None
+                        )
                         return False
                     self.KP[i][j] = res
                     # assert res == rkp1[i][j]
@@ -252,11 +287,15 @@ class Attack:
                     res = k[j] ^ r
                     if self.KP_im[i - 1][j] != None:
                         if self.KP_im[i - 1][j] != res:
-                            print(
-                                f"K_im[{i}][{j}] ^ KP_im[{i}][{j}] -> KP_im[{i - 1}][{j}]",
-                                res,
-                                self.KP_im[i][j],
-                            ) if self.DEBUG else None
+                            (
+                                print(
+                                    f"K_im[{i}][{j}] ^ KP_im[{i}][{j}] -> KP_im[{i - 1}][{j}]",
+                                    res,
+                                    self.KP_im[i][j],
+                                )
+                                if self.DEBUG
+                                else None
+                            )
                             return False
                     else:
                         self.KP_im[i - 1][j] = res
@@ -266,11 +305,15 @@ class Attack:
                     res = k[j] ^ l
                     if self.KP_im[i][j] != None:
                         if self.KP_im[i][j] != res:
-                            print(
-                                f"K_im[{i}][{j}] ^ KP_im[{i - 1}][{j}] -> KP_im[{i}][{j}]",
-                                res,
-                                self.KP_im[i][j],
-                            ) if self.DEBUG else None
+                            (
+                                print(
+                                    f"K_im[{i}][{j}] ^ KP_im[{i - 1}][{j}] -> KP_im[{i}][{j}]",
+                                    res,
+                                    self.KP_im[i][j],
+                                )
+                                if self.DEBUG
+                                else None
+                            )
                             return False
                     else:
                         self.KP_im[i][j] = res
@@ -298,9 +341,15 @@ class Attack:
                 inv_mix_single_column(temp)
                 for j in range(4):
                     if self.K_im[i][j] != None and self.K_im[i][j] != temp[j]:
-                        print(
-                            f"K[{i}][{j}] -> K_im[{i}][{j}]", self.K_im[i][j], temp[j]
-                        ) if self.DEBUG else None
+                        (
+                            print(
+                                f"K[{i}][{j}] -> K_im[{i}][{j}]",
+                                self.K_im[i][j],
+                                temp[j],
+                            )
+                            if self.DEBUG
+                            else None
+                        )
                         return False
                     self.K_im[i][j] = temp[j]
             if not None in self.K_im[i]:
@@ -309,9 +358,15 @@ class Attack:
                 for j in range(4):
                     if self.K[i][j] != None:
                         if self.K[i][j] != temp[j]:
-                            print(
-                                f"K_im[{i}][{j}] -> K[{i}][{j}]", self.K[i][j], temp[j]
-                            ) if self.DEBUG else None
+                            (
+                                print(
+                                    f"K_im[{i}][{j}] -> K[{i}][{j}]",
+                                    self.K[i][j],
+                                    temp[j],
+                                )
+                                if self.DEBUG
+                                else None
+                            )
                             return False
                     else:
                         self.K[i][j] = temp[j]
@@ -323,11 +378,15 @@ class Attack:
                 for j in range(4):
                     if self.KP_im[i][j] != None:
                         if self.KP_im[i][j] != temp[j]:
-                            print(
-                                f"KP[{i}][{j}] -> KP_im[{i}][{j}]",
-                                self.KP_im[i][j],
-                                temp[j],
-                            ) if self.DEBUG else None
+                            (
+                                print(
+                                    f"KP[{i}][{j}] -> KP_im[{i}][{j}]",
+                                    self.KP_im[i][j],
+                                    temp[j],
+                                )
+                                if self.DEBUG
+                                else None
+                            )
                             return False
                     else:
                         self.KP_im[i][j] = temp[j]
@@ -338,9 +397,15 @@ class Attack:
                 mix_single_column(temp)
                 for j in range(4):
                     if self.KP[i][j] != None and self.KP[i][j] != temp[j]:
-                        print(
-                            f"KP_im[{i}][{j}] -> KP[{i}][{j}]", self.KP[i][j], temp[j]
-                        ) if self.DEBUG else None
+                        (
+                            print(
+                                f"KP_im[{i}][{j}] -> KP[{i}][{j}]",
+                                self.KP[i][j],
+                                temp[j],
+                            )
+                            if self.DEBUG
+                            else None
+                        )
                         return False
                     self.KP[i][j] = temp[j]
         return True
@@ -519,7 +584,7 @@ class Bruteforcer:
             with ThreadPoolExecutor() as executor:
                 futures = []
                 for p in (pbar := tqdm(possiblity, total=len(possiblity))):
-                    pbar.set_description(f"Processing possibilities ~ {p}")
+                    # pbar.set_description(f"Processing possibilities ~ {p}")
                     futures.append(
                         executor.submit(
                             process_possibility,
@@ -619,12 +684,12 @@ attack.forward(0, 0)
 attack.forward(2, 3)
 attack.forward(3, 3)
 
-# attack.KP_im[0][1] = rkp1_im[0][1]
-# attack.backward(1, 0)
-# attack.KP_im[0][2] = rkp1_im[0][2]
-# attack.backward(2, 0)
+attack.KP_im[0][1] = rkp1_im[0][1]
+attack.backward(1, 0)
+attack.KP_im[0][2] = rkp1_im[0][2]
+attack.backward(2, 0)
 
 brute = attack.get_bruteforcer()
-brute.add("KP_im_0_1", "KP_im_0_2")
+# brute.add("KP_im_0_1", "KP_im_0_2")
 brute.add("KP_im_1_3", "KP_im_2_3")
 brute.run(True)

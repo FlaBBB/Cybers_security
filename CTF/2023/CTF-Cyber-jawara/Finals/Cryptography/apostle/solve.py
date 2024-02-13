@@ -723,7 +723,12 @@ forward(0, 0)
 forward(2, 3)
 forward(3, 3)
 
+KP_im[0][1] = rkp0_im[0][1]
+KP_im[0][2] = rkp0_im[0][2]
+backward(1, 0)
+backward(2, 0)
+
 brute = Bruteforcer()
-brute.add("KP_im_0_1", "KP_im_0_2")
+# brute.add("KP_im_0_1", "KP_im_0_2")
 brute.add("KP_im_1_3", "KP_im_2_3")
 brute.run(True)

@@ -467,17 +467,8 @@ H = Matrix(
         ],
     ],
 )
-
-inv_G = G.inverse()
-
-m = 0
-_G = H
-
-while _G != G:
-    if m and m % 1000 == 0:
-        print(m, end="\r")
-    _G *= inv_G
-    m += 1
+if G.is_invertible():
+    m = discrete_log_lambda(H, G, (0, 2**128))
 
 print(m)
 print(long_to_bytes(m))

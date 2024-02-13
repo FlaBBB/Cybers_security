@@ -1,0 +1,1 @@
+data = open("chall.html", "rb").read()
