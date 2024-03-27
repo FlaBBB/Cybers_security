@@ -1,0 +1,3 @@
+[submodule "CTF/2024/GCC-CTF/Web3/First_drop/exploit/lib/openzeppelin-contracts"]
+	path = CTF/2024/GCC-CTF/Web3/First_drop/exploit/lib/openzeppelin-contracts
+	url = https://github.com/@OpenZeppelin/openzeppelin-contracts

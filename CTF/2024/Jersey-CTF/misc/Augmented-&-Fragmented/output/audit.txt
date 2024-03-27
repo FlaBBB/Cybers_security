@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Mar 24 19:35:43 2024
+Invocation: foremost -i nicc_aug3.png 
+Output directory: /mnt/d/Programming/CySec/Cyber Security/CTF/2024/Jersey-CTF/misc/Augmented-&-Fragmented/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: nicc_aug3.png
+Start: Sun Mar 24 19:35:43 2024
+Length: 44 KB (45485 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	      44 KB 	          0 	  (783 x 787)
+Finish: Sun Mar 24 19:35:43 2024
+
+1 FILES EXTRACTED
+	
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sun Mar 24 19:35:44 2024

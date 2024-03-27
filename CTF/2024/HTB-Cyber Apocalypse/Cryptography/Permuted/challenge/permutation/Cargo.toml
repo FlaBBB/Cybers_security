@@ -1,0 +1,20 @@
+[package]
+name = "permutation"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+opt-level = 3
+
+[profile.dev.package."*"]
+opt-level = 3
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+factorial = "0.4.0"
+indicatif = "0.17.8"
+rand = "0.8.5"
+fxhash = "0.2.1"
+num-bigint = "0.4.4"
+num-traits = "0.2.18"

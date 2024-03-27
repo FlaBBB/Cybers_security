@@ -1,0 +1,3496 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="https://osu.ppy.sh/images/favicon/apple-touch-icon.png">
+<link rel="icon" sizes="32x32" href="https://osu.ppy.sh/images/favicon/favicon-32x32.png">
+<link rel="icon" sizes="16x16" href="https://osu.ppy.sh/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://osu.ppy.sh/site.webmanifest">
+<link rel="mask-icon" href="https://osu.ppy.sh/images/favicon/safari-pinned-tab.svg" color="#e2609a">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="theme-color" content="hsl(45, 10%, 40%)"> 
+
+<meta charset="utf-8">
+<meta name="description" content="Multiplayer
+Multiplayer (sometimes shortened to Multi) is a mode in which up to 16 players can compete against each other individually or in teams, or play together co-operatively, on maps decided by the host.
+The osu!academy covers this part of the client in video format in Episode 6, along with...">
+<meta name="keywords" content="osu, peppy, ouendan, elite, beat, agents, ds, windows, game, taiko, tatsujin, simulator, sim, xna, ddr, beatmania, osu!, osume">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="search" type="application/opensearchdescription+xml" title="osu! search" href="https://osu.ppy.sh/opensearch.xml">
+
+<meta property="og:site_name" content="osu!">
+<meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://osu.ppy.sh/wiki/en/Client/Interface/Multiplayer">
+
+                        <meta property="og:description" content="Multiplayer
+Multiplayer (sometimes shortened to Multi) is a mode in which up to 16 players can compete against each other individually or in teams, or play together co-operatively, on maps decided by the host.
+The osu!academy covers this part of the client in video format in Episode 6, along with...">
+                                    <meta property="og:title" content="Multiplayer · wiki">
+            
+
+<meta name="csrf-param" content="_token">
+<meta name="csrf-token" content="TiLBY66l9s9Rd0jhcLb6wwYhXkRDvWj9nkdg7oQX">
+
+<meta name="turbolinks-cache-control" content="no-preview">
+
+
+<link rel="stylesheet" media="all" href="/assets/css/app.fcaa6859.css" data-turbolinks-track="reload">
+
+<script>
+    var currentLocale = "en";
+    var fallbackLocale = "en";
+    var experimentalHost = "lazer.ppy.sh"
+</script>
+
+<script src="/assets/js/runtime.f36610ff.js" data-turbolinks-track="reload"></script>
+<script src="/assets/js/vendor.b719dc74.js" data-turbolinks-track="reload"></script>
+
+
+<script src="/assets/js/locales/en.f4e6a998.js" data-turbolinks-track="reload"></script>
+
+<script src="/assets/js/commons.7bd5d475.js" data-turbolinks-track="reload"></script>
+<script src="/assets/js/app.8bb26418.js" data-turbolinks-track="reload"></script>
+
+<script
+    src="/assets/js/moment-locales/en-gb.88e58be3.js"
+    data-turbolinks-track="reload"
+></script>
+
+
+    <link rel="canonical" href="https://osu.ppy.sh/wiki/en/Client/Interface/Multiplayer">
+
+            <link rel="alternate" hreflang="en" href="https://osu.ppy.sh/wiki/en/Client/Interface/Multiplayer" />
+            <link rel="alternate" hreflang="fr" href="https://osu.ppy.sh/wiki/fr/Client/Interface/Multiplayer" />
+            <link rel="alternate" hreflang="ru" href="https://osu.ppy.sh/wiki/ru/Client/Interface/Multiplayer" />
+            <link rel="alternate" hreflang="zh" href="https://osu.ppy.sh/wiki/zh/Client/Interface/Multiplayer" />
+            <title>Interface / Multiplayer · wiki | osu!</title>
+    </head>
+
+    <body
+        class="
+            t-section
+            osu-layout osu-layout--body
+            
+        "
+    >
+        <style>
+            :root {
+                --base-hue: 45;
+                --base-hue-deg: 45deg;
+            }
+        </style>
+        <div id="overlay" class="blackout blackout--overlay" style="display: none;"></div>
+        <div class="blackout js-blackout" data-visibility="hidden"></div>
+
+        
+                    <div class="visible-xs no-print js-header--main">
+    <div class="navbar-mobile-before"></div>
+
+    <div class="navbar-mobile" role="navigation">
+        <div class="navbar-mobile__header-section">
+            <a class="navbar-mobile__logo" href="https://osu.ppy.sh/home"></a>
+            <span class="navbar-mobile__brand u-ellipsis-overflow">
+                wiki
+            </span>
+        </div>
+
+        <div class="navbar-mobile__header-section navbar-mobile__header-section--buttons">
+            <button
+                type="button"
+                class="navbar-mobile__toggle js-click-menu"
+                data-click-menu-target="mobile-menu"
+            >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-mobile__toggle-icon">
+                    <i class="fas fa-chevron-down"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div
+        class="mobile-menu js-click-menu u-fancy-scrollbar"
+        data-click-menu-id="mobile-menu"
+    >
+        <div class="mobile-menu__content">
+            <div class="mobile-menu__tabs">
+                                    <button
+                        class="mobile-menu-tab mobile-menu-tab--user js-user-link"
+                    >
+                        <span class="mobile-menu-tab__avatar">
+                            <span class="avatar avatar--full-rounded avatar--guest"></span>
+                        </span>
+
+                        <span class="u-ellipsis-overflow">
+                            sign in / register
+                        </span>
+                    </button>
+                
+                <button class="mobile-menu-tab js-click-menu" data-click-menu-target="mobile-nav">
+                    <span class="fas fa-sitemap"></span>
+                </button>
+
+                            </div>
+
+            <div class="mobile-menu__item js-click-menu" data-click-menu-id="mobile-user">
+                <div class="navbar-mobile-item js-click-menu--close">
+            <a
+            class="js-user-link navbar-mobile-item__main navbar-mobile-item__main--user"
+            href="#"
+            title="click to sign in"
+        >
+            <span class="avatar avatar--guest avatar--navbar-mobile"></span>
+
+            Guest
+        </a>
+    </div>
+            </div>
+
+            <div class="mobile-menu__item js-click-menu" data-click-menu-id="mobile-nav">
+                <div class="navbar-mobile-item">
+        <a
+            data-click-menu-target="nav-mobile-home"
+            class="navbar-mobile-item__main js-click-menu"
+            href="https://osu.ppy.sh/home"
+        >
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--closed">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--opened">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+
+            home
+        </a>
+
+        <ul class="navbar-mobile-item__submenu js-click-menu" data-click-menu-id="nav-mobile-home">
+                                                                                <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/home/news"
+                    >
+                        news
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/wiki/en/People/osu%21_team"
+                    >
+                        team
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/home/changelog"
+                    >
+                        changelog
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/home/download"
+                    >
+                        download
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/home/search"
+                    >
+                        search
+                    </a>
+                </li>
+                    </ul>
+    </div>
+    <div class="navbar-mobile-item">
+        <a
+            data-click-menu-target="nav-mobile-beatmaps"
+            class="navbar-mobile-item__main js-click-menu"
+            href="https://osu.ppy.sh/beatmapsets"
+        >
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--closed">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--opened">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+
+            beatmaps
+        </a>
+
+        <ul class="navbar-mobile-item__submenu js-click-menu" data-click-menu-id="nav-mobile-beatmaps">
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/beatmapsets"
+                    >
+                        beatmap listing
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/beatmaps/artists"
+                    >
+                        featured artists
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/beatmaps/packs"
+                    >
+                        beatmap packs
+                    </a>
+                </li>
+                    </ul>
+    </div>
+    <div class="navbar-mobile-item">
+        <a
+            data-click-menu-target="nav-mobile-rankings"
+            class="navbar-mobile-item__main js-click-menu"
+            href="https://osu.ppy.sh/rankings/osu/performance"
+        >
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--closed">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--opened">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+
+            rankings
+        </a>
+
+        <ul class="navbar-mobile-item__submenu js-click-menu" data-click-menu-id="nav-mobile-rankings">
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/rankings/osu/performance"
+                    >
+                        performance
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/rankings/osu/charts"
+                    >
+                        spotlights
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/rankings/osu/score"
+                    >
+                        score
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/rankings/osu/country"
+                    >
+                        country
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/multiplayer/rooms/latest"
+                    >
+                        multiplayer
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/seasons/latest"
+                    >
+                        seasons
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/rankings/kudosu"
+                    >
+                        kudosu
+                    </a>
+                </li>
+                    </ul>
+    </div>
+    <div class="navbar-mobile-item">
+        <a
+            data-click-menu-target="nav-mobile-community"
+            class="navbar-mobile-item__main js-click-menu"
+            href="https://osu.ppy.sh/community/forums"
+        >
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--closed">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--opened">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+
+            community
+        </a>
+
+        <ul class="navbar-mobile-item__submenu js-click-menu" data-click-menu-id="nav-mobile-community">
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/community/forums"
+                    >
+                        forum
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/community/chat"
+                    >
+                        chat
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/community/contests"
+                    >
+                        contests
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/community/tournaments"
+                    >
+                        tournaments
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/community/livestreams"
+                    >
+                        live streams
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://discord.gg/ppy"
+                    >
+                        development
+                    </a>
+                </li>
+                    </ul>
+    </div>
+    <div class="navbar-mobile-item">
+        <a
+            data-click-menu-target="nav-mobile-store"
+            class="navbar-mobile-item__main js-click-menu"
+            href="https://osu.ppy.sh/store/listing"
+        >
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--closed">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--opened">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+
+            store
+        </a>
+
+        <ul class="navbar-mobile-item__submenu js-click-menu" data-click-menu-id="nav-mobile-store">
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/store/listing"
+                    >
+                        products
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/store/cart"
+                    >
+                        cart
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/store/orders"
+                    >
+                        order history
+                    </a>
+                </li>
+                    </ul>
+    </div>
+    <div class="navbar-mobile-item">
+        <a
+            data-click-menu-target="nav-mobile-help"
+            class="navbar-mobile-item__main js-click-menu"
+            href="https://osu.ppy.sh/wiki/en/Main_page"
+        >
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--closed">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+
+            <span class="navbar-mobile-item__icon navbar-mobile-item__icon--opened">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+
+            help
+        </a>
+
+        <ul class="navbar-mobile-item__submenu js-click-menu" data-click-menu-id="nav-mobile-help">
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/wiki/en/Main_page"
+                    >
+                        wiki
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/wiki/en/FAQ"
+                    >
+                        faq
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/wiki/en/Rules"
+                    >
+                        rules
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/wiki/en/Reporting_bad_behaviour/Abuse"
+                    >
+                        report abuse
+                    </a>
+                </li>
+                                            <li>
+                    <a
+                        class="navbar-mobile-item__submenu-item js-click-menu--close"
+                        href="https://osu.ppy.sh/wiki/en/Help_centre"
+                    >
+                        no, really, i need help!
+                    </a>
+                </li>
+                    </ul>
+    </div>
+
+<div class="navbar-mobile-item">
+    <button
+        class="navbar-mobile-item__main js-click-menu"
+        data-click-menu-target="nav-mobile-locale"
+    >
+        <span class="navbar-mobile-item__icon navbar-mobile-item__icon--closed">
+            <i class="fas fa-chevron-right"></i>
+        </span>
+
+        <span class="navbar-mobile-item__icon navbar-mobile-item__icon--opened">
+            <i class="fas fa-chevron-down"></i>
+        </span>
+
+        <span class="navbar-mobile-item__locale-flag">
+            <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ec-1f1e7.svg');"
+></span>
+        </span>
+
+        English
+    </button>
+
+    <ul class="navbar-mobile-item__submenu js-click-menu" data-click-menu-id="nav-mobile-locale">
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=en"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ec-1f1e7.svg');"
+></span>
+                    </span>
+
+                    English
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=ar"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f8-1f1e6.svg');"
+></span>
+                    </span>
+
+                    اَلْعَرَبِيَّةُ‎
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=be"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e7-1f1fe.svg');"
+></span>
+                    </span>
+
+                    беларуская мова
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=bg"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e7-1f1ec.svg');"
+></span>
+                    </span>
+
+                    български
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=ca"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e6-1f1e9.svg');"
+></span>
+                    </span>
+
+                    català
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=cs"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e8-1f1ff.svg');"
+></span>
+                    </span>
+
+                    česky
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=da"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e9-1f1f0.svg');"
+></span>
+                    </span>
+
+                    dansk
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=de"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e9-1f1ea.svg');"
+></span>
+                    </span>
+
+                    Deutsch
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=el"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ec-1f1f7.svg');"
+></span>
+                    </span>
+
+                    ελληνικά
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=es"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ea-1f1f8.svg');"
+></span>
+                    </span>
+
+                    español
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=fi"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1eb-1f1ee.svg');"
+></span>
+                    </span>
+
+                    suomi
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=fil"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f5-1f1ed.svg');"
+></span>
+                    </span>
+
+                    wikang Filipino
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=fr"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1eb-1f1f7.svg');"
+></span>
+                    </span>
+
+                    français
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=he"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ee-1f1f1.svg');"
+></span>
+                    </span>
+
+                    עִבְרִית‎
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=hu"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ed-1f1fa.svg');"
+></span>
+                    </span>
+
+                    magyar
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=id"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ee-1f1e9.svg');"
+></span>
+                    </span>
+
+                    bahasa Indonesia
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=it"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ee-1f1f9.svg');"
+></span>
+                    </span>
+
+                    italiano
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=ja"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ef-1f1f5.svg');"
+></span>
+                    </span>
+
+                    日本語
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=ko"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f0-1f1f7.svg');"
+></span>
+                    </span>
+
+                    한국어
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=lt"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f1-1f1f9.svg');"
+></span>
+                    </span>
+
+                    lietuvių kalba
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=nl"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f3-1f1f1.svg');"
+></span>
+                    </span>
+
+                    Nederlands
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=no"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f3-1f1f4.svg');"
+></span>
+                    </span>
+
+                    norsk
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=pl"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f5-1f1f1.svg');"
+></span>
+                    </span>
+
+                    polski
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=pt"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f5-1f1f9.svg');"
+></span>
+                    </span>
+
+                    português
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=pt-br"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e7-1f1f7.svg');"
+></span>
+                    </span>
+
+                    português brasileiro
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=ro"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f7-1f1f4.svg');"
+></span>
+                    </span>
+
+                    română
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=ru"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f7-1f1fa.svg');"
+></span>
+                    </span>
+
+                    русский
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=sk"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f8-1f1f0.svg');"
+></span>
+                    </span>
+
+                    slovenčina
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=sl"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f8-1f1ee.svg');"
+></span>
+                    </span>
+
+                    slovenščina
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=sr"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f7-1f1f8.svg');"
+></span>
+                    </span>
+
+                    српски
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=sv"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f8-1f1ea.svg');"
+></span>
+                    </span>
+
+                    svenska
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=th"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f9-1f1ed.svg');"
+></span>
+                    </span>
+
+                    ไทย
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=tr"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f9-1f1f7.svg');"
+></span>
+                    </span>
+
+                    Türkçe
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=uk"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1fa-1f1e6.svg');"
+></span>
+                    </span>
+
+                    українська мова
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=vi"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1fb-1f1f3.svg');"
+></span>
+                    </span>
+
+                    tiếng Việt
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=zh"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e8-1f1f3.svg');"
+></span>
+                    </span>
+
+                    简体中文
+                </a>
+            </li>
+                                <li>
+                <a
+                    class="navbar-mobile-item__submenu-item js-click-menu--close"
+                    href="https://osu.ppy.sh/home/set-locale?locale=zh-tw"
+                    data-remote="1"
+                    data-method="POST"
+                >
+                    <span class="navbar-mobile-item__locale-flag">
+                        <span class="flag-country flag-country--small flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f9-1f1fc.svg');"
+></span>
+                    </span>
+
+                    繁體中文（台灣）
+                </a>
+            </li>
+            </ul>
+</div>
+
+            </div>
+
+                    </div>
+    </div>
+</div>
+
+<div
+    class="
+    js-pinned-header
+    hidden-xs
+    no-print
+    nav2-header
+">
+    <div class="nav2-header__body">
+        <div class="nav2-header__menu-bg js-nav2--menu-bg" data-visibility="hidden"></div>
+        <div class="nav2-header__triangles"></div>
+        <div class="nav2-header__transition-overlay"></div>
+
+        <div class="osu-page">
+            <div class="nav2 js-nav-button">
+    <div class="nav2__colgroup nav2__colgroup--menu js-nav-button--container">
+        <div class="nav2__col nav2__col--logo">
+            <a href="https://osu.ppy.sh/home" class="nav2__logo-link">
+                <div class="nav2__logo nav2__logo--bg"></div>
+                <div class="nav2__logo"></div>
+            </a>
+        </div>
+
+                    <div class="nav2__col nav2__col--menu">
+                <a
+                    class="nav2__menu-link-main js-menu"
+                    href="https://osu.ppy.sh/home"
+                    data-menu-target="nav2-menu-popup-home"
+                    data-menu-show-delay="0"
+                >
+                    <span class="u-relative">
+                        home
+
+                                            </span>
+                </a>
+
+                <div class="nav2__menu-popup">
+                    <div
+                        class="
+                            simple-menu
+                            simple-menu--nav2
+                            simple-menu--nav2-left-aligned
+                            simple-menu--nav2-transparent
+                            js-menu
+                        "
+                        data-menu-id="nav2-menu-popup-home"
+                        data-visibility="hidden"
+                    >
+                                                                                                                                            <a class="simple-menu__item u-section-home--before-bg-normal" href="https://osu.ppy.sh/home/news">
+                                news
+                            </a>
+                                                                                <a class="simple-menu__item u-section-home--before-bg-normal" href="https://osu.ppy.sh/wiki/en/People/osu%21_team">
+                                team
+                            </a>
+                                                                                <a class="simple-menu__item u-section-home--before-bg-normal" href="https://osu.ppy.sh/home/changelog">
+                                changelog
+                            </a>
+                                                                                <a class="simple-menu__item u-section-home--before-bg-normal" href="https://osu.ppy.sh/home/download">
+                                download
+                            </a>
+                                                                                <a class="simple-menu__item u-section-home--before-bg-normal" href="https://osu.ppy.sh/home/search">
+                                search
+                            </a>
+                                            </div>
+                </div>
+            </div>
+                    <div class="nav2__col nav2__col--menu">
+                <a
+                    class="nav2__menu-link-main js-menu"
+                    href="https://osu.ppy.sh/beatmapsets"
+                    data-menu-target="nav2-menu-popup-beatmaps"
+                    data-menu-show-delay="0"
+                >
+                    <span class="u-relative">
+                        beatmaps
+
+                                            </span>
+                </a>
+
+                <div class="nav2__menu-popup">
+                    <div
+                        class="
+                            simple-menu
+                            simple-menu--nav2
+                            simple-menu--nav2-left-aligned
+                            simple-menu--nav2-transparent
+                            js-menu
+                        "
+                        data-menu-id="nav2-menu-popup-beatmaps"
+                        data-visibility="hidden"
+                    >
+                                                                                <a class="simple-menu__item u-section-beatmaps--before-bg-normal" href="https://osu.ppy.sh/beatmapsets">
+                                beatmap listing
+                            </a>
+                                                                                <a class="simple-menu__item u-section-beatmaps--before-bg-normal" href="https://osu.ppy.sh/beatmaps/artists">
+                                featured artists
+                            </a>
+                                                                                <a class="simple-menu__item u-section-beatmaps--before-bg-normal" href="https://osu.ppy.sh/beatmaps/packs">
+                                beatmap packs
+                            </a>
+                                            </div>
+                </div>
+            </div>
+                    <div class="nav2__col nav2__col--menu">
+                <a
+                    class="nav2__menu-link-main js-menu"
+                    href="https://osu.ppy.sh/rankings/osu/performance"
+                    data-menu-target="nav2-menu-popup-rankings"
+                    data-menu-show-delay="0"
+                >
+                    <span class="u-relative">
+                        rankings
+
+                                            </span>
+                </a>
+
+                <div class="nav2__menu-popup">
+                    <div
+                        class="
+                            simple-menu
+                            simple-menu--nav2
+                            simple-menu--nav2-left-aligned
+                            simple-menu--nav2-transparent
+                            js-menu
+                        "
+                        data-menu-id="nav2-menu-popup-rankings"
+                        data-visibility="hidden"
+                    >
+                                                                                <a class="simple-menu__item u-section-rankings--before-bg-normal" href="https://osu.ppy.sh/rankings/osu/performance">
+                                performance
+                            </a>
+                                                                                <a class="simple-menu__item u-section-rankings--before-bg-normal" href="https://osu.ppy.sh/rankings/osu/charts">
+                                spotlights
+                            </a>
+                                                                                <a class="simple-menu__item u-section-rankings--before-bg-normal" href="https://osu.ppy.sh/rankings/osu/score">
+                                score
+                            </a>
+                                                                                <a class="simple-menu__item u-section-rankings--before-bg-normal" href="https://osu.ppy.sh/rankings/osu/country">
+                                country
+                            </a>
+                                                                                <a class="simple-menu__item u-section-rankings--before-bg-normal" href="https://osu.ppy.sh/multiplayer/rooms/latest">
+                                multiplayer
+                            </a>
+                                                                                <a class="simple-menu__item u-section-rankings--before-bg-normal" href="https://osu.ppy.sh/seasons/latest">
+                                seasons
+                            </a>
+                                                                                <a class="simple-menu__item u-section-rankings--before-bg-normal" href="https://osu.ppy.sh/rankings/kudosu">
+                                kudosu
+                            </a>
+                                            </div>
+                </div>
+            </div>
+                    <div class="nav2__col nav2__col--menu">
+                <a
+                    class="nav2__menu-link-main js-menu"
+                    href="https://osu.ppy.sh/community/forums"
+                    data-menu-target="nav2-menu-popup-community"
+                    data-menu-show-delay="0"
+                >
+                    <span class="u-relative">
+                        community
+
+                                            </span>
+                </a>
+
+                <div class="nav2__menu-popup">
+                    <div
+                        class="
+                            simple-menu
+                            simple-menu--nav2
+                            simple-menu--nav2-left-aligned
+                            simple-menu--nav2-transparent
+                            js-menu
+                        "
+                        data-menu-id="nav2-menu-popup-community"
+                        data-visibility="hidden"
+                    >
+                                                                                <a class="simple-menu__item u-section-community--before-bg-normal" href="https://osu.ppy.sh/community/forums">
+                                forum
+                            </a>
+                                                                                <a class="simple-menu__item u-section-community--before-bg-normal" href="https://osu.ppy.sh/community/chat">
+                                chat
+                            </a>
+                                                                                <a class="simple-menu__item u-section-community--before-bg-normal" href="https://osu.ppy.sh/community/contests">
+                                contests
+                            </a>
+                                                                                <a class="simple-menu__item u-section-community--before-bg-normal" href="https://osu.ppy.sh/community/tournaments">
+                                tournaments
+                            </a>
+                                                                                <a class="simple-menu__item u-section-community--before-bg-normal" href="https://osu.ppy.sh/community/livestreams">
+                                live streams
+                            </a>
+                                                                                <a class="simple-menu__item u-section-community--before-bg-normal" href="https://discord.gg/ppy">
+                                development
+                            </a>
+                                            </div>
+                </div>
+            </div>
+                    <div class="nav2__col nav2__col--menu">
+                <a
+                    class="nav2__menu-link-main js-menu"
+                    href="https://osu.ppy.sh/store/listing"
+                    data-menu-target="nav2-menu-popup-store"
+                    data-menu-show-delay="0"
+                >
+                    <span class="u-relative">
+                        store
+
+                                            </span>
+                </a>
+
+                <div class="nav2__menu-popup">
+                    <div
+                        class="
+                            simple-menu
+                            simple-menu--nav2
+                            simple-menu--nav2-left-aligned
+                            simple-menu--nav2-transparent
+                            js-menu
+                        "
+                        data-menu-id="nav2-menu-popup-store"
+                        data-visibility="hidden"
+                    >
+                                                                                <a class="simple-menu__item u-section-store--before-bg-normal" href="https://osu.ppy.sh/store/listing">
+                                products
+                            </a>
+                                                                                <a class="simple-menu__item u-section-store--before-bg-normal" href="https://osu.ppy.sh/store/cart">
+                                cart
+                            </a>
+                                                                                <a class="simple-menu__item u-section-store--before-bg-normal" href="https://osu.ppy.sh/store/orders">
+                                order history
+                            </a>
+                                            </div>
+                </div>
+            </div>
+                    <div class="nav2__col nav2__col--menu">
+                <a
+                    class="nav2__menu-link-main js-menu"
+                    href="https://osu.ppy.sh/wiki/en/Main_page"
+                    data-menu-target="nav2-menu-popup-help"
+                    data-menu-show-delay="0"
+                >
+                    <span class="u-relative">
+                        help
+
+                                                    <span class="nav2__menu-link-bar u-section--bg-normal"></span>
+                                            </span>
+                </a>
+
+                <div class="nav2__menu-popup">
+                    <div
+                        class="
+                            simple-menu
+                            simple-menu--nav2
+                            simple-menu--nav2-left-aligned
+                            simple-menu--nav2-transparent
+                            js-menu
+                        "
+                        data-menu-id="nav2-menu-popup-help"
+                        data-visibility="hidden"
+                    >
+                                                                                <a class="simple-menu__item u-section-help--before-bg-normal" href="https://osu.ppy.sh/wiki/en/Main_page">
+                                wiki
+                            </a>
+                                                                                <a class="simple-menu__item u-section-help--before-bg-normal" href="https://osu.ppy.sh/wiki/en/FAQ">
+                                faq
+                            </a>
+                                                                                <a class="simple-menu__item u-section-help--before-bg-normal" href="https://osu.ppy.sh/wiki/en/Rules">
+                                rules
+                            </a>
+                                                                                <a class="simple-menu__item u-section-help--before-bg-normal" href="https://osu.ppy.sh/wiki/en/Reporting_bad_behaviour/Abuse">
+                                report abuse
+                            </a>
+                                                                                <a class="simple-menu__item u-section-help--before-bg-normal" href="https://osu.ppy.sh/wiki/en/Help_centre">
+                                no, really, i need help!
+                            </a>
+                                            </div>
+                </div>
+            </div>
+        
+        <div class="nav2__col nav2__col--menu js-react--quick-search-button">
+            <a
+                href="https://osu.ppy.sh/home/search"
+                class="
+                    nav2__menu-link-main
+                    nav2__menu-link-main--search
+                    
+                "
+            >
+                <span class="fas fa-search"></span>
+            </a>
+        </div>
+    </div>
+    <div class="nav2__colgroup nav2__colgroup--icons js-nav-button--container">
+        <div class="nav2__col js-nav-button--item">
+            <a
+                href="https://osu.ppy.sh/wiki/Twitter"
+                class="nav-button nav-button--twitter"
+                title="Twitter"
+                data-tooltip-position="bottom center"
+            >
+                <span class="fab fa-twitter"></span>
+            </a>
+        </div>
+
+        <div class="nav2__col">
+            <a
+                href="https://osu.ppy.sh/home/support"
+                class="nav-button nav-button--support"
+                title="support the game"
+                data-tooltip-position="bottom center"
+            >
+                <span class="fas fa-heart"></span>
+            </a>
+        </div>
+
+        <div class="nav2__col">
+            <button
+    class="nav-button js-click-menu"
+    data-click-menu-target="nav2-locale-popup"
+>
+    <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ec-1f1e7.svg');"
+></span>
+</button>
+
+<div class="nav-click-popup">
+    <div
+        class="simple-menu simple-menu--nav2 simple-menu--nav2-locales js-click-menu js-nav2--centered-popup"
+        data-click-menu-id="nav2-locale-popup"
+        data-visibility="hidden"
+    >
+        <div class="simple-menu__content">
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        simple-menu__item--active
+                    "
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ec-1f1e7.svg');"
+></span>
+                        </span>
+
+                        English
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=ar"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f8-1f1e6.svg');"
+></span>
+                        </span>
+
+                        اَلْعَرَبِيَّةُ‎
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=be"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e7-1f1fe.svg');"
+></span>
+                        </span>
+
+                        беларуская мова
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=bg"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e7-1f1ec.svg');"
+></span>
+                        </span>
+
+                        български
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=ca"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e6-1f1e9.svg');"
+></span>
+                        </span>
+
+                        català
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=cs"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e8-1f1ff.svg');"
+></span>
+                        </span>
+
+                        česky
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=da"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e9-1f1f0.svg');"
+></span>
+                        </span>
+
+                        dansk
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=de"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e9-1f1ea.svg');"
+></span>
+                        </span>
+
+                        Deutsch
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=el"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ec-1f1f7.svg');"
+></span>
+                        </span>
+
+                        ελληνικά
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=es"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ea-1f1f8.svg');"
+></span>
+                        </span>
+
+                        español
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=fi"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1eb-1f1ee.svg');"
+></span>
+                        </span>
+
+                        suomi
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=fil"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f5-1f1ed.svg');"
+></span>
+                        </span>
+
+                        wikang Filipino
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=fr"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1eb-1f1f7.svg');"
+></span>
+                        </span>
+
+                        français
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=he"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ee-1f1f1.svg');"
+></span>
+                        </span>
+
+                        עִבְרִית‎
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=hu"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ed-1f1fa.svg');"
+></span>
+                        </span>
+
+                        magyar
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=id"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ee-1f1e9.svg');"
+></span>
+                        </span>
+
+                        bahasa Indonesia
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=it"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ee-1f1f9.svg');"
+></span>
+                        </span>
+
+                        italiano
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=ja"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ef-1f1f5.svg');"
+></span>
+                        </span>
+
+                        日本語
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=ko"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f0-1f1f7.svg');"
+></span>
+                        </span>
+
+                        한국어
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=lt"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f1-1f1f9.svg');"
+></span>
+                        </span>
+
+                        lietuvių kalba
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=nl"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f3-1f1f1.svg');"
+></span>
+                        </span>
+
+                        Nederlands
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=no"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f3-1f1f4.svg');"
+></span>
+                        </span>
+
+                        norsk
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=pl"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f5-1f1f1.svg');"
+></span>
+                        </span>
+
+                        polski
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=pt"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f5-1f1f9.svg');"
+></span>
+                        </span>
+
+                        português
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=pt-br"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e7-1f1f7.svg');"
+></span>
+                        </span>
+
+                        português brasileiro
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=ro"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f7-1f1f4.svg');"
+></span>
+                        </span>
+
+                        română
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=ru"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f7-1f1fa.svg');"
+></span>
+                        </span>
+
+                        русский
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=sk"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f8-1f1f0.svg');"
+></span>
+                        </span>
+
+                        slovenčina
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=sl"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f8-1f1ee.svg');"
+></span>
+                        </span>
+
+                        slovenščina
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=sr"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f7-1f1f8.svg');"
+></span>
+                        </span>
+
+                        српски
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=sv"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f8-1f1ea.svg');"
+></span>
+                        </span>
+
+                        svenska
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=th"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f9-1f1ed.svg');"
+></span>
+                        </span>
+
+                        ไทย
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=tr"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f9-1f1f7.svg');"
+></span>
+                        </span>
+
+                        Türkçe
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=uk"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1fa-1f1e6.svg');"
+></span>
+                        </span>
+
+                        українська мова
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=vi"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1fb-1f1f3.svg');"
+></span>
+                        </span>
+
+                        tiếng Việt
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=zh"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e8-1f1f3.svg');"
+></span>
+                        </span>
+
+                        简体中文
+                    </span>
+                </button>
+                                            <button
+                    type="button"
+                    class="
+                        simple-menu__item
+                        
+                    "
+                                            data-url="https://osu.ppy.sh/home/set-locale?locale=zh-tw"
+                        data-remote="1"
+                        data-method="POST"
+                                    >
+                    <span class="nav2-locale-item">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f9-1f1fc.svg');"
+></span>
+                        </span>
+
+                        繁體中文（台灣）
+                    </span>
+                </button>
+                    </div>
+    </div>
+</div>
+
+        </div>
+
+        
+        <div class="nav2__col nav2__col--avatar">
+            <button
+        class="avatar
+        avatar--nav2
+        js-current-user-avatar
+        js-click-menu
+        js-user-login--menu
+        js-user-header avatar--guest"
+        data-click-menu-target="nav2-login-box"
+        title="click to sign in"
+    ></button>
+
+            <div class="nav-click-popup nav-click-popup--user js-user-header-popup">
+                            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    <div class="js-pinned-header-sticky sticky-header js-sync-height--reference"
+     data-sync-height-target="sticky-header"
+     data-visibility="hidden"
+     data-visibility-animation="none"
+>
+    <div class="osu-page">
+        
+        
+            </div>
+</div>
+</div>
+
+    <div class="login-box">
+    <div
+        class="
+            login-box__content
+            login-box__content--captcha
+            js-click-menu
+            js-nav2--centered-popup
+            js-nav2--login-box
+        "
+        data-click-menu-id="nav2-login-box"
+        data-visibility="hidden"
+    >
+        <form
+            action="https://osu.ppy.sh/session"
+            class="
+                login-box__section
+                login-box__section--login
+                js-login-form
+                js-nav-popup--submenu
+            "
+            data-remote
+            method="POST"
+        >
+            <input type="hidden" name="_token" value="TiLBY66l9s9Rd0jhcLb6wwYhXkRDvWj9nkdg7oQX" autocomplete="off">            <h2 class="login-box__row login-box__row--title">Sign In To Proceed</h2>
+
+            <div class="login-box__row login-box__row--inputs">
+                <input
+                    class="login-box__form-input js-login-form-input js-nav2--autofocus"
+                    name="username"
+                    placeholder="username"
+                    required
+                />
+                <input
+                    class="login-box__form-input js-login-form-input"
+                    name="password"
+                    type="password"
+                    placeholder="password"
+                    required
+                />
+            </div>
+
+                            <div class="login-box__row">
+                    <div
+                        class="js-captcha--container"
+                        data-captcha-triggered=""
+                    ></div>
+                </div>
+                <script>
+    osuCore.turbolinksReload.load('https://www.recaptcha.net/recaptcha/api.js?render=explicit&onload=initCaptcha&hl=en');
+    function initCaptcha() { osuCore.captcha.init('6LcsMMEZAAAAAEaveJ7bCI5sizQVYol-dAGVZFoq'); }
+</script>
+            
+            <div class="login-box__row login-box__row--error js-login-form--error"></div>
+
+            <div class="login-box__row">
+                <a href="https://osu.ppy.sh/home/password-reset" class="login-box__link js-nav--hide">
+                    I&#039;ve forgotten my details
+                </a>
+            </div>
+
+            <div class="login-box__row login-box__row--actions">
+                <div class="login-box__action">
+                    <button
+                        class="btn-osu-big btn-osu-big--nav-popup js-captcha--submit-button"
+                        data-disable-with="Signing in..."
+                    >
+                        <div class="btn-osu-big__content">
+                            <span class="btn-osu-big__left">
+                                Sign in
+                            </span>
+
+                            <span class="fas fa-fw fa-sign-in-alt"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="login-box__section login-box__section--register">
+            <h2 class="login-box__row login-box__row--title">
+                Don&#039;t have an account?
+            </h2>
+
+            <div class="login-box__row">
+                Download osu! to create your own account!
+            </div>
+
+            <div class="login-box__row login-box__row--actions">
+                <div class="login-box__action">
+                    <a href="https://osu.ppy.sh/home/download" class="btn-osu-big btn-osu-big--nav-popup">
+                        <div class="btn-osu-big__content">
+                            <span class="btn-osu-big__left">
+                                Download
+                            </span>
+
+                            <span class="fas fa-fw fa-download"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="js-user-verification--reference"></div>
+
+            <div
+                class="osu-page osu-page--notification-banners js-notification-banners js-sync-height--reference"
+                data-sync-height-target="notification-banners"
+            >
+                            </div>
+                <div class="osu-layout__section osu-layout__section--full">
+                <div class="
+    header-v4
+            header-v4--help
+        
+">
+    <div class="header-v4__container header-v4__container--main">
+        <div class="header-v4__bg-container">
+            <div class="header-v4__bg " ></div>
+        </div>
+
+        <div class="hidden-xs js-sync-height--target" data-sync-height-id="notification-banners">
+        </div>
+
+        <div class="header-v4__content">
+                            <div class="header-v4__row header-v4__row--title">
+                                            <div class="header-v4__icon"></div>
+                        <div class="header-v4__title">
+                            wiki
+                        </div>
+                    
+                    
+                </div>
+            
+            
+        </div>
+    </div>
+            <div class="header-v4__container">
+            <div class="header-v4__content">
+                <div class="header-v4__row header-v4__row--bar">
+                    <ol
+                        class="header-nav-v4 header-nav-v4--breadcrumb"
+                    >
+                                                                                <li class="header-nav-v4__item">
+                                                                    <a
+                                        class="
+                                            header-nav-v4__link
+                                            
+                                        "
+                                        href="https://osu.ppy.sh/wiki/en/Main_page"
+                                    >
+                                        <span
+                                            class="fake-bold"
+                                            data-content=index
+                                        >index</span>
+                                    </a>
+                                                            </li>
+                                                                                <li class="header-nav-v4__item">
+                                                                    <a
+                                        class="
+                                            header-nav-v4__link
+                                            
+                                        "
+                                        href="https://osu.ppy.sh/wiki/en/Client/Interface"
+                                    >
+                                        <span
+                                            class="fake-bold"
+                                            data-content=Interface
+                                        >Interface</span>
+                                    </a>
+                                                            </li>
+                                                                                <li class="header-nav-v4__item">
+                                                                    <a
+                                        class="
+                                            header-nav-v4__link
+                                            
+                                        "
+                                        href="https://osu.ppy.sh/wiki/en/Client/Interface/Multiplayer"
+                                    >
+                                        <span
+                                            class="fake-bold"
+                                            data-content=Multiplayer
+                                        >Multiplayer</span>
+                                    </a>
+                                                            </li>
+                                            </ol>
+
+                    
+                    <div class="header-buttons">
+    <div class="header-buttons__item">
+        <a
+            class="btn-osu-big btn-osu-big--rounded-thin"
+            href="https://github.com/ppy/osu-wiki/tree/master/wiki/Client/Interface/Multiplayer/en.md"
+            title="Show on GitHub"
+        >
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+
+    
+    <div class="header-buttons__item">
+        <a
+    href="https://osu.ppy.sh/wiki/en/Client/Interface/Multiplayer"
+    class="btn-osu-big btn-osu-big--rounded-thin js-click-menu"
+    data-click-menu-target="wiki-locales"
+>
+    <span class="btn-osu-big__content">
+        <span class="btn-osu-big__icon-inline btn-osu-big__icon-inline--left">
+            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1ec-1f1e7.svg');"
+></span>
+        </span>
+
+        English
+
+                    <span class="btn-osu-big__icon-inline btn-osu-big__icon-inline--right">
+                <i class="fas fa-angle-down"></i>
+            </span>
+            </span>
+</a>
+
+    <div
+        class="simple-menu simple-menu--wiki-locales js-click-menu"
+        data-visibility="hidden"
+        data-click-menu-id="wiki-locales"
+    >
+        <div class="simple-menu__content">
+                                            <a class="simple-menu__item" href="https://osu.ppy.sh/wiki/fr/Client/Interface/Multiplayer">
+                    <span class="nav2-locale-item nav2-locale-item--no-padding">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1eb-1f1f7.svg');"
+></span>
+                        </span>
+
+                        français
+                    </span>
+                </a>
+                                            <a class="simple-menu__item" href="https://osu.ppy.sh/wiki/ru/Client/Interface/Multiplayer">
+                    <span class="nav2-locale-item nav2-locale-item--no-padding">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1f7-1f1fa.svg');"
+></span>
+                        </span>
+
+                        русский
+                    </span>
+                </a>
+                                            <a class="simple-menu__item" href="https://osu.ppy.sh/wiki/zh/Client/Interface/Multiplayer">
+                    <span class="nav2-locale-item nav2-locale-item--no-padding">
+                        <span class="nav2-locale-item__flag">
+                            <span class="flag-country flag-country--flat"
+        style="background-image: url('/assets/images/flags/1f1e8-1f1f3.svg');"
+></span>
+                        </span>
+
+                        简体中文
+                    </span>
+                </a>
+                    </div>
+    </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="osu-page osu-page--wiki">
+        <div class="wiki-page">
+            <div class="wiki-page__toc">
+                <div class="sidebar">
+                    <button
+                        type="button"
+                        class="sidebar__mobile-toggle js-mobile-toggle"
+                        data-mobile-toggle-target="wiki-toc"
+                    >
+                        <h2 class="sidebar__title">
+                            Contents
+                        </h2>
+
+                        <div class="visible-xs sidebar__mobile-toggle-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </button>
+
+                    <div class="js-mobile-toggle hidden-xs sidebar__content" data-mobile-toggle-id="wiki-toc">
+                                                    <ol class="wiki-toc-list wiki-toc-list--top">
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#how-to-play"
+            class="wiki-toc-list__link "
+        >
+            How to play
+        </a>
+
+        
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#main-lobby"
+            class="wiki-toc-list__link "
+        >
+            Main lobby
+        </a>
+
+        
+    
+                    <ol class="wiki-toc-list ">
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#filter-options"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            Filter options
+        </a>
+
+        
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#matches"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            Matches
+        </a>
+
+        
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#general-options"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            General options
+        </a>
+
+        
+                    </ol>
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#creating-a-new-game"
+            class="wiki-toc-list__link "
+        >
+            Creating a new game
+        </a>
+
+        
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#match-setup"
+            class="wiki-toc-list__link "
+        >
+            Match setup
+        </a>
+
+        
+    
+                    <ol class="wiki-toc-list ">
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#header-section"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            Header section
+        </a>
+
+        
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#current-players-list"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            Current players list
+        </a>
+
+        
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#match-settings"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            Match settings
+        </a>
+
+        
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#match-setup-buttons"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            Match setup buttons
+        </a>
+
+        
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#match-history"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            Match history
+        </a>
+
+        
+                    </ol>
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#while-playing"
+            class="wiki-toc-list__link "
+        >
+            While playing
+        </a>
+
+        
+    
+                    <ol class="wiki-toc-list ">
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#general"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            General
+        </a>
+
+        
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#team-mode-gameplay"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            Team mode
+        </a>
+
+        
+                    </ol>
+    
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#trivia"
+            class="wiki-toc-list__link "
+        >
+            Trivia
+        </a>
+
+        
+    
+                    <ol class="wiki-toc-list ">
+    
+    
+    <li class="wiki-toc-list__item">
+        <a
+            href="#history"
+            class="wiki-toc-list__link wiki-toc-list__link--small"
+        >
+            History
+        </a>
+
+                                                                                        </div>
+                </div>
+            </div>
+
+            <div class="wiki-page__content">
+                <div class="wiki-notice">
+        This page does not meet the standards of the osu! wiki and needs to be cleaned up or rewritten. If you are able to help out, please consider updating the article!
+    </div>
+
+
+                                    <div class='osu-md osu-md--wiki'>
+<h1 class="osu-md__header osu-md__header--1">Multiplayer</h1>
+<p class="osu-md__paragraph"><strong>Multiplayer</strong> (sometimes shortened to <em>Multi</em>) is a mode in which up to 16 players can compete against each other individually or in teams, or play together co-operatively, on maps decided by the host.</p>
+<p class="osu-md__paragraph">The <a class="osu-md__link" href="../../Community/Video_series/osu%21academy">osu!academy</a> covers this part of the client in video format in <a class="osu-md__link" href="https://www.youtube.com/watch?v=QPTLyG7O8ak">Episode 6</a>, along with the <a class="osu-md__link" href="../../Client/Interface/Chat_console#extended-chat-console">online users panel</a>.</p>
+<h2 class="osu-md__header osu-md__header--2" id="how-to-play">How to play</h2>
+<p class="osu-md__paragraph"><em>Notice: Multiplayer requires an <a class="osu-md__link" href="../../Registration">osu! account</a> and is not available for <a class="osu-md__link" href="../../Silence">silenced</a> players.</em></p>
+<p class="osu-md__paragraph">From the main menu, the main multiplayer lobby can be accessed with the following steps:</p>
+<ol class="osu-md__list osu-md__list--ordered" style="--list-start: 0">
+<li class="osu-md__list-item"><div>Click the <code>Play</code> button or press <code>P</code>.</div></li>
+<li class="osu-md__list-item"><div>Click the <code>Multi</code> button or press <code>M</code>.</div></li>
+</ol>
+<h2 class="osu-md__header osu-md__header--2" id="main-lobby">Main lobby</h2>
+<p class="osu-md__paragraph"><em>Notice: An active <a class="osu-md__link" href="../../osu%21supporter">osu!supporter</a> tag is required to enter the lobby while using the <code>Cutting Edge</code> build.</em></p>
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="0" data-src="https://i.ppy.sh/a00be815fc8d76fe3295393abaef75968122e376/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6c6f6262792e6a7067" src="https://i.ppy.sh/a00be815fc8d76fe3295393abaef75968122e376/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6c6f6262792e6a7067" alt="" title="Example of a typical day in the main multiplayer lobby" /><em class="osu-md__figure-caption">Example of a typical day in the main multiplayer lobby</em></p>
+<p class="osu-md__paragraph">On entering, the player is presented with all currently available matches.</p>
+<h3 class="osu-md__header osu-md__header--3" id="filter-options">Filter options</h3>
+<p class="osu-md__paragraph">The listed match lobbies can be filtered using the options at the top left.</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Title</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>All</code> / <code>osu!</code> / <code>osu!taiko</code> / <code>osu!catch</code> / <code>osu!mania</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Only show matches either with the currently selected <a class="osu-md__link" href="../../Game_mode">game mode</a> or from all game modes.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Owned Beatmaps</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Only show matches if the player owns the <a class="osu-md__link" href="../../Beatmap">beatmap</a> currently being played.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Show Full</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Show matches even if they have no empty slots available.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Search</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Search for a specific beatmap being played or the host's name using the search bar. When searching, all filters will temporarily be ignored except <code>Show In-progress</code>.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Games with Friends</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Only show matches the player's friends are playing in. This filter option will override all other filters when enabled.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Show Locked</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Show matches that require a password to enter.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Show In-progress</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Show matches that are currently being played. These can still be entered if there are empty slots available. They are indicated with a grey match title and with <code>(In progress)</code> appended to it until the match ends.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="osu-md__header osu-md__header--3" id="matches">Matches</h3>
+<p class="osu-md__paragraph">Covering the middle of the screen is a list of available matches.</p>
+<p class="osu-md__paragraph">Most matches have light white backgrounds, indicating that they were <a class="osu-md__link" href="#creating-a-new-game">created normally through the game UI</a>. There are also ones with purple backgrounds, which are <em>tournament matches</em> created and managed using <a class="osu-md__link" href="../../osu%21_tournament_client/osu%21tourney/Tournament_management_commands">lobby management chat commands</a> such as <code>!mp make</code> or <code>!mp makeprivate</code>.</p>
+<p class="osu-md__paragraph">A variety of information is displayed about each lobby. For example, the player slots to the right can have three different colours:</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Colour</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center">Red</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The slot is taken by a player.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center">Green</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The slot is available.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center">No colour</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The slot is locked.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="osu-md__paragraph">To enter a match, click on any one of them.</p>
+<h3 class="osu-md__header osu-md__header--3" id="general-options">General options</h3>
+<p class="osu-md__paragraph">The three buttons above the <a class="osu-md__link" href="../../Client/Interface/Chat_console">chat console</a> provide the main navigation options of this screen:</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Title</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Back to Menu</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Leave the lobby and return to the main menu.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>New Game</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Create a new game. See below for more details.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Quick Join</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Join an available match <em>randomly</em> based on the player's current <a class="osu-md__link" href="../../Ranking#performance-points-ranking">performance points ranking</a>.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 class="osu-md__header osu-md__header--2" id="creating-a-new-game">Creating a new game</h2>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="1" data-src="https://i.ppy.sh/83c2a6c3a617f67ba7d2ab9d9125fd80857e39b1/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d726f6f6d2d6372656174696f6e2e6a7067" src="https://i.ppy.sh/83c2a6c3a617f67ba7d2ab9d9125fd80857e39b1/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d726f6f6d2d6372656174696f6e2e6a7067" alt="" title="Configuration screen for creating a match lobby" /><em class="osu-md__figure-caption">Configuration screen for creating a match lobby</em></p>
+</div>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Title</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Game Name</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The name of the match. The default value is <code>{account name}'s game</code>.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Require password to join</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Make the match private.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Password</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Set a password for the match. Only appears if the <code>Require password to join</code> button is enabled.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Make match history publicly viewable</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Allow players other than match participants to view the match history via direct link. Only appears if the <code>Require password to join</code> button is enabled.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Max Players</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The total number of players (including the host) allowed to join the match. A range from 2 to 16 can be selected, with a default of 8. This can be adjusted later by locking/unlocking player slots.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="osu-md__paragraph">Pressing the <code>1. Start Game</code> button will create the match with the currently playing song as the beatmap. The <code>2. Cancel</code> button brings the player back to the lobby.</p>
+<h2 class="osu-md__header osu-md__header--2" id="match-setup">Match setup</h2>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1280" data-height="720" data-gallery-id="1236084165" data-index="2" data-src="https://i.ppy.sh/ca5f4b6ffac52a2cb6cbebfef198256136e6dddc/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d726f6f6d2e6a7067" src="https://i.ppy.sh/ca5f4b6ffac52a2cb6cbebfef198256136e6dddc/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d726f6f6d2e6a7067" alt="" title="The match lobby viewed as a player" /><em class="osu-md__figure-caption">The match lobby viewed as a player</em></p>
+</div>
+<p class="osu-md__paragraph">After going into or creating a match, the match setup will be displayed. The following sections will focus on the different parts of the screen starting from top to bottom and going left to right.</p>
+<p class="osu-md__paragraph">While there is no direct button for it, the <a class="osu-md__link" href="../../Client/Options">options menu</a> can still be accessed by pressing <code>Ctrl</code> + <code>O</code> while in a match lobby.</p>
+<h3 class="osu-md__header osu-md__header--3" id="header-section">Header section</h3>
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1279" data-height="80" data-gallery-id="1236084165" data-index="3" data-src="https://i.ppy.sh/8d7c894b4c8f9a906d70b0b9b11a236147020304/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6d617463682d6865616465722e6a7067" src="https://i.ppy.sh/8d7c894b4c8f9a906d70b0b9b11a236147020304/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6d617463682d6865616465722e6a7067" alt="" title="Example of the header" /><em class="osu-md__figure-caption">Example of the header</em></p>
+<p class="osu-md__paragraph">The top-left text indicates whether the player is the match host or a normal player. In the middle, there is a player box with information about <a class="osu-md__link" href="../../Performance_points/Total_performance_points">performance points</a>, <a class="osu-md__link" href="../../Gameplay/Accuracy">overall accuracy</a>, <a class="osu-md__link" href="../../Gameplay/Score/Total_score#level">level</a>, <a class="osu-md__link" href="../../Ranking#performance-points-ranking">rank</a> and the selected <a class="osu-md__link" href="../../Game_mode">game mode</a>. To the right is a button for pausing the currently playing song.</p>
+<h3 class="osu-md__header osu-md__header--3" id="current-players-list">Current players list</h3>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="521" data-height="339" data-gallery-id="1236084165" data-index="4" data-src="https://i.ppy.sh/7e45a417126d89c0231494ff5615819f260aff50/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6d617463682d63757272656e742d706c61796572732d6c6973742e6a7067" src="https://i.ppy.sh/7e45a417126d89c0231494ff5615819f260aff50/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6d617463682d63757272656e742d706c61796572732d6c6973742e6a7067" alt="" title="Example of the player list in a match lobby" /><em class="osu-md__figure-caption">Example of the player list in a match lobby</em></p>
+</div>
+<p class="osu-md__paragraph">The player list shows all slots for a match. The numbers in parentheses to the right of <code>Current Players</code> show the number of players in the match over the amount of unlocked player slots.</p>
+<p class="osu-md__paragraph">Available slots can be moved between by clicking on them, but slots indicated with a closed lock are not accessible. The host is able to lock and unlock slots through the icons on the left, as well as kick players. Host privileges can be transferred to another player by right-clicking and pressing <code>Transfer host privileges</code>. The team colour can be changed between blue and red when playing Team VS.</p>
+<p class="osu-md__paragraph">Hovering above any player on the list will show the level, country and <a class="osu-md__link" href="../../Gameplay/Accuracy">overall accuracy</a> of the player in question.</p>
+<p class="osu-md__paragraph">A player can have four different colours in this list, which also mean different things:</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Colour</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><strong>Red (no map)</strong></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player does not have the beatmap, indicated by a <code>[no map]</code> notice until they have downloaded the beatmap.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><strong>White (not ready)</strong></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player has the beatmap but is not ready yet. <a class="osu-md__link" href="../../Gameplay/Game_modifier">Game modifiers</a> can be changed in this state.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><strong>Green (ready)</strong></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player is ready. Game modifiers cannot be changed in this state. The host will be able to start the game after readying, and any ready players will begin the match.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><strong>Light Blue (playing)</strong></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player is playing, indicated by a <code>[playing]</code> notice until the match ends.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="osu-md__header osu-md__header--3" id="match-settings">Match settings</h3>
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="515" data-height="310" data-gallery-id="1236084165" data-index="5" data-src="https://i.ppy.sh/e2798cc93ce5f648a1f663ef6a51e7f5c99af4ce/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6d617463682d73657474696e67732e6a7067" src="https://i.ppy.sh/e2798cc93ce5f648a1f663ef6a51e7f5c99af4ce/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6d617463682d73657474696e67732e6a7067" alt="" title="The match settings, where the host can change the lobby name, beatmap, team mode, etc" /><em class="osu-md__figure-caption">The match settings, where the host can change the lobby name, beatmap, team mode, etc</em></p>
+<h4 class="osu-md__header osu-md__header--4" id="game-name-and-password">Game name and password</h4>
+<p class="osu-md__paragraph">The <code>Game Name</code> is the name of the lobby that is visible in match listings in-game and on the website. Having a password is useful for restricting the lobby to friends or tournament players, and can be changed using the <code>Change Password</code> button above the game name.</p>
+<h4 class="osu-md__header osu-md__header--4" id="beatmap">Beatmap</h4>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="634" data-height="156" data-gallery-id="1236084165" data-index="6" data-src="https://i.ppy.sh/0519cd424e73df5ca9f5e00752c7ffae6adc79b4/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d686f73742d6d61702d6368616e67652e6a7067" src="https://i.ppy.sh/0519cd424e73df5ca9f5e00752c7ffae6adc79b4/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d686f73742d6d61702d6368616e67652e6a7067" alt="" title="The beatmap card when the host is changing songs" /><em class="osu-md__figure-caption">The beatmap card when the host is changing songs</em></p>
+</div>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="7" data-src="https://i.ppy.sh/6cc5e8042cb4449929008395eb88e3200c627565/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d626561746d61702d6368616e67652e6a7067" src="https://i.ppy.sh/6cc5e8042cb4449929008395eb88e3200c627565/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d626561746d61702d6368616e67652e6a7067" alt="" title="The song selection screen when selecting a beatmap in multiplayer" /><em class="osu-md__figure-caption">The song selection screen when selecting a beatmap in multiplayer</em></p>
+</div>
+<p class="osu-md__paragraph">The beatmap section shows the beatmap to be played in the match. Changing the beatmap using the button above it opens the song selection screen.</p>
+<p class="osu-md__paragraph">The beatmap card will show the background image, game mode icon, title and artist of the song, creator of the beatmap, the selected <a class="osu-md__link" href="../../Beatmap/Difficulty">difficulty</a>, and the <a class="osu-md__link" href="../../Beatmap/Star_rating">star rating</a> for the selected beatmap.</p>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="538" data-height="166" data-gallery-id="1236084165" data-index="8" data-src="https://i.ppy.sh/aeb1c39f28ffe56a44cb0a99d29218f1ea82bf5b/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d626561746d61702d696e666f2e6a7067" src="https://i.ppy.sh/aeb1c39f28ffe56a44cb0a99d29218f1ea82bf5b/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d626561746d61702d696e666f2e6a7067" alt="" title="Hovering over the beatmap card" /><em class="osu-md__figure-caption">Hovering over the beatmap card</em></p>
+</div>
+<p class="osu-md__paragraph">When hovering over the beatmap, there is a popup that displays information about the beatmap. These are as follows:</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Value</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>BPM</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Beats per minute</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Length</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Length of the beatmap</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Last Played</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">When the beatmap was last played</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>CS</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Circle size</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>AR</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Approach rate</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>OD</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Overall difficulty</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>HP</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">HP drain rate</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Stars</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Star rating</td>
+</tr>
+</tbody>
+</table></div>
+<p class="osu-md__paragraph">If the player does not have the beatmap, one of these statuses will be shown:</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Beatmap status</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Ranked</code> / <code>Approved</code> / <code>Pending</code> / <code>Graveyard</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The <a class="osu-md__link" href="../../Beatmap/Category">beatmap category</a>. Clicking on the beatmap card will open the beatmap page on the website, where it can be <a class="osu-md__link" href="../../Beatmap#downloading-beatmaps">downloaded</a>.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Not uploaded or not up-to-date</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The beatmap is not available for download. The host should find the link (in the <a class="osu-md__link" href="https://osu.ppy.sh/beatmapsets">beatmap listing</a>) for the player if the issue persists.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Cannot update the beatmap</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The host is playing a modified version of the beatmap.</td>
+</tr>
+</tbody>
+</table></div>
+<h4 class="osu-md__header osu-md__header--4" id="mods">Mods</h4>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="9" data-src="https://i.ppy.sh/6b117dbb7fa107b61d55876c0d0ab3efa608e7ac/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d706c617965722d667265652d6d6f64732e6a7067" src="https://i.ppy.sh/6b117dbb7fa107b61d55876c0d0ab3efa608e7ac/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d706c617965722d667265652d6d6f64732e6a7067" alt="" title="The multiplayer mod selection screen, where the host has enabled Free Mods" /><em class="osu-md__figure-caption">The multiplayer mod selection screen, where the host has enabled Free Mods</em></p>
+</div>
+<p class="osu-md__paragraph">This section will show the <a class="osu-md__link" href="../../Gameplay/Game_modifier">game mods</a> used for this match.</p>
+<p class="osu-md__paragraph">The host can enable <code>Free Mods</code> to allow players to freely choose any mod combination, except ones that change gameplay speed (<a class="osu-md__link" href="../../Gameplay/Game_modifier/Double_Time">Double Time (DT)</a>, <a class="osu-md__link" href="../../Gameplay/Game_modifier/Nightcore">Nightcore (NC)</a> and <a class="osu-md__link" href="../../Gameplay/Game_modifier/Half_Time">Half Time (HT)</a>).</p>
+<h4 class="osu-md__header osu-md__header--4" id="team-mode-match-setup">Team mode</h4>
+<p class="osu-md__paragraph"><em>For more information about team modes, see the <a class="osu-md__link" href="#team-mode-gameplay">gameplay section on team modes</a>.</em></p>
+<p class="osu-md__paragraph">There are four different ways a match can be played:</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Team mode</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Head-to-head</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Compete against each other to reach the top spot of the match leaderboard.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Team VS</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Compete against each other in teams (Red and Blue) for match supremacy.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Tag co-op</code> (osu! mode only, unranked)</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Team up to complete the beatmap, one combo at a time together.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Tag-team VS</code> (osu! mode only, unranked)</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The same as <code>Tag co-op</code>, but with two teams competing against each other.</td>
+</tr>
+</tbody>
+</table></div>
+<h5 class="osu-md__header osu-md__header--5" id="tag-colour">Tag Colour</h5>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="77" data-height="121" data-gallery-id="1236084165" data-index="10" data-src="https://i.ppy.sh/cf566facf4bd048502eef7d446017cca4e2713dc/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7461672d636f6c6f7572732e6a7067" src="https://i.ppy.sh/cf566facf4bd048502eef7d446017cca4e2713dc/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7461672d636f6c6f7572732e6a7067" alt="" title="Available colours for the player's turn combo colour" /><em class="osu-md__figure-caption">Available colours for the player's turn combo colour</em></p>
+</div>
+<p class="osu-md__paragraph">If the team mode was set to <code>Tag co-op</code> or <code>Tag-team VS</code>, a <code>Tag Colour: (combo colour)</code> section will be shown which allows choosing a custom colour for each player. Setting this to <code>Default</code> will use the beatmap's original combo colours.</p>
+<h4 class="osu-md__header osu-md__header--4" id="win-condition">Win condition</h4>
+<p class="osu-md__paragraph">There are four different ways the winner of a match can be decided:</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Title</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Score</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player with the highest score wins.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Accuracy</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player with the highest accuracy wins. If there are two players with 100.00%, the player with the highest score (from spinners) wins. Otherwise, it is a tie.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Combo</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player with the highest combo count <em>at the end of the beatmap</em> wins. If the combo count is the same, the player with the highest score wins. The maximum combo is not counted in this case.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Score v2</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player with the highest (standardised) score wins.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="osu-md__header osu-md__header--3" id="match-setup-buttons">Match setup buttons</h3>
+<p class="osu-md__paragraph">There are two large wide orange and blue buttons above the <a class="osu-md__link" href="../../Client/Interface/Chat_console">chat console</a>.</p>
+<p class="osu-md__paragraph">The orange <code>Leave Match</code> button on the left is self-explanatory. If the match host leave the match, the host will be automatically transferred to the remaining player in slot order. If there is no one in the match, it will automatically close, except for ones made by <a class="osu-md__link" href="../../osu%21_tournament_client/osu%21tourney/Tournament_management_commands"><code>!mp</code> commands</a>, which will instead close after 30 minutes.</p>
+<p class="osu-md__paragraph">The blue button is used to control the player ready state and to start the match.</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Title</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Ready!</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Marks the player as ready (green on the player list). The button will change to <code>Not Ready</code>. For the match host, it will change to either <code>Start Game!</code> or <code>Force Start Game!</code> if there are players in the lobby.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Not Ready</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Marks the player as not ready (white on the player list). The button will change to <code>Ready!</code></td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Start Game!</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Starts the match. This button only appears for the match host when all players are ready.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><code>Force Start Game! ({ready}/{total})</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Starts the match even if not all players are ready. This button only appears for the match host when some players are ready. The amount of ready players compared to the total amount of players is shown in parentheses.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="osu-md__header osu-md__header--3" id="match-history">Match history</h3>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1005" data-height="821" data-gallery-id="1236084165" data-index="11" data-src="https://i.ppy.sh/8ba21262229d6d712283ea0cc0507d09cfbb9c88/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6d682e6a7067" src="https://i.ppy.sh/8ba21262229d6d712283ea0cc0507d09cfbb9c88/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6d682e6a7067" alt="" title="A match history page on the website" /><em class="osu-md__figure-caption">A match history page on the website</em></p>
+</div>
+<p class="osu-md__paragraph">The bottom section of the screen is the <a class="osu-md__link" href="../../Client/Interface/Chat_console">chat console</a>. Every match has its own channel in a tab called <code>#multiplayer</code>, with <a class="osu-md__link" href="../../BanchoBot">BanchoBot</a> providing a link to the match history on the first line.</p>
+<p class="osu-md__paragraph">For Head-to-head matches, the result will be displayed privately in another tab called <code>#userlog</code> upon conclusion, where BanchoBot says <code>You placed #{placement} of {total} players in multiplayer on {beatmap} [difficulty] &lt;game mode&gt;.</code></p>
+<h2 class="osu-md__header osu-md__header--2" id="while-playing">While playing</h2>
+<h3 class="osu-md__header osu-md__header--3" id="general">General</h3>
+<h4 class="osu-md__header osu-md__header--4" id="quitting-the-match">Quitting the match</h4>
+<p class="osu-md__paragraph">There is no way to pause a multiplayer match. Pressing <code>Esc</code> will give a warning in the lower-right corner, and pressing it again will quit the match.</p>
+<h4 class="osu-md__header osu-md__header--4" id="visual-settings">Visual settings</h4>
+<p class="osu-md__paragraph">While the match is starting, moving the cursor to the bottom of the screen will open the visual settings panel. See the <a class="osu-md__link" href="../../Client/Interface/Visual_settings">Visual settings</a> page for more information.</p>
+<h4 class="osu-md__header osu-md__header--4" id="health">Health</h4>
+<p class="osu-md__paragraph">When a player's health bar has been depleted completely, they can still continue playing, but the score will be considered as failed and will not appear on leaderboards. The player can be revived if they reach full health again, unless they use <a class="osu-md__link" href="../../Gameplay/Game_modifier/Sudden_Death">Sudden Death (SD)</a>.</p>
+<p class="osu-md__paragraph">In Team VS matches, being in the failed state at the end of the match will make the score not contribute to the team score. If all players of a team have failed, the match immediately ends and the opposite team wins by default.</p>
+<h4 class="osu-md__header osu-md__header--4" id="results">Results</h4>
+<p class="osu-md__paragraph">Despite there being no <a class="osu-md__link" href="../../Client/Interface#extended-results-screen">extended results screen</a> below the results screen like when playing solo, scores set during multiplayer matches (with the exception of <code>Tag co-op</code> and <code>Tag-team VS</code> matches) will still appear on online leaderboards if they are good enough. The result will not be shown on the local leaderboard.</p>
+<h4 class="osu-md__header osu-md__header--4" id="saving-the-replay">Saving the replay</h4>
+<p class="osu-md__paragraph">The replay of the score can be exported by pressing <code>F2</code>, except in <code>Tag co-op</code> and <code>Tag-team VS</code>.</p>
+<h4 class="osu-md__header osu-md__header--4" id="multiplayer-leaderboard">Multiplayer leaderboard</h4>
+<p class="osu-md__paragraph">The leaderboard to the side of the screen shows different live statistics for each player based on the match settings.</p>
+<p class="osu-md__paragraph">For <code>Head-to-head</code> and <code>Team VS</code> matches:</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Win condition</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Statistics displayed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Score</code> / <code>Score v2</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Individual score, combo multiplier, judgements</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Accuracy</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Accuracy, individual score, combo multiplier, judgements</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Combo</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Current combo counts</td>
+</tr>
+</tbody>
+</table></div>
+<p class="osu-md__paragraph">For <code>Tag co-op</code> and <code>Tag-team VS</code>:</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Win condition</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Statistics displayed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Score</code> / <code>Score v2</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Team score, individual score, judgements</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Accuracy</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Team average accuracy, individual score, judgements</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--left" align="left"><code>Combo</code></td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">Current combo count, individual score, judgements</td>
+</tr>
+</tbody>
+</table></div>
+<p class="osu-md__paragraph">If a player fails during a Tag co-op match, the match ends and the players return to the match lobby. In Tag-team VS, the opposing team receives a win by default instead. Failed players do not contribute towards the team unless they have been revived by the end of the match.</p>
+<p class="osu-md__paragraph">If a player quits while being in a match, the game will perfectly play their part for them, but not contribute anything to the team. If all players of a team quit, the opposing team will win by default.</p>
+<p class="osu-md__paragraph">Players who have failed or quit will be placed at the bottom of the leaderboard with their scores sorted separately from other players.</p>
+<p class="osu-md__paragraph">The colour of each player on the leaderboard while playing indicates the status of the player during the match.</p>
+<div class="osu-md__table"><table>
+<thead>
+<tr>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Example image</th>
+<th class="osu-md__table-data osu-md__table-data--center osu-md__table-data--header" align="center">Status</th>
+<th class="osu-md__table-data osu-md__table-data--left osu-md__table-data--header" align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><img class="osu-md__image" src="https://i.ppy.sh/5bdf4e9944d96064366cab29125ed8f4a32ff012/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f506c61796572626f782f4d756c74695f50425f422e6a7067" alt="" title="Normal" /></td>
+<td class="osu-md__table-data osu-md__table-data--center" align="center">Normal</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player has more than half of their health. The colour will become a brighter blue or bleed to red depending on the player's health.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><img class="osu-md__image" src="https://i.ppy.sh/56e64cbf7a505c59c86c3975ffbf449f322d13de/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f506c61796572626f782f4d756c74695f50425f522e6a7067" alt="" title="Danger" /></td>
+<td class="osu-md__table-data osu-md__table-data--center" align="center">Danger</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player has less than half of their health. The colour will become a brighter red or change to blue depending on the player's health.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><img class="osu-md__image" src="https://i.ppy.sh/86e8baf43921a7d4b18415f0c2fffc8139ccdc3c/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f506c61796572626f782f4d756c74695f50425f462e6a7067" alt="" title="Failed" /></td>
+<td class="osu-md__table-data osu-md__table-data--center" align="center">Failed</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player has reached 0 HP and is in the <a class="osu-md__link" href="#health">failed state</a>.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><img class="osu-md__image" src="https://i.ppy.sh/d9b52f7fef648692d70effed27028b7663c7aaa6/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f506c61796572626f782f4d756c74695f50425f5441472e6a7067" alt="" title="Tag" /></td>
+<td class="osu-md__table-data osu-md__table-data--center" align="center">Tag</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">In <code>Tag co-op</code> and <code>Tag-team VS</code>, the player box will always be green. A green arrow points at the current player with a subtle white glow.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><img class="osu-md__image" src="https://i.ppy.sh/f8132aa18152e896d16f14ddd5ac75298be73293/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f506c61796572626f782f4d756c74695f50425f534b49502e6a7067" alt="" title="Skipped" /></td>
+<td class="osu-md__table-data osu-md__table-data--center" align="center">Skipped</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">A request from the player to skip the intro of a beatmap if there is one. The intro will be skipped once all players have requested to skip.</td>
+</tr>
+<tr>
+<td class="osu-md__table-data osu-md__table-data--center" align="center"><img class="osu-md__image" src="https://i.ppy.sh/83ba0beee2dcaeda07e6f247bc9733ab839c560f/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f506c61796572626f782f4d756c74695f50425f515549542e6a7067" alt="" title="Quit" /></td>
+<td class="osu-md__table-data osu-md__table-data--center" align="center">Quit</td>
+<td class="osu-md__table-data osu-md__table-data--left" align="left">The player has quit the match, either by pressing <code>Esc</code> twice or by disconnecting from <a class="osu-md__link" href="../../Bancho_%28server%29">Bancho</a>. The text colour will be changed from white to red, with <code>[Quit]</code> appended at the end. The box colour signifies the status before quitting the game.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 class="osu-md__header osu-md__header--3" id="team-mode-gameplay">Team mode</h3>
+<h4 class="osu-md__header osu-md__header--4" id="head-to-head">Head-to-head</h4>
+<h5 class="osu-md__header osu-md__header--5" id="interface">Interface</h5>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="12" data-src="https://i.ppy.sh/b097940ae9e0de24a04dbc791c37d3503aa948b8/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6874682d696e746572666163652e6a7067" src="https://i.ppy.sh/b097940ae9e0de24a04dbc791c37d3503aa948b8/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6874682d696e746572666163652e6a7067" alt="" title="Head-to-head interface" /><em class="osu-md__figure-caption">Head-to-head interface</em></p>
+</div>
+<p class="osu-md__paragraph">Head-to-head is a team mode where players duke it all out in a free-for-all match for the top spot on the leaderboard. This is the default team mode and does not have any special characteristics in gameplay, other than going for the top spot.</p>
+<h5 class="osu-md__header osu-md__header--5" id="results.1">Results</h5>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="13" data-src="https://i.ppy.sh/8347957703593a5ffca498b7d702237ee7cd8be6/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6874682d726573756c74732e6a7067" src="https://i.ppy.sh/8347957703593a5ffca498b7d702237ee7cd8be6/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d6874682d726573756c74732e6a7067" alt="" title="Head-to-head results screen" /><em class="osu-md__figure-caption">Head-to-head results screen</em></p>
+</div>
+<p class="osu-md__paragraph">At the end of the match, the winner's avatar is shown in a big winner's box, along with the match leaderboard to the right</p>
+<p class="osu-md__paragraph">The <a class="osu-md__link" href="../../Gameplay/Grade">grade</a> for the play is placed behind the result like a watermark. Other players' results can be checked by clicking on their panel on the leaderboard.</p>
+<p class="osu-md__paragraph">Each player will receive their match result as a private message in the <code>#userlog</code> tab in <a class="osu-md__link" href="../../Client/Interface/Chat_console">chat</a>.</p>
+<h4 class="osu-md__header osu-md__header--4" id="team-vs">Team VS</h4>
+<h5 class="osu-md__header osu-md__header--5" id="interface.1">Interface</h5>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="14" data-src="https://i.ppy.sh/c33e3c944958ed7f5aea16e916e4834de69c22da/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7465616d76732d696e746572666163652e6a7067" src="https://i.ppy.sh/c33e3c944958ed7f5aea16e916e4834de69c22da/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7465616d76732d696e746572666163652e6a7067" alt="" title="Team VS interface" /><em class="osu-md__figure-caption">Team VS interface</em></p>
+</div>
+<p class="osu-md__paragraph">Team VS pits two teams, Blue and Red, against each other.</p>
+<p class="osu-md__paragraph">Blue is on the left and Red is on the right. A crown at the centre moves left and right to show which team is currently winning.</p>
+<p class="osu-md__paragraph">Changing teams can be done while in the lobby. There is no handicap for teams with fewer members, and it is entirely possible to start a match with only one team.</p>
+<h5 class="osu-md__header osu-md__header--5" id="team-vs-results-screen">Results</h5>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="15" data-src="https://i.ppy.sh/7ebc123be10624a22fbbc4d86e66b63ea5abfccf/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7465616d76732d726573756c74732e6a7067" src="https://i.ppy.sh/7ebc123be10624a22fbbc4d86e66b63ea5abfccf/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7465616d76732d726573756c74732e6a7067" alt="" title="Team VS results screen" /><em class="osu-md__figure-caption">Team VS results screen</em></p>
+</div>
+<p class="osu-md__paragraph">The winning team is announced at the top of the results screen.</p>
+<p class="osu-md__paragraph">Only players who are alive by the end of the match count towards their teams' totals.</p>
+<p class="osu-md__paragraph">The panels to the sides show results for each player in different tabs. The <code>Total</code> tab shows the total count of <a class="osu-md__link" href="../../Gameplay/Judgement">judgements</a> for both teams and their average accuracy.</p>
+<h4 class="osu-md__header osu-md__header--4" id="tag-co-op-/-tag-team-vs">Tag co-op / Tag-team VS</h4>
+<h5 class="osu-md__header osu-md__header--5" id="interface.2">Interface</h5>
+<p class="osu-md__paragraph"><em>Note: This team mode is unranked and only available in osu! mode.</em></p>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="16" data-src="https://i.ppy.sh/8e8825ee8a779567e3efea5d23023555e3017510/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d636f6f702d696e746572666163652e6a7067" src="https://i.ppy.sh/8e8825ee8a779567e3efea5d23023555e3017510/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d636f6f702d696e746572666163652e6a7067" alt="" title="Tag co-op interface" /><em class="osu-md__figure-caption">Tag co-op interface</em></p>
+</div>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="17" data-src="https://i.ppy.sh/11fa188d8d701771a6626940260f03737d5f5e79/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7461677465616d2d696e746572666163652e6a7067" src="https://i.ppy.sh/11fa188d8d701771a6626940260f03737d5f5e79/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7461677465616d2d696e746572666163652e6a7067" alt="" title="Tag-team VS interface" /><em class="osu-md__figure-caption">Tag-team VS interface</em></p>
+</div>
+<p class="osu-md__paragraph">Tag co-op makes all players in the match work together to pass the beatmap, one combo at a time. <code>Tag-team VS</code> is just <code>Tag co-op</code> but with two teams playing against each other.</p>
+<p class="osu-md__paragraph">In this mode, the players' slot placement in the lobby determines the order they play in.</p>
+<p class="osu-md__paragraph">A green arrow will show the player who is currently playing, and their name will be shown at the lower right. Warning arrows indicate when it is about to be the player's turn and the hit objects will be coloured. The player can set a fixed combo colour at the match setup the <a class="osu-md__link" href="#tag-colour">Tag Colour</a> section in the match lobby.</p>
+<p class="osu-md__paragraph">All players must spin the spinner, or the combo will break.</p>
+<p class="osu-md__paragraph">If a player quits during the match, the game will play their part for them.</p>
+<p class="osu-md__paragraph">All players share the same health bar. If it depletes completely, the match ends. In Tag-team VS, each team has their own health bars, and losing all health will cause that team to lose.</p>
+<p class="osu-md__paragraph">Players using the <a class="osu-md__link" href="../../Gameplay/Game_modifier/Sudden_Death">Sudden Death (SD)</a> game modifier will cause the whole match to end if they fail due to it, even in Tag-team VS. If <a class="osu-md__link" href="../../Gameplay/Game_modifier/Easy">Easy (EZ)</a> is used, players can still get two extra lives. However, in Tag-team VS, when a team's health drops to zero, even though the <a class="osu-md__link" href="../../Client/Interface/Health_bar">health bar</a> will be refilled, the match will judge them as <em>failed</em> and end immediately.</p>
+<h5 class="osu-md__header osu-md__header--5" id="results.2">Results</h5>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="18" data-src="https://i.ppy.sh/1fdedaf5b3b53279e64dbcf57b8bf576a05a1818/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d636f6f702d726573756c74732e6a7067" src="https://i.ppy.sh/1fdedaf5b3b53279e64dbcf57b8bf576a05a1818/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d636f6f702d726573756c74732e6a7067" alt="" title="Tag co-op results screen" /><em class="osu-md__figure-caption">Tag co-op results screen</em></p>
+</div>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1440" data-height="900" data-gallery-id="1236084165" data-index="19" data-src="https://i.ppy.sh/da2e1cc366efef0bca6df4a01d0f08210cb035e2/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7461677465616d2d726573756c74732e6a7067" src="https://i.ppy.sh/da2e1cc366efef0bca6df4a01d0f08210cb035e2/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6d756c74692d7461677465616d2d726573756c74732e6a7067" alt="" title="Tag-team VS results screen" /><em class="osu-md__figure-caption">Tag-team VS results screen</em></p>
+</div>
+<p class="osu-md__paragraph">No ranked score or performance points are awarded for <code>Tag co-op</code> or <code>Tag-team VS</code> matches.</p>
+<p class="osu-md__paragraph">For <code>Tag co-op</code>, the result shown is the total score, the <a class="osu-md__link" href="../../Gameplay/Judgement">judgements</a> and accuracy of the team. Individual results are not shown, and can only be seen in the match history. The result screen only appears if the beatmap was cleared successfully, unlike other multiplayer modes.</p>
+<p class="osu-md__paragraph">The <code>Tag-team VS</code> results screen is identical to the <a class="osu-md__link" href="#team-vs-results-screen"><code>Team VS</code>'s results screen</a>, except that individual results can be seen under different tabs for each team.</p>
+<h2 class="osu-md__header osu-md__header--2" id="trivia">Trivia</h2>
+<h3 class="osu-md__header osu-md__header--3" id="history">History</h3>
+<div class="osu-md__infobox">
+<p class="osu-md__figure-container"><img class="osu-md__figure-image osu-md__figure-image--gallery js-gallery" data-width="1024" data-height="768" data-gallery-id="1236084165" data-index="20" data-src="https://i.ppy.sh/f420d336cefdd7e8fdf6a458415fa693377fc2ef/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6c65676163792d6d756c74692d6c6f6262792e6a7067" src="https://i.ppy.sh/f420d336cefdd7e8fdf6a458415fa693377fc2ef/68747470733a2f2f6f73752e7070792e73682f77696b692f696d616765732f436c69656e742f496e746572666163652f4d756c7469706c617965722f696d672f6c65676163792d6d756c74692d6c6f6262792e6a7067" alt="" title="Screenshot of the main lobby when osu!mania was first released (October 8, 2012), but not yet playable in multiplayer" /><em class="osu-md__figure-caption">Screenshot of the main lobby when osu!mania was first released (October 8, 2012), but not yet playable in multiplayer</em></p>
+</div>
+<ul class="osu-md__list">
+<li class="osu-md__list-item"><div>The initial multiplayer version was implemented on June 3, 2008 in osu! Public Release b335.</div></li>
+<li class="osu-md__list-item"><div>Match setup used to allow only up to a total of 8 players.</div></li>
+<li class="osu-md__list-item"><div>osu!mania was shown as a &quot;3&quot; in the lobby for players that had not yet updated their client to the latest release patch (which enabled osu!mania with no ranking support).</div></li>
+<li class="osu-md__list-item"><div>No Video used to be the <em>only</em> game modifier allowed for players to use, but it was removed in favour of its placement in the <a class="osu-md__link" href="../../Client/Interface/Visual_settings">visual settings</a>.</div></li>
+</ul>
+</div>
+                            </div>
+        </div>
+    </div>
+        </div>
+                    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button type="button" class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button type="button" class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button type="button" class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="js-pswp-buttons"></div>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get modifier active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button type="button" class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button type="button" class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+            <footer class="no-print footer">
+            <div class="footer__row">
+                            <a class="footer__link" href="https://osu.ppy.sh/legal/en/Terms">
+                    Terms
+                </a>
+                            <a class="footer__link" href="https://osu.ppy.sh/legal/en/Privacy">
+                    Privacy
+                </a>
+                            <a class="footer__link" href="https://osu.ppy.sh/legal/en/Copyright">
+                    Copyright (DMCA)
+                </a>
+                            <a class="footer__link" href="https://status.ppy.sh">
+                    Server Status
+                </a>
+                            <a class="footer__link" href="https://github.com/ppy">
+                    Source Code
+                </a>
+            
+                    </div>
+        <div class="footer__row">ppy powered 2007-2024</div>
+
+    <div class="js-sync-height--target" data-sync-height-id="permanent-fixed-footer"></div>
+</footer>
+        
+        <div
+            class="fixed-bar
+                js-fixed-element
+                js-fixed-bottom-bar
+                js-sticky-footer--fixed-bar"
+        >
+            <div
+                class="js-permanent-fixed-footer
+                    js-sync-height--reference"
+                data-sync-height-target="permanent-fixed-footer"
+            >
+                
+                            </div>
+        </div>
+
+        <div id="main-player" class="audio-player-floating" data-turbolinks-permanent>
+            <div class="js-audio--main"></div>
+            <div class="js-sync-height--target" data-sync-height-id="permanent-fixed-footer"></div>
+        </div>
+        
+        <div id="estimate-min-lines" class="estimate-min-lines" data-turbolinks-permanent>
+            <div class="estimate-min-lines__content js-estimate-min-lines"></div>
+        </div>
+        <script data-turbolinks-eval="always">
+    var csrf = "TiLBY66l9s9Rd0jhcLb6wwYhXkRDvWj9nkdg7oQX";
+    var canonicalUrl = "https://osu.ppy.sh/wiki/en/Client/Interface/Multiplayer";
+</script>
+
+<script id="json-current-user" type="application/json">
+    {}
+</script>
+        <div class="loading-overlay js-loading-overlay">
+    <div class="loading-overlay__container">
+                    <div class="loading-overlay__follow-point
+                    loading-overlay__follow-point--1">
+                ›
+            </div>
+
+                            <div class="loading-overlay__circle
+                        loading-overlay__circle--1
+                        loading-overlay__circle--approach"
+                ></div>
+                            <div class="loading-overlay__circle
+                        loading-overlay__circle--1
+                        loading-overlay__circle--hit"
+                ></div>
+                                <div class="loading-overlay__follow-point
+                    loading-overlay__follow-point--2">
+                ›
+            </div>
+
+                            <div class="loading-overlay__circle
+                        loading-overlay__circle--2
+                        loading-overlay__circle--approach"
+                ></div>
+                            <div class="loading-overlay__circle
+                        loading-overlay__circle--2
+                        loading-overlay__circle--hit"
+                ></div>
+                                <div class="loading-overlay__follow-point
+                    loading-overlay__follow-point--3">
+                ›
+            </div>
+
+                            <div class="loading-overlay__circle
+                        loading-overlay__circle--3
+                        loading-overlay__circle--approach"
+                ></div>
+                            <div class="loading-overlay__circle
+                        loading-overlay__circle--3
+                        loading-overlay__circle--hit"
+                ></div>
+                                <div class="loading-overlay__follow-point
+                    loading-overlay__follow-point--4">
+                ›
+            </div>
+
+                            <div class="loading-overlay__circle
+                        loading-overlay__circle--4
+                        loading-overlay__circle--approach"
+                ></div>
+                            <div class="loading-overlay__circle
+                        loading-overlay__circle--4
+                        loading-overlay__circle--hit"
+                ></div>
+                        </div>
+</div>
+        <div id="popup-container">
+    <div class="alert alert-dismissable popup-clone col-md-6 col-md-offset-3 text-center" style="display: none">
+        <button type="button" data-dismiss="alert" class="close"><i class="fas fa-times"></i></button>
+        <span class="popup-text"></span>
+    </div>
+
+    </div>
+
+        <script id="json-route-section" type="application/json">
+            {"action":"show","controller":"wiki_controller","namespace":"main","section":"help"}
+        </script>
+
+            
+    <div class="js-user-verification modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog--full">
+            <div class="user-verification-popup">
+                <div class="osu-layout__row">
+                    <div class="user-verification-popup__modal">
+                        <div class="js-user-verification--box user-verification-popup__box">
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+#special_contest {
+    animation-name: blinking;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+ /* The animation code */
+ @keyframes blinking {
+    0%   {background-color:red; color: #ffffff;}
+    25%  {background-color:yellow; color: #000000;}
+    50%  {background-color:blue; color: #ffffff;}
+    75%  {background-color:green; color: #ffffff;}
+    100% {background-color:red; color: #000000;}
+  }
+
+  #carouselExampleAutoplaying {
+    box-shadow: 3px 3px 15px #333333;
+  }

@@ -5,3 +5,4 @@ tempCodeRunnerFile.*
 session.log
 factor.log
 factor.json
+**/out/*

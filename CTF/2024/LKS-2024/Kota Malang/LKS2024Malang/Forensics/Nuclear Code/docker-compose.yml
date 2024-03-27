@@ -1,0 +1,16 @@
+version: "3"
+services:
+  nuclear-code:
+    build: .
+    container_name: nuclear-code
+    restart: always
+    ports:
+      - "10101:22"
+    read_only: true
+  nuclear-code-solve:
+    build: 
+      dockerfile: Dockerfile2
+    container_name: nuclear-code-solve
+    restart: always
+    ports:
+      - "10102:11000"

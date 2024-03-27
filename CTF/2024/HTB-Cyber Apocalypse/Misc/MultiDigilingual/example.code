@@ -1,0 +1,5 @@
+#include/*
+q="""*/<stdio.h>
+int main() {putchar('C'); if(sizeof('C') - 1);
+    else   {putchar('+'); putchar('+');}} /*=;
+open(F, '<flag.txt') && say <F>#""";print("%s" % open('flag.txt', 'r').read())#*/

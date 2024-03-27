@@ -1,5 +1,6 @@
-from math import sqrt, ceil
 from decimal import Decimal
+from math import ceil, sqrt
+
 p = 29
 ints = [14, 6, 11]
 

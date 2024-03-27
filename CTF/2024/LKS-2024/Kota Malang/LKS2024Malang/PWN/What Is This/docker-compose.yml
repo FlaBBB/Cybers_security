@@ -1,0 +1,10 @@
+version: '3'
+services:
+  whatisthis:
+    image: whatisthis
+    build: .
+    restart: always
+    environment:
+      - TERM=xterm
+    ports:
+      - "10010:11101"

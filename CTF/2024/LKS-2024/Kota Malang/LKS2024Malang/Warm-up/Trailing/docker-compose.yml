@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+    php-httpd:
+        build:
+            context: ./src/php-httpd
+        ports:
+            - 2000:80
+        volumes:
+            - "./src/www:/var/www/html"
+        depends_on: 
+            - mariadb
+    mariadb:
+        image: mariadb:10.5.2
+        volumes:
+            - mariadb-volume:/var/lib/mysql
+        environment:
+            TZ: "Asia/Indonesia"
+            MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+            MYSQL_ROOT_PASSWORD: "laosUwU(){}"
+            MYSQL_USER: 'probset'
+            MYSQL_PASSWORD: 'probset(){}'
+            MYSQL_DATABASE: 'laos21'
+        ports:
+            - 2011:3306
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - 'mariadb:db'
+        ports:
+            - 2010:80
+        depends_on: 
+            - mariadb          
+
+volumes:
+    mariadb-volume:
+

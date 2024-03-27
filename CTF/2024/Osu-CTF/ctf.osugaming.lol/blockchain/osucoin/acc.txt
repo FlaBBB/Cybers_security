@@ -1,0 +1,8 @@
+[+] deployer account: 0x47e9515bf69891fAf68BE5f2Bb8d1db2c33A344E
+[+] token: v4.local.yxQb0QQuwUH0riy7aRl6jsdtXuzliePHMBzMz8OHcrYdernGXmoVitqeBY2sE9x0l8UV6tfKOmKWq3vT0NU4DsWbaydld2TnLCnjR1Bkq5V7dI-5tIt8_gThnaBsIjC0pp05YpInhWva_UeanZX_SEsfnO948BJHm7oJKn7FRgtwmw.U2V0dXA
+[+] please transfer more than 0.001 test ether to the deployer account for next step
+
+[-] input your choice: 2
+[-] input your token: v4.local.yxQb0QQuwUH0riy7aRl6jsdtXuzliePHMBzMz8OHcrYdernGXmoVitqeBY2sE9x0l8UV6tfKOmKWq3vT0NU4DsWbaydld2TnLCnjR1Bkq5V7dI-5tIt8_gThnaBsIjC0pp05YpInhWva_UeanZX_SEsfnO948BJHm7oJKn7FRgtwmw.U2V0dXA
+[+] contract address: 0xf6F8619C7416171344C7416336AECBD926c92389
+[+] transaction hash: 0x7da58fe04963710d822d897cb14c7ba39ba90ae2d76e0da9027f8807c38ef192

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../../../../../../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../GCC-CTF/Web3/First_drop/exploit/lib/openzeppelin-contracts" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../GCC-CTF/Web3/First_drop/exploit/lib/openzeppelin-contracts/lib/erc4626-tests" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../GCC-CTF/Web3/First_drop/exploit/lib/openzeppelin-contracts/lib/forge-std" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../GCC-CTF/Web3/First_drop/exploit/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../../../tools/DeepBlueCLI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../../../tools/RsaCtfTool" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../../../tools/ctfd-parser" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../../../tools/python-xasm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../../../tools/yafu" vcs="Git" />
+  </component>
+</project>

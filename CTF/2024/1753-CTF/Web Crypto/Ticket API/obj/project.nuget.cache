@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "beTaAVsUA2hXSDAxsNxnU4mau75IL/AmvyV9JTvsyxkGqx6JGIw4ar2wv4FcT/8mw7oK/m3lmL8BaffV9QUCrQ==",
+  "success": true,
+  "projectFilePath": "D:\\Programming\\CySec\\Cyber Security\\CTF\\2024\\1753-CTF\\Web Crypto\\Ticket API\\App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\bblanchon.pdfium.linux\\124.0.6322\\bblanchon.pdfium.linux.124.0.6322.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\bblanchon.pdfium.macos\\124.0.6322\\bblanchon.pdfium.macos.124.0.6322.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\bblanchon.pdfium.win32\\124.0.6322\\bblanchon.pdfium.win32.124.0.6322.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.data.sqlite\\5.0.0\\microsoft.data.sqlite.5.0.0.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.0\\microsoft.data.sqlite.core.5.0.0.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\pdftoimage\\4.0.0\\pdftoimage.4.0.0.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\skiasharp\\2.88.7\\skiasharp.2.88.7.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\skiasharp.nativeassets.linux.nodependencies\\2.88.7\\skiasharp.nativeassets.linux.nodependencies.2.88.7.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.7\\skiasharp.nativeassets.macos.2.88.7.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\skiasharp.nativeassets.webassembly\\2.88.7\\skiasharp.nativeassets.webassembly.2.88.7.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.7\\skiasharp.nativeassets.win32.2.88.7.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\sungaila.pdfium.blazorwebassembly\\124.0.6322\\sungaila.pdfium.blazorwebassembly.124.0.6322.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\zxing.net\\0.16.9\\zxing.net.0.16.9.nupkg.sha512",
+    "C:\\Users\\WINDOWS 11\\.nuget\\packages\\zxing.net.bindings.skiasharp\\0.16.14\\zxing.net.bindings.skiasharp.0.16.14.nupkg.sha512"
+  ],
+  "logs": []
+}

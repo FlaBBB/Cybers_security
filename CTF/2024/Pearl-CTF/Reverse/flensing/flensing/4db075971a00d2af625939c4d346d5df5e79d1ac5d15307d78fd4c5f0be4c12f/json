@@ -1,0 +1,25 @@
+{
+    "id": "4db075971a00d2af625939c4d346d5df5e79d1ac5d15307d78fd4c5f0be4c12f",
+    "parent": "792fa78682f4ca52abd4c98523ad99961e0df3475aded443ba966a56aeaffe36",
+    "created": "1970-01-01T00:00:00Z",
+    "container_config": {
+        "Hostname": "",
+        "Domainname": "",
+        "User": "",
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "AttachStderr": false,
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": null,
+        "Cmd": null,
+        "Image": "",
+        "Volumes": null,
+        "WorkingDir": "",
+        "Entrypoint": null,
+        "OnBuild": null,
+        "Labels": null
+    },
+    "os": "linux"
+}

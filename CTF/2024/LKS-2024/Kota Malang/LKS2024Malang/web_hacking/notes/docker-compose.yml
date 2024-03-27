@@ -1,0 +1,15 @@
+version: '2.2'
+services:
+  mongo:
+    image: mongo:6.0.7-jammy
+    restart: always
+  web:
+    build: .
+    restart: always
+    mem_limit: 256MB
+    environment:
+    - MONGO_URL=mongodb://mongo:27017/mydata
+    ports:
+    - "10021:3000"
+    depends_on:
+    - mongo

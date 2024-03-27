@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:alpine
+    restart: always
+    volumes:
+      - ./src/app:/app
+      - ./src/nginx-config/:/etc/nginx/conf.d/
+    ports:
+      - 5003:5003
+    depends_on:
+      - php
+  php:
+    image: php:7.3-fpm-alpine
+    volumes:
+     - ./src/app:/app

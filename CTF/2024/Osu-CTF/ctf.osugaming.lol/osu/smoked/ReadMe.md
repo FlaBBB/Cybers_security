@@ -1,0 +1,3 @@
+Name: smoked
+Value: 108
+Description: Imagine getting flag from simply watching a replay...

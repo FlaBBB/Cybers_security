@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  thefastfalafelshop:
+    build: '.'
+    ports:
+      - '5010:80'
+    restart: unless-stopped

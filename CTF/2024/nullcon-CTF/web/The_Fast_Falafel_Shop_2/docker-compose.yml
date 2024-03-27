@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  shop:
+    build: ./shop
+    environment:
+      - flag=ENO{FAKE_FLAG}
+    ports:
+      - "0.0.0.0:5012:80"

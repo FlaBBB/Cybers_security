@@ -1,0 +1,3 @@
+"""
+print(`cat flag.txt`);
+"""
